@@ -1,0 +1,270 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.17f1 (3e8111cac19d) revision 4096273'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16151 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Programs\Unity\Unity Editors\2021.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+E:/Github/Work/SAS-Game-Dev/SASWebGame
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+2762
+Successfully changed project path to: E:/Github/Work/SAS-Game-Dev/SASWebGame
+E:/Github/Work/SAS-Game-Dev/SASWebGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [33788] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 1616353229 [EditorId] 1616353229 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [33788] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 1616353229 [EditorId] 1616353229 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 132.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.17f1 (3e8111cac19d)
+[Subsystems] Discovering subsystems at path D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Github/Work/SAS-Game-Dev/SASWebGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010797 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 86.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.614 seconds
+Domain Reload Profiling:
+	ReloadAssembly (614ms)
+		BeginReloadAssembly (116ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (383ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (86ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (235ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (87ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (106ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005062 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 88.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.195 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1196ms)
+		BeginReloadAssembly (122ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (953ms)
+			LoadAssemblies (115ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (276ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (506ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (88ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (221ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5124 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (1.1 MB). Loaded Objects now: 5569.
+Memory consumption went from 199.7 MB to 198.5 MB.
+Total: 3.833800 ms (FindLiveObjects: 0.561400 ms CreateObjectMapping: 0.249200 ms MarkObjects: 2.643300 ms  DeleteObjects: 0.379000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 18806.825982 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_395.asset
+  artifactKey: Guid(0da2e8f9f0f9352408e69bc67033feab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_395.asset using Guid(0da2e8f9f0f9352408e69bc67033feab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fe5d42d69a4a4119f3c3aeec98f12bc') in 0.062025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_458.asset
+  artifactKey: Guid(deb7d6528a564fa4aac3950772ed8f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_458.asset using Guid(deb7d6528a564fa4aac3950772ed8f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d4617cd70c4beb7cefdfd4d9af5e72') in 0.007080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_462.asset
+  artifactKey: Guid(91900f6810cebdf49846248e5fae1d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_462.asset using Guid(91900f6810cebdf49846248e5fae1d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c7477824ef3a6b8dd922a805e15ca3') in 0.005388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_468.asset
+  artifactKey: Guid(9556516bc0788f3408b23a9dbaf921ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_468.asset using Guid(9556516bc0788f3408b23a9dbaf921ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1186d4ac9639ae2abf8a1223e08bc5aa') in 0.006184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_404.asset
+  artifactKey: Guid(584fe4acc2e48974aaaf1377aa8497ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_404.asset using Guid(584fe4acc2e48974aaaf1377aa8497ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e74b7bee4c62edb635a694ff0cfc83') in 0.006510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_396.asset
+  artifactKey: Guid(045ebd5e6d4165746925191538b1f632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_396.asset using Guid(045ebd5e6d4165746925191538b1f632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd627acf38aeaf12ce777182416959e6d') in 0.006594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_441.asset
+  artifactKey: Guid(d88a2568d7ce9b74890b77f839f75118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_441.asset using Guid(d88a2568d7ce9b74890b77f839f75118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be594955d2f6a3690d4836bcd689f64') in 0.006972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_412.asset
+  artifactKey: Guid(47a78eca483640d408e71fa45d3e1776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_412.asset using Guid(47a78eca483640d408e71fa45d3e1776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aca2ef2494aab5bb7efd69c60756c28') in 0.005921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_453.asset
+  artifactKey: Guid(e4cb1df7b5918884a8353d05b1f2eb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_453.asset using Guid(e4cb1df7b5918884a8353d05b1f2eb8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb687d21dd1efc6d8ade8cff9021d84') in 0.005902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_410.asset
+  artifactKey: Guid(bf1749c1b1c89a14c83fcc3ee69c2901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_410.asset using Guid(bf1749c1b1c89a14c83fcc3ee69c2901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e39e299396280a8fba0a28a07999f328') in 0.006130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_437.asset
+  artifactKey: Guid(ce677f44ea1978a41b143b3231374978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_437.asset using Guid(ce677f44ea1978a41b143b3231374978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e589c236873dba42fe5a3d4f182bb0') in 0.005779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_407.asset
+  artifactKey: Guid(833155b7550501d4cb783b605a125a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_407.asset using Guid(833155b7550501d4cb783b605a125a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa5ac21750c618b827b80ee79190dbb8') in 0.005550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_454.asset
+  artifactKey: Guid(6dbb3209b85f190498bbf8ffe547939c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_454.asset using Guid(6dbb3209b85f190498bbf8ffe547939c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c562b590850cb8d9583f6a979fa732') in 0.006194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_444.asset
+  artifactKey: Guid(2fce456126605a047b470532dfd626e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_444.asset using Guid(2fce456126605a047b470532dfd626e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd81dc04634930a48de8d8d106e3086fe') in 0.006547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_399.asset
+  artifactKey: Guid(df0430c6c5614e64d96367c1446bf001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_399.asset using Guid(df0430c6c5614e64d96367c1446bf001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5acf1636da79526a7df3e137d9898df') in 0.005954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_405.asset
+  artifactKey: Guid(fd619cfa4e70a6448855ecda350f1a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_405.asset using Guid(fd619cfa4e70a6448855ecda350f1a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb6ef07674d04c4c9139f812b32831b') in 0.005990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/_ArtAssets/Tiles/cloud_tileset_435.asset
+  artifactKey: Guid(e5ba107f802d15f46b40986dd9ae99d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tiles/cloud_tileset_435.asset using Guid(e5ba107f802d15f46b40986dd9ae99d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98426782a42dc84153420464c803109e') in 0.006043 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
