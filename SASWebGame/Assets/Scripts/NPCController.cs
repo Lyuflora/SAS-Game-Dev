@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour, Interactables
 {
     public void Interact()
     {
-        Debug.Log("Interact with "+ gameObject.name);
+        Debug.Log("Interact with NPC "+ gameObject.name);
     }
 
     // Start is called before the first frame update

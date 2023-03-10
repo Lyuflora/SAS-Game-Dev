@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
 
+    private Rigidbody2D playerRigidbody;
+
     private Animator animator;
 
     [SerializeField]
@@ -15,7 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private LayerMask interactableLayer;
 
-
+    // pickup
+    PickUp pickUp;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,10 +28,13 @@ public class PlayerController : MonoBehaviour
     {
         //isMoving = true;
         //Debug.Log("start");
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        pickUp = GetComponent<PickUp>();
+        pickUp.Direction = new Vector2(0, -1);
     }
     private void Update()
     {
-        if (!isMoving)
+        //if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
@@ -49,10 +55,22 @@ public class PlayerController : MonoBehaviour
 
                 if (isWalkable(targetPos))
                 {
-                    StartCoroutine(Move(targetPos));
-
+                    // no use
+                    //StartCoroutine(Move(targetPos));
+                    
+                    MoveCharacter();
+                    
                 }
 
+                if(input.sqrMagnitude > .1f)
+                {
+                    pickUp.Direction = input.normalized;
+                }
+
+            }
+            else
+            {
+                isMoving = false;
             }
         }
 
@@ -72,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
         // Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
 
+        // detect colliding objects
         var collider = Physics2D.OverlapCircle(interactPos, 0.2f, interactableLayer);
         if (collider != null)
         {
@@ -98,5 +117,11 @@ public class PlayerController : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    void MoveCharacter()
+    {
+        isMoving = true;
+        playerRigidbody.MovePosition(transform.position + new Vector3(input.x, input.y, 0) * moveSpeed * 5f * Time.deltaTime);
     }
 }

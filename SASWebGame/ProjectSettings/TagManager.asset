@@ -50,6 +50,6 @@ TagManager:
   - name: Character
     uniqueID: 1366456497
     locked: 0
-  - name: 
+  - name: PickUp
     uniqueID: 2001301923
     locked: 0
