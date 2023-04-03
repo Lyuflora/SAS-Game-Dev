@@ -321,6 +321,7 @@
 -r:"D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
+-r:"D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
 -r:"D:/Programs/Unity/Unity Editors/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:"E:/Github/Work/SAS-Game-Dev/SASWebGame/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
 -r:"E:/Github/Work/SAS-Game-Dev/SASWebGame/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"
