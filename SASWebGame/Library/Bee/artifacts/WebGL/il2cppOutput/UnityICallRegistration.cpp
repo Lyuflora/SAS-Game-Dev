@@ -1098,6 +1098,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_SetStereoViewMatrix_Injected();
 		Register_UnityEngine_Camera_SetStereoViewMatrix_Injected();
 
+		//System.Void UnityEngine.Camera::ViewportToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Vector3&)
+		void Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
+		Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
+
 		//System.Void UnityEngine.Camera::WorldToScreenPoint_Injected(UnityEngine.Vector3&,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Vector3&)
 		void Register_UnityEngine_Camera_WorldToScreenPoint_Injected();
 		Register_UnityEngine_Camera_WorldToScreenPoint_Injected();
@@ -4109,6 +4113,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Physics2D::get_queriesHitTriggers()
 		void Register_UnityEngine_Physics2D_get_queriesHitTriggers();
 		Register_UnityEngine_Physics2D_get_queriesHitTriggers();
+
+		//System.Void UnityEngine.Physics2D::IgnoreCollision(UnityEngine.Collider2D,UnityEngine.Collider2D,System.Boolean)
+		void Register_UnityEngine_Physics2D_IgnoreCollision();
+		Register_UnityEngine_Physics2D_IgnoreCollision();
 
 		//UnityEngine.Collider2D[] UnityEngine.Physics2D::OverlapBoxAll_Internal_Injected(UnityEngine.PhysicsScene2D&,UnityEngine.Vector2&,UnityEngine.Vector2&,System.Single,UnityEngine.ContactFilter2D&)
 		void Register_UnityEngine_Physics2D_OverlapBoxAll_Internal_Injected();

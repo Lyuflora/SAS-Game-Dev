@@ -9,4 +9,9 @@ public class ChallengerContoller : MonoBehaviour, Interactables
         Debug.Log("Interact with Challenger " + gameObject.name);
     }
 
+    private void OnMouseDown()
+    {
+        Debug.Log("click" + name);
+    }
+
 }

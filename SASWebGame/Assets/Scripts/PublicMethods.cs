@@ -1,6 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[Serializable]
+public class SceneInfo
+{
+    private string m_SceneName;
+    
+}
 
 public class PublicMethods : MonoBehaviour
 {

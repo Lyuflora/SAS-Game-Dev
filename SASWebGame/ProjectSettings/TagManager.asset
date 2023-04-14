@@ -16,7 +16,7 @@ TagManager:
   - SolidObjects
   - Interactable
   - Pickup
-  - 
+  - Waypoint
   - 
   - 
   - 
@@ -48,6 +48,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 506883531
+    locked: 0
+  - name: Spot
+    uniqueID: 953542675
     locked: 0
   - name: Character
     uniqueID: 1366456497
