@@ -23,11 +23,18 @@ public class SpaceInvaderManager : MonoBehaviour
     public void WinSpaceInvader()
     {
         m_WinPanel.SetActive(true);
+        PlayerPrefs.SetInt("spStatus",1);   // 1 for winning, 0 for losing, -1 for not initialized
     }
 
     public void LoseSpaceInvader()
     {
         m_LosePanel.SetActive(true);
+
+        if (PlayerStatus.m_Instance.CheckReceivedSPReward() == false)
+        {
+            PlayerPrefs.SetInt("spStatus",0); 
+            
+        }
     }
     
 }

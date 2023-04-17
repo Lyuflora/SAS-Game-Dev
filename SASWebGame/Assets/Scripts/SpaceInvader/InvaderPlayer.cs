@@ -50,10 +50,21 @@ public class InvaderPlayer : MonoBehaviour
         }
 
         // Debug
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.J))
         {
             autoShoot = !autoShoot;
         }
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            SpaceInvaderManager.m_Instance.WinSpaceInvader();
+        }
+
+        if (Input.GetKey(KeyCode.L))
+        {
+            SpaceInvaderManager.m_Instance.LoseSpaceInvader();
+        }
+        
     }
 
     public void MoveLeft()

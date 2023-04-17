@@ -62,7 +62,7 @@ public class InvaderGenerator : MonoBehaviour
     
     private void Update()
     {
-        this.transform.position += direction * speed.Evaluate(percentKilled) * Time.deltaTime;
+        this.transform.position += direction * (speed.Evaluate(percentKilled) * Time.deltaTime);
 
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
         Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
