@@ -20,12 +20,15 @@ public class InvaderPlayer : MonoBehaviour
 
     public InvaderGenerator invaderGenerator;
 
+
+    public int playerScore;
     public void ToggleGameStart()
     {
         if (!isGameStarted)
         {
             isGameStarted = true;
             invaderGenerator.StartMissleAttack();
+            playerScore = 0;
         }else{return;}
         
     }
@@ -46,6 +49,11 @@ public class InvaderPlayer : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Space) || autoShoot)
         {
+            // Press Spacebar to start the game
+            if (!isGameStarted)
+            {
+                ToggleGameStart();
+            }
             Shoot();
         }
 
@@ -87,7 +95,6 @@ public class InvaderPlayer : MonoBehaviour
             projectile.destroyed += LayserDestroyed;
         }
 
-        
     }
 
     public void LayserDestroyed()
@@ -99,6 +106,11 @@ public class InvaderPlayer : MonoBehaviour
     {
         Debug.Log("Damage");
         SpaceInvaderManager.m_Instance.LoseSpaceInvader();
+        
     }
 
+    public void GetScore()
+    {
+        playerScore++;
+    }
 }

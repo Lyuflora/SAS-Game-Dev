@@ -7,7 +7,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Analytics;
 public class UGS_Analytics : MonoBehaviour
 {
-
+    
     public string environment = "dev";
     async void Start()
     {
@@ -16,7 +16,7 @@ public class UGS_Analytics : MonoBehaviour
             var options = new InitializationOptions().SetEnvironmentName(environment);
 
             await UnityServices.InitializeAsync();
-            LevelCompletedCustomEvent();
+            
         }
         catch (ConsentCheckException e)
         {
@@ -32,10 +32,35 @@ public class UGS_Analytics : MonoBehaviour
            { "levelName", "level" + currentLevel.ToString()}
        };
 
-        // The ¡®levelCompleted¡¯ event will get cached locally 
+        // The ï¿½ï¿½levelCompletedï¿½ï¿½ event will get cached locally 
         //and sent during the next scheduled upload, within 1 minute
         AnalyticsService.Instance.CustomData("levelCompleted", parameters);
         // You can call Events.Flush() to send the event immediately
+        AnalyticsService.Instance.Flush();
+    }
+
+    public void SPWinCustomEvent(int score)
+    {
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            { "userScore", score},
+            {"DeathTime", 0}
+        };
+
+        AnalyticsService.Instance.CustomData("SP_Win", parameters);
+        AnalyticsService.Instance.Flush();
+    }
+    
+    public void SPLoseCustomEvent(int score)
+    {
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            { "userScore", score},
+        };
+
+        AnalyticsService.Instance.CustomData("SP_Win", parameters);
         AnalyticsService.Instance.Flush();
     }
 }

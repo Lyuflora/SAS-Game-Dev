@@ -26,6 +26,8 @@ public class InvaderGenerator : MonoBehaviour
     public float percentKilled => (float)amountKillled / (float)totalInvaders;  // 0-1
     private int amountAlive => this.totalInvaders - this.amountKillled;
 
+    [SerializeField] private InvaderPlayer player;
+    
     private void Awake()
     {
         for(int row = 0; row < rows; row++)
@@ -104,7 +106,7 @@ public class InvaderGenerator : MonoBehaviour
     {
         amountKillled += 1;
         Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("kill: {0}, total: {1}, percent: {2}", amountKillled, totalInvaders, percentKilled));
-
+        player.GetScore();
         if (amountKillled >= totalInvaders)
         {
             SpaceInvaderManager.m_Instance.WinSpaceInvader();
