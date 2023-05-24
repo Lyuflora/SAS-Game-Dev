@@ -65,8 +65,6 @@ extern void TransparencySortGraphicsHelper__cctor_mDA1E6B7E59C849CCF1E8156F35E9A
 extern void TransparencySortGraphicsHelper_OnLoad_m0B6B4C7624C6A714C2E38F8E1CCE84D08D5C640B (void);
 extern void TransparencySortGraphicsHelper__ctor_m6F4280809A0BA5EEB20DFD806C87C717BF252AF9 (void);
 extern void SceneInfo__ctor_m3CE9159D3B9801C0581BC1A3ED681B8BED7F9908 (void);
-extern void PublicMethods_Start_m305491C3F3F1DACEB7FC43488EF0D99250A6E9CE (void);
-extern void PublicMethods_Update_m73408953321960F3A1A6C66954BDE385FF4536D6 (void);
 extern void PublicMethods__ctor_m92BC7B4B86711EE583243D46E4D721F7F7F1B281 (void);
 extern void ChallengerContoller_Interact_m6CB30A2FABD403033D144805D7C643A65A32B95A (void);
 extern void ChallengerContoller_OnMouseDown_mF34EEE91A3BBEB4634989BC3E9DE1AEA13791ECF (void);
@@ -172,6 +170,12 @@ extern void InvaderGenerator_InvaderKilled_mCB3AACCB37A4200C1B078EC445D7045E089C
 extern void InvaderGenerator_MissileAttack_m292FE8C6B5165AC067282EB4C5B946CE1F476DBA (void);
 extern void InvaderGenerator__ctor_m7B0C9F12249E608245FB2B0D93BBD2D462B9ED73 (void);
 extern void InvaderPlayer_ToggleGameStart_m216A32B2FA5C52FA9D7B06758594CB0DAB95AC0C (void);
+extern void InvaderPlayer_IsMobile_m4D85C719C53EBEB56107ECCAE2E2062625E70109 (void);
+extern void InvaderPlayer_isMobile_m536E678C12235F69787DAD63E8F9C4D656B0890C (void);
+extern void InvaderPlayer_EnableOrDisableButtonsBasedOnPlatform_m3372A25D578FB8B3414ADFB753B267BD66D454D5 (void);
+extern void InvaderPlayer_PlayerMovement_m8ED036959A4B0B887B40536C6CA1803124A29331 (void);
+extern void InvaderPlayer_PlayerAttack_m13BB76662FF6233E291486FB6A72701793666206 (void);
+extern void InvaderPlayer_Start_m47686A8A67E887A422B5197B7188C7C70DB0125B (void);
 extern void InvaderPlayer_Update_m596453141D0DE476ACFFCE8C2F5969D9E2B5143A (void);
 extern void InvaderPlayer_MoveLeft_m7038DB1E9E250A4CD3EAB4C326A91B078F7F623C (void);
 extern void InvaderPlayer_MoveRight_m8F314F3AA403D4E7A772B3325E2F614AD254E418 (void);
@@ -200,7 +204,7 @@ extern void PlayerHistory__ctor_mB342D781F18AE72B67EE3EFC3ACE46E84FEEFF04 (void)
 extern void DebugToUIManager_Awake_m6F82BC040E044FBC8A7BAC09FF36A5145C80541B (void);
 extern void DebugToUIManager_DebugToUI_mD7C1422B2C1271BB92DE01F5C55B66FA36B9E481 (void);
 extern void DebugToUIManager__ctor_m42CFD7CE6170D8E289AE5E5F8B4F9E5B3D277657 (void);
-static Il2CppMethodPointer s_methodPointers[191] = 
+static Il2CppMethodPointer s_methodPointers[197] = 
 {
 	InitWithDefault_Start_m57BBFBF876A01907CECC270B79990B6834DC7530,
 	InitWithDefault__ctor_m063BA086BF30E89E6B3C3D85EA82903FE1C2BC89,
@@ -257,8 +261,8 @@ static Il2CppMethodPointer s_methodPointers[191] =
 	TransparencySortGraphicsHelper_OnLoad_m0B6B4C7624C6A714C2E38F8E1CCE84D08D5C640B,
 	TransparencySortGraphicsHelper__ctor_m6F4280809A0BA5EEB20DFD806C87C717BF252AF9,
 	SceneInfo__ctor_m3CE9159D3B9801C0581BC1A3ED681B8BED7F9908,
-	PublicMethods_Start_m305491C3F3F1DACEB7FC43488EF0D99250A6E9CE,
-	PublicMethods_Update_m73408953321960F3A1A6C66954BDE385FF4536D6,
+	NULL,
+	NULL,
 	PublicMethods__ctor_m92BC7B4B86711EE583243D46E4D721F7F7F1B281,
 	ChallengerContoller_Interact_m6CB30A2FABD403033D144805D7C643A65A32B95A,
 	ChallengerContoller_OnMouseDown_mF34EEE91A3BBEB4634989BC3E9DE1AEA13791ECF,
@@ -365,6 +369,12 @@ static Il2CppMethodPointer s_methodPointers[191] =
 	InvaderGenerator_MissileAttack_m292FE8C6B5165AC067282EB4C5B946CE1F476DBA,
 	InvaderGenerator__ctor_m7B0C9F12249E608245FB2B0D93BBD2D462B9ED73,
 	InvaderPlayer_ToggleGameStart_m216A32B2FA5C52FA9D7B06758594CB0DAB95AC0C,
+	InvaderPlayer_IsMobile_m4D85C719C53EBEB56107ECCAE2E2062625E70109,
+	InvaderPlayer_isMobile_m536E678C12235F69787DAD63E8F9C4D656B0890C,
+	InvaderPlayer_EnableOrDisableButtonsBasedOnPlatform_m3372A25D578FB8B3414ADFB753B267BD66D454D5,
+	InvaderPlayer_PlayerMovement_m8ED036959A4B0B887B40536C6CA1803124A29331,
+	InvaderPlayer_PlayerAttack_m13BB76662FF6233E291486FB6A72701793666206,
+	InvaderPlayer_Start_m47686A8A67E887A422B5197B7188C7C70DB0125B,
 	InvaderPlayer_Update_m596453141D0DE476ACFFCE8C2F5969D9E2B5143A,
 	InvaderPlayer_MoveLeft_m7038DB1E9E250A4CD3EAB4C326A91B078F7F623C,
 	InvaderPlayer_MoveRight_m8F314F3AA403D4E7A772B3325E2F614AD254E418,
@@ -409,7 +419,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] =
 	{ 0x0600000E, U3CStartU3Ed__1_MoveNext_mCAE593CD30BACB5A07D4FE12B896A9D420F5AB6E_AdjustorThunk },
 	{ 0x0600000F, U3CStartU3Ed__1_SetStateMachine_m08FFE91F97BF22E53072189CF59DA393230B096B_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[191] = 
+static const int32_t s_InvokerIndices[197] = 
 {
 	7398,
 	7398,
@@ -466,8 +476,8 @@ static const int32_t s_InvokerIndices[191] =
 	11458,
 	7398,
 	7398,
-	7398,
-	7398,
+	0,
+	0,
 	7398,
 	7398,
 	7398,
@@ -574,6 +584,12 @@ static const int32_t s_InvokerIndices[191] =
 	7398,
 	7398,
 	7398,
+	11387,
+	7140,
+	7398,
+	7398,
+	7398,
+	7398,
 	7398,
 	7398,
 	7398,
@@ -603,21 +619,32 @@ static const int32_t s_InvokerIndices[191] =
 	5971,
 	7398,
 };
+static const Il2CppTokenRangePair s_rgctxIndices[1] = 
+{
+	{ 0x02000013, { 0, 2 } },
+};
+extern const uint32_t g_rgctx_Optional_1_t25468D0BE4A31FDC94D87F153BF3F2AC2F8D11FF;
+extern const uint32_t g_rgctx_T_tA6B1907605C4F07AA51DDA90BE1C5CA20937C3A4;
+static const Il2CppRGCTXDefinition s_rgctxValues[2] = 
+{
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Optional_1_t25468D0BE4A31FDC94D87F153BF3F2AC2F8D11FF },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_tA6B1907605C4F07AA51DDA90BE1C5CA20937C3A4 },
+};
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	191,
+	197,
 	s_methodPointers,
 	6,
 	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
 	NULL,
-	0,
-	NULL,
-	0,
-	NULL,
+	1,
+	s_rgctxIndices,
+	2,
+	s_rgctxValues,
 	NULL,
 	NULL,
 	NULL,

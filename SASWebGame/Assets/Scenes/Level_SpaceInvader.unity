@@ -2441,6 +2441,7 @@ MonoBehaviour:
   isGameStarted: 0
   invaderGenerator: {fileID: 806193479}
   playerScore: 0
+  moveButtons: {fileID: 687389762}
 --- !u!1 &1106466503
 GameObject:
   m_ObjectHideFlags: 0

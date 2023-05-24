@@ -10,17 +10,17 @@ public class SceneInfo
     
 }
 
+public struct Optional<T>
+{
+    [SerializeField] private bool enabled;
+    [SerializeField] private T value;
+
+    public bool Enabled => enabled;
+    public T Value => value;
+    
+}
+
+
 public class PublicMethods : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -37,8 +37,7 @@ public class SpaceInvaderManager : MonoBehaviour
         
         if (PlayerStatus.m_Instance.CheckReceivedSPReward() == false)
         {
-            PlayerPrefs.SetInt("spStatus",0); 
-            
+            PlayerPrefs.SetInt("spStatus",0);
         }
         
         m_Analytics.SPLoseCustomEvent(m_player.playerScore);

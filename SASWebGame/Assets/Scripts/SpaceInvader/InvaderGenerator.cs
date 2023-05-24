@@ -49,9 +49,14 @@ public class InvaderGenerator : MonoBehaviour
         }
     }
 
+    private Vector3 _leftEdge;
+    private Vector3 _rightEdge;
     private void Start()
     {
         isGameStarted = false;
+        
+        _leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        _rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
     }
 
     // Called by the IncaderPlayer
@@ -64,10 +69,8 @@ public class InvaderGenerator : MonoBehaviour
     
     private void Update()
     {
+        if(isGameStarted==false)    return;
         this.transform.position += direction * (speed.Evaluate(percentKilled) * Time.deltaTime);
-
-        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
 
         foreach (Transform invader in this.transform)
         {
@@ -76,10 +79,10 @@ public class InvaderGenerator : MonoBehaviour
                 continue;
             }
 
-            if(direction == Vector3.right && invader.position.x >= (rightEdge.x-1f))
+            if(direction == Vector3.right && invader.position.x >= (_rightEdge.x-1f))
             {
                 AdvanceRow();
-            }else if(direction == Vector3.left && invader.position.x <= (leftEdge.x + 1f))
+            }else if(direction == Vector3.left && invader.position.x <= (_leftEdge.x + 1f))
             {
                 AdvanceRow();
             }
