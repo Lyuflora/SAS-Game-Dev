@@ -24004,11 +24004,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 592880071}
   - {fileID: 366016765}
   - {fileID: 2117327736}
   - {fileID: 105285221}
   - {fileID: 268676907}
+  - {fileID: 592880071}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24079,7 +24079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -25}
+  m_AnchoredPosition: {x: -62, y: -25}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592880072
@@ -27071,7 +27071,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 72
     y: 163
-    width: 86
+    width: 85.42857
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -27126,7 +27126,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 72
     y: 209
-    width: 71
+    width: 70.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -27181,7 +27181,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 270
     y: 178
-    width: 111
+    width: 110.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
