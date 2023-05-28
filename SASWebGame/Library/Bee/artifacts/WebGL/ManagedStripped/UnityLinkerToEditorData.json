@@ -236,7 +236,9 @@
           },
           {
             "name": "LightProbes",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Map_Prototype.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

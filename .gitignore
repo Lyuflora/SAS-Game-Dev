@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+/Library/Bee/artifacts/WebGL/GameAssembly/master_WebGL_wasm/GameAssembly.a
+/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a
+/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/libburst-Ilvm-14.dylib

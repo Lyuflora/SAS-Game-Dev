@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +23,10 @@ public class InvaderPlayer : MonoBehaviour
     public int playerScore;
 
     [SerializeField] private GameObject moveButtons;
+
+    private Vector2 screenBounds;
+    private float objectWidth;
+    private float objectHeight;
     
     public void ToggleGameStart()
     {
@@ -98,6 +103,14 @@ public class InvaderPlayer : MonoBehaviour
     private void Start()
     {
         EnableOrDisableButtonsBasedOnPlatform();
+        
+        // Screen Bounds
+        screenBounds =
+            Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        Debug.Log("screenbounds: "+screenBounds);
+
+        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x/2;
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y/2;
     }
 
     private void Update()
@@ -134,6 +147,15 @@ public class InvaderPlayer : MonoBehaviour
             SpaceInvaderManager.m_Instance.LoseSpaceInvader();
         }
         #endregion
+    }
+
+    private void LateUpdate()
+    {
+        // Screen Bounds
+        Vector3 viewPos = transform.position;
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x *(- 1f) + objectWidth, screenBounds.x - objectWidth);
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y *(- 1f) + objectHeight, screenBounds.y - objectHeight);
+        transform.position = viewPos;
     }
 
     public void MoveLeft()
