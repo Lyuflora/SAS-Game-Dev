@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using Fungus;
 
 public class MapSpot : MonoBehaviour, IClickable
 {
@@ -12,6 +14,11 @@ public class MapSpot : MonoBehaviour, IClickable
     [SerializeField] private Color m_Disabled;
 
     private bool m_IsActive;
+
+    [SerializeField]
+    private string blockName;
+
+    public UnityEvent mapSpotEvent;
     
     private void Awake()
     {
@@ -60,8 +67,11 @@ public class MapSpot : MonoBehaviour, IClickable
     {
         m_SpriteRenderer.color = m_Press;
         Debug.Log("go" + this.name);
-        
-        SpotManager.m_Instance.TryEnterSpot(this);
+        mapSpotEvent.Invoke();
+        // SpotManager.m_Instance.TryEnterSpot(this);
+
+        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
+        SpotManager.m_Instance.SetCurSpot(this);
     }
 
     public void ExitInteract()

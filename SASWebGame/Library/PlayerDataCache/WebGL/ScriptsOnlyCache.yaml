@@ -63,6 +63,7 @@ ScriptsOnlyBuild:
     - Fungus.Say
     - Fungus.SayDialog
     - Fungus.SetSayDialog
+    - Fungus.SetSprite
     - Fungus.SetText
     - Fungus.ShowSprite
     - Fungus.Stage
@@ -70,6 +71,9 @@ ScriptsOnlyBuild:
     - Fungus.Writer
     - Fungus.WriterAudio
     FungusEditor.dll:
+    - Fungus.EditorUtils.BlockEditor
+    - Fungus.EditorUtils.BlockInspector
+    - Fungus.EditorUtils.FlowchartWindow
     - Fungus.EditorUtils.FungusEditorResources
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
@@ -132,8 +136,6 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -152,10 +154,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -317,17 +317,17 @@ ScriptsOnlyBuild:
     fullTypeName: SceneSwitcher
     methodName: LoadScene
   - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: SwitchPauseStatus
-  - assembly: Assembly-CSharp
     fullTypeName: SceneSwitcher
     methodName: LoadScene
   - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadSpaceInvaderScene
+  - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: SwitchPauseStatus
   - assembly: Assembly-CSharp
-    fullTypeName: SceneSwitcher
-    methodName: LoadSpaceInvaderScene
+    fullTypeName: PauseMenu
+    methodName: SwitchPauseStatus
   - assembly: Assembly-CSharp
     fullTypeName: SceneSwitcher
     methodName: LoadScene
@@ -602,6 +602,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1974}
     - Class: 114
       Script: {instanceID: 2298}
+    - Class: 114
+      Script: {instanceID: 2518}
     - Class: 114
       Script: {instanceID: 2530}
     - Class: 114
@@ -4294,4 +4296,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Opening.unity
   - Assets/Scenes/Map_Prototype.unity
   - Assets/Scenes/Level_SpaceInvader.unity
-  playerPath: E:/Github/Work/SAS-Game-Dev/Builds/v1.13_Stampbook
+  playerPath: E:/Github/Work/SAS-Game-Dev/Builds/v1.14_720 SIZE
