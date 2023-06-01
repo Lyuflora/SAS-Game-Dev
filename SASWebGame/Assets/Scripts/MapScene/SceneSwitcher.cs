@@ -29,7 +29,7 @@ public class SceneSwitcher : MonoBehaviour
     IEnumerator LoadSceneByName()
     {
         transtionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(sceneName);
     }
 }

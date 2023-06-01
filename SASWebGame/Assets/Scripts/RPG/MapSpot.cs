@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Fungus;
+using SAS;
 
 public class MapSpot : MonoBehaviour, IClickable
 {
@@ -19,11 +20,15 @@ public class MapSpot : MonoBehaviour, IClickable
     private string blockName;
 
     public UnityEvent mapSpotEvent;
-    
+    [SerializeField] private Optional<TravelEvent> travelEvent = new Optional<TravelEvent>();
     private void Awake()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    #region MouseEvent Handler
+
+    
 
     public void Init(bool isActive)
     {
@@ -62,18 +67,25 @@ public class MapSpot : MonoBehaviour, IClickable
         if(m_IsActive)
             ExitInteract();
     }
+    #endregion
 
     public void Interact()
     {
         m_SpriteRenderer.color = m_Press;
         Debug.Log("go" + this.name);
-        mapSpotEvent.Invoke();
+
         // SpotManager.m_Instance.TryEnterSpot(this);
 
-        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
         SpotManager.m_Instance.SetCurSpot(this);
+        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
+        
+        
     }
 
+    public Optional<TravelEvent> GetTravelEvent()
+    {
+        return this.travelEvent;
+    }
     public void ExitInteract()
     {
         m_SpriteRenderer.color = m_Normal;
