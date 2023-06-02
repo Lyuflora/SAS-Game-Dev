@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Spot3
   m_EditorClassIdentifier: 
   spotPict: {fileID: -339495058, guid: 83fdfc2ef1db8644bb0c1a9d49ad4586, type: 3}
-  initialStatus: 0
+  status: 3
   comments: 

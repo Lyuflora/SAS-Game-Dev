@@ -12,19 +12,25 @@ public class SpotManager : MonoBehaviour
     public static SpotManager m_Instance;
 
     [FormerlySerializedAs("m_SpotInfoList")] public List<MapSpot> m_SpotList;
-    [SerializeField] private MapSpot currentSpot;
+    public MapSpot CurrentSpot { get; set; }
     [SerializeField] private MapSpot firstSpot;
     public Flowchart spotFlowchart;
+
+    [Header("Spot Marker Sprites")]
+    public Sprite check;
+    public Sprite question;
+
+    public GameObject player;
 
     private void Awake()
     {
         m_Instance = this;
-        InitializeSpots();
+        
     }
 
     public void Start()
     {
-        
+        InitializeSpots();
     }
 
     // set spots initial status
@@ -33,10 +39,16 @@ public class SpotManager : MonoBehaviour
         foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
         {
             spotPreset.spotInfo.status = spotPreset.statusPreset;
+            Debug.Log(spotPreset.spotInfo.status);
         }
         
         // set the first spot
         SetCurSpot(firstSpot);
+
+        foreach (var spot in m_SpotList)
+        {
+            spot.Init();
+        }
     }
 
     #region What happens after clicking on a Spot
@@ -44,7 +56,7 @@ public class SpotManager : MonoBehaviour
     public void SetCurSpot(MapSpot spot)
     {
         Debug.Log(spot.name);
-        currentSpot = spot;
+        CurrentSpot = spot;
     }
 
     // Here is the start, called by fungus
@@ -52,15 +64,15 @@ public class SpotManager : MonoBehaviour
     {
         // should find the spot-scene relation
         // do some changes...
-        currentSpot.mapSpotEvent.Invoke();
+        CurrentSpot.mapSpotEvent.Invoke();
         
     }
 
     public void TriggerTravelEvent()
     {
-        if (currentSpot.GetTravelEvent().Enabled)
+        if (CurrentSpot.GetTravelEvent().Enabled)
         {
-            ShowPopupEvent(currentSpot.GetTravelEvent().Value);
+            ShowPopupEvent(CurrentSpot.GetTravelEvent().Value);
         }
     }
 
@@ -74,5 +86,10 @@ public class SpotManager : MonoBehaviour
         SceneSwitcher.m_Instance.LoadSpaceInvaderScene();
     }
 
+    public void SetPlayerPos(Vector3 r_position)
+    {
+        player.transform.position = r_position;
+        player.GetComponent<Animator>().SetTrigger("Hooray");
+    }
     #endregion
 }

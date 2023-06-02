@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -91,6 +93,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -339,7 +353,7 @@ TextureImporter:
       name: character_11
       rect:
         serializedVersion: 2
-        x: 208
+        x: 216
         y: 224
         width: 16
         height: 32
@@ -352,27 +366,6 @@ TextureImporter:
       bones: []
       spriteID: 31796f8213445c04e9b9a3f87a700685
       internalID: -395179913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_12
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 224
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e566307f246adec47b47bc85e212ca12
-      internalID: 1171981449
       vertices: []
       indices: 
       edges: []
@@ -1753,87 +1746,86 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      character_0: -562005904
+      character_1: -196517429
+      character_10: -1989864173
+      character_11: -395179913
+      character_12: 1171981449
+      character_13: 1309846925
+      character_14: -95515947
+      character_15: 688336470
+      character_16: -138810568
+      character_17: 1561329176
+      character_18: 1789684205
+      character_19: -533578818
       character_2: 626344024
       character_20: -199644804
-      character_31: 239524020
-      character_18: 1789684205
-      character_38: -1895146793
-      character_6: -1500001261
-      character_26: -1657136611
-      character_10: -1989864173
-      character_51: -920592611
-      character_19: -533578818
-      character_72: 948732125
-      character_12: 1171981449
-      character_16: -138810568
-      character_28: 2060569393
-      character_61: -1570246560
-      character_37: 845141071
-      character_27: -1187853760
-      character_23: -92941954
-      character_35: -2101903593
-      character_24: -297732157
-      character_60: 1521850575
-      character_73: 2136640545
-      character_46: -460030175
-      character_68: -446401962
-      character_13: 1309846925
-      character_65: 193954302
-      character_75: -45071547
-      character_3: 117927713
-      character_52: -618815671
-      character_55: -2056554810
-      character_29: 479822722
-      character_4: 128744253
-      character_8: -1439293993
-      character_7: -758195630
-      character_25: -189658151
-      character_41: -1477324833
-      character_48: 452296195
-      character_64: 1367358351
-      character_66: -1444489077
-      character_63: 1891580656
-      character_33: 2080509807
-      character_49: -890827712
-      character_74: 149837173
-      character_30: -91705930
       character_21: 1469036969
-      character_11: -395179913
-      character_40: 140912645
-      character_69: 1096939250
-      character_15: 688336470
-      character_59: -1731299342
-      character_53: -695642629
-      character_71: 1412344695
-      character_1: -196517429
-      character_5: 759675737
-      character_77: 1690865826
-      character_67: 1251512275
-      character_14: -95515947
-      character_47: -1786559888
-      character_76: -1705448141
-      character_32: 1453292573
-      character_50: 55605503
-      character_56: -2136069816
-      character_0: -562005904
-      character_9: 1069889289
       character_22: -1037614102
-      character_42: 1939366317
+      character_23: -92941954
+      character_24: -297732157
+      character_25: -189658151
+      character_26: -1657136611
+      character_27: -1187853760
+      character_28: 2060569393
+      character_29: 479822722
+      character_3: 117927713
+      character_30: -91705930
+      character_31: 239524020
+      character_32: 1453292573
+      character_33: 2080509807
       character_34: 326602441
-      character_39: -147271907
-      character_45: -1544232585
+      character_35: -2101903593
       character_36: -918286651
-      character_54: -1331985493
-      character_17: 1561329176
-      character_44: -22783205
-      character_58: -383624289
+      character_37: 845141071
+      character_38: -1895146793
+      character_39: -147271907
+      character_4: 128744253
+      character_40: 140912645
+      character_41: -1477324833
+      character_42: 1939366317
       character_43: 1275192504
-      character_70: 238099530
+      character_44: -22783205
+      character_45: -1544232585
+      character_46: -460030175
+      character_47: -1786559888
+      character_48: 452296195
+      character_49: -890827712
+      character_5: 759675737
+      character_50: 55605503
+      character_51: -920592611
+      character_52: -618815671
+      character_53: -695642629
+      character_54: -1331985493
+      character_55: -2056554810
+      character_56: -2136069816
       character_57: 954188245
+      character_58: -383624289
+      character_59: -1731299342
+      character_6: -1500001261
+      character_60: 1521850575
+      character_61: -1570246560
       character_62: 1467872106
-  spritePackingTag: 
+      character_63: 1891580656
+      character_64: 1367358351
+      character_65: 193954302
+      character_66: -1444489077
+      character_67: 1251512275
+      character_68: -446401962
+      character_69: 1096939250
+      character_7: -758195630
+      character_70: 238099530
+      character_71: 1412344695
+      character_72: 948732125
+      character_73: 2136640545
+      character_74: 149837173
+      character_75: -45071547
+      character_76: -1705448141
+      character_77: 1690865826
+      character_8: -1439293993
+      character_9: 1069889289
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
