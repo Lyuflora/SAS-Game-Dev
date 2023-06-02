@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,64 +8,82 @@ using SAS;
 
 public class MapSpot : MonoBehaviour, IClickable
 {
+    [SerializeField] private SpotInfo m_SpotInfo;
     public SpriteRenderer m_SpriteRenderer;
+    public SpriteRenderer m_Marker;
 
     [SerializeField] private Color m_Normal;
     [SerializeField] private Color m_Hover;
     [SerializeField] private Color m_Press;
     [SerializeField] private Color m_Disabled;
-
-    private bool m_IsActive;
-
+    
     [SerializeField]
-    private string blockName;
+    public SpotStatus m_Status { get; set; }
+    [SerializeField] private string blockName;
 
     public UnityEvent mapSpotEvent;
     [SerializeField] private Optional<TravelEvent> travelEvent = new Optional<TravelEvent>();
     private void Awake()
     {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     #region MouseEvent Handler
 
-    
-
-    public void Init(bool isActive)
+    private void Start()
     {
-        m_IsActive = isActive;
-        if (!isActive)
+        Init();
+    }
+
+    public void Init()
+    {
+        m_Status = m_SpotInfo.status;
+        if (m_Status==SpotStatus.Locked)
         {
             m_SpriteRenderer.color = m_Disabled;
+            m_Marker.enabled = true;
             Debug.Log("not active "+ this.name);
+        }
+        else if(m_Status==SpotStatus.Unvisited)
+        {
+            m_SpriteRenderer.color = m_Normal;
+            m_Marker.enabled = true;
         }
         else
         {
-            m_SpriteRenderer.color = m_Normal;
+            // do something
+            m_Marker.enabled = false;
         }
     }
     
     private void OnMouseEnter()
     {
-        if(m_IsActive)
+        if (m_Status != SpotStatus.Locked)
+        {
             m_SpriteRenderer.color = m_Hover;
+            Debug.Log("Hovering");
+        }
+        else
+        {
+            Debug.Log("locked!");
+        }
     }
 
     private void OnMouseDown()
     {
-        if(m_IsActive)
+        if(m_Status!=SpotStatus.Locked)
             Interact();
     }
 
     private void OnMouseUpAsButton()
     {
-        if(m_IsActive)
+        if(m_Status!=SpotStatus.Locked)
             ExitInteract();
     }
 
     private void OnMouseExit()
     {
-        if(m_IsActive)
+        if(m_Status!=SpotStatus.Locked)
             ExitInteract();
     }
     #endregion

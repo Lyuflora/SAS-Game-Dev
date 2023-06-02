@@ -8,30 +8,14 @@ namespace SAS {
     
     public class Manifest : ScriptableObject
     {
-        public static Manifest m_Instance;
-
-        public List<SpotFound> m_Preset;
-
-        private void Awake()
-        {
-            m_Instance = this;
-        }
-        
-        public void Start()
-        {
-        }
+        public List<SpotPreset> m_Preset;
 
     }
     [Serializable]
-    public class SpotFound
+    public class SpotPreset
     {
-        public SpotInfo spot;
-        public bool isActivePreset;
+        public SpotInfo spotInfo;
+        public SpotStatus statusPreset;
     }
-    [Serializable]
-    public class PlayerHistory
-    {
-        public List<SpotInfo> spotVisitingRecord;
-        public bool preset;
-    }
+
 }

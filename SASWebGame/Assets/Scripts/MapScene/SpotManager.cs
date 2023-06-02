@@ -7,38 +7,36 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[Serializable]
-public class SpotInfo
-{
-    public MapSpot m_Spot;
-    public bool isActive;
-}
-
 public class SpotManager : MonoBehaviour
 {
     public static SpotManager m_Instance;
 
-    public List<SpotInfo> m_SpotInfoList;
+    [FormerlySerializedAs("m_SpotInfoList")] public List<MapSpot> m_SpotList;
     [SerializeField] private MapSpot currentSpot;
+    [SerializeField] private MapSpot firstSpot;
     public Flowchart spotFlowchart;
 
     private void Awake()
     {
         m_Instance = this;
+        InitializeSpots();
     }
 
     public void Start()
     {
-        InitializeSpots();
+        
     }
 
     // set spots initial status
     public void InitializeSpots()
     {
-        foreach (var spotInfo in m_SpotInfoList)
+        foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
         {
-            spotInfo.m_Spot.Init(spotInfo.isActive);
+            spotPreset.spotInfo.status = spotPreset.statusPreset;
         }
+        
+        // set the first spot
+        SetCurSpot(firstSpot);
     }
 
     #region What happens after clicking on a Spot

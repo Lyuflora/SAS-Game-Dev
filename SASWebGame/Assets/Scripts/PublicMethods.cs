@@ -11,6 +11,14 @@ public class SceneInfo
     private string m_SceneName;
     
 }
+[Serializable]
+public enum SpotStatus
+{
+    Unvisited=0,
+    Visited,
+    Active,
+    Locked,
+}
 
 [Serializable]
 public struct Optional<T>
