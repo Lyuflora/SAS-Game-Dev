@@ -17,23 +17,21 @@ public class MapSpot : MonoBehaviour, IClickable
     [SerializeField] private Color m_Hover;
     [SerializeField] private Color m_Press;
     [SerializeField] private Color m_Disabled;
-    
-    [SerializeField]
-    public SpotStatus m_Status { get; set; }
+
+    [SerializeField] public SpotStatus m_Status { get; set; }
     [SerializeField] private string blockName;
 
     public UnityEvent mapSpotEvent;
     [SerializeField] private Optional<TravelEvent> travelEvent = new Optional<TravelEvent>();
+
     private void Awake()
     {
-        
     }
 
     #region MouseEvent Handler
 
     private void Start()
     {
-        
     }
 
     public void Init()
@@ -44,84 +42,102 @@ public class MapSpot : MonoBehaviour, IClickable
 
     public void SetSpotLook()
     {
-        if (m_Status==SpotStatus.Locked)
+        if (m_Status == SpotStatus.Locked)
         {
             m_SpriteRenderer.color = m_Disabled;
             m_Marker.enabled = true;
             m_Marker.sprite = SpotManager.m_Instance.question;
-            Debug.Log("not active "+ this.name);
+            Debug.Log("not active " + this.name);
         }
-        else if(m_Status==SpotStatus.Unvisited)
+        else if (m_Status == SpotStatus.Unvisited)
         {
             m_SpriteRenderer.color = m_Normal;
             m_Marker.enabled = true;
             m_Marker.sprite = SpotManager.m_Instance.question;
         }
-        else if(m_Status==SpotStatus.Active)
+        else if (m_Status == SpotStatus.Active)
         {
             m_Marker.enabled = false;
             // set player position
             SpotManager.m_Instance.SetPlayerPos(m_PlayerTrans.position);
         }
-        else if(m_Status==SpotStatus.Visited)
+        else if (m_Status == SpotStatus.Visited)
         {
             m_Marker.enabled = true;
             m_Marker.sprite = SpotManager.m_Instance.check;
         }
     }
+
     private void OnMouseEnter()
     {
-        if (m_Status != SpotStatus.Locked)
+        if (CanInteractSpot())
         {
             m_SpriteRenderer.color = m_Hover;
-            
         }
 
-            Debug.Log(m_Status);
+        // Debug.Log(m_Status);
+    }
 
+    private bool CanInteractSpot()
+    {
+        return (m_Status != SpotStatus.Locked &&
+                PlayerStatus.m_Instance.GetInteractionStatus() == IntStatus.canInteract);
     }
 
     private void OnMouseDown()
     {
-        if(m_Status!=SpotStatus.Locked)
+        if (CanInteractSpot())
             Interact();
     }
 
     private void OnMouseUpAsButton()
     {
-        if(m_Status!=SpotStatus.Locked)
+        if (CanInteractSpot())
             ExitInteract();
     }
 
     private void OnMouseExit()
     {
-        if(m_Status!=SpotStatus.Locked)
+        if (CanInteractSpot())
             ExitInteract();
     }
+
     #endregion
 
     public void Interact()
     {
         m_SpriteRenderer.color = m_Press;
         Debug.Log("go" + this.name);
+        PlayerStatus.m_Instance.DisableInteraction();
 
         // SpotManager.m_Instance.TryEnterSpot(this);
         m_Status = SpotStatus.Active;
         SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
         SpotManager.m_Instance.CurrentSpot.SetSpotLook();
-        
+
         SpotManager.m_Instance.CurrentSpot = this;
         this.m_Status = SpotStatus.Active;
         this.SetSpotLook();
-        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
+
+        // spot dialogue
+        StartCoroutine(nameof(ExecuteSpotBlock));
+
     }
 
     public Optional<TravelEvent> GetTravelEvent()
     {
         return this.travelEvent;
     }
+
     public void ExitInteract()
     {
         m_SpriteRenderer.color = m_Normal;
+    }
+
+    IEnumerator ExecuteSpotBlock()
+    {
+        yield return new WaitForSeconds(.5f);
+        m_SpriteRenderer.color = m_Normal;
+        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
     }
 }

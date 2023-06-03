@@ -16,6 +16,8 @@ public class SpotManager : MonoBehaviour
     [SerializeField] private MapSpot firstSpot;
     public Flowchart spotFlowchart;
 
+    [Header("Event UI")] public TravelEventUI travelEventUI;
+    
     [Header("Spot Marker Sprites")]
     public Sprite check;
     public Sprite question;
@@ -79,6 +81,8 @@ public class SpotManager : MonoBehaviour
     private void ShowPopupEvent(TravelEvent targetEvent)
     {
         Debug.Log(targetEvent.eventTitle);
+        
+        travelEventUI.Popup();
     }
     
     public void EnterSpaceInvader()

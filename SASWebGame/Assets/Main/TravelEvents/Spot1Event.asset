@@ -15,4 +15,7 @@ MonoBehaviour:
   eventPict: {fileID: 21300000, guid: c5e645a724e17b54dbd838cf4d856bcd, type: 3}
   eventTitle: Zombies!!
   eventText: Defeat the zombies, and survive.
-  OptionList: []
+  eventOptionBlock: Spot1_Event
+  OptionList:
+  - option: Go!
+    block: Spot1 AfterEventTrigger

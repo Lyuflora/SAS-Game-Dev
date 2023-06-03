@@ -22,10 +22,12 @@ public class StampBook : MonoBehaviour
     public void Popup()
     {
         animator.SetBool("Open", true);
+        PlayerStatus.m_Instance.DisableInteraction();
     }
     public void Close()
     {
         animator.SetBool("Open", false);
+        PlayerStatus.m_Instance.EnableInteraction();
     }
     public void InitialState()
     {

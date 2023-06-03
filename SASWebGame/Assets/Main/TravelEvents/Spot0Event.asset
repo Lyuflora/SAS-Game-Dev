@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Spot0Event
   m_EditorClassIdentifier: 
   eventPict: {fileID: 21300000, guid: f6cd0e526987d6e4895536cfbafcb8ad, type: 3}
-  eventTitle: 
+  eventTitle: Zombie Alert
   eventText: 'You''ve encountered a bunch of zombies, but they don''t seem to be
     aggressive.
 
     Perhaps there''s some kind of divine protection at play.'
+  eventOptionBlock: Spot0_Event
   OptionList: []

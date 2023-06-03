@@ -17,8 +17,9 @@ MonoBehaviour:
   eventText: There might be a lot of things related to 'movies' inside. It could
     be a good opportunity for everyone to learn something new. But there might be
     a lot of zombies ahead. Are you ready to take the risk and see what lies ahead?
+  eventOptionBlock: Spot2_Event
   OptionList:
   - option: Bravely Go
-    block: Go
+    block: Spot2_Go
   - option: Don't go
-    block: Not Go
+    block: Spot2_Not Go

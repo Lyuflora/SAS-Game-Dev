@@ -14,10 +14,17 @@ public class SceneInfo
 [Serializable]
 public enum SpotStatus
 {
-    Unvisited=0,
+    Unvisited = 0,
     Visited,
     Active,
     Locked,
+}
+
+[Serializable]
+public enum IntStatus
+{
+    canInteract = 0,
+    disabled,
 }
 
 [Serializable]
@@ -39,8 +46,8 @@ public struct Optional<T>
 [Serializable]
 public struct TravelEventOption
 {
-    [SerializeField] private string option;
-    [SerializeField] private string block;
+    [SerializeField] public string option;
+    [SerializeField] public string block;
 }
 public class PublicMethods : MonoBehaviour
 {

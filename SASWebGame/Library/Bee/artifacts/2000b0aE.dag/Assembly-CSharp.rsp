@@ -374,6 +374,7 @@
 "Assets/Scripts/CloudData/UGS_Analytics.cs"
 "Assets/Scripts/DebugToUIManager.cs"
 "Assets/Scripts/Manifest/Manifest.cs"
+"Assets/Scripts/MapScene/AudioManager.cs"
 "Assets/Scripts/MapScene/IClickable.cs"
 "Assets/Scripts/MapScene/MapUIManager.cs"
 "Assets/Scripts/MapScene/PlayerStatus.cs"
