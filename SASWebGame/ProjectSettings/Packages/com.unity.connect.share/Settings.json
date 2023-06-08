@@ -14,7 +14,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"E:/Github/Work/SAS-Game-Dev/Builds/v1.14_720 SIZE;E:/Github/Work/SAS-Game-Dev/Builds/v1.13_Stampbook;E:/Github/Work/SAS-Game-Dev/Builds/v1.11_platform_default;E:/Github/Work/SAS-Game-Dev/Builds/v1.12_platform_Bzip;E:/Github/Work/SAS-Game-Dev/Builds/Test10_4_3_ratio;E:/Github/Work/SAS-Game-Dev/Builds/Test7_itch_record;E:/Github/Work/SAS-Game-Dev/Builds/Test7;E:/Github/Work/SAS-Game-Dev/Builds/Test6;E:/Github/Work/SAS-Game-Dev/Builds/Test4_webgl;E:/Github/Work/SAS-Game-Dev/Builds/test3_analytics/Test_Opening\"}"
+                "value": "{\"m_Value\":\"E:/导出临时点/SAS/Build;E:/Github/Work/SAS-Game-Dev/Builds/v1.14_720 SIZE;E:/Github/Work/SAS-Game-Dev/Builds/v1.13_Stampbook;E:/Github/Work/SAS-Game-Dev/Builds/v1.11_platform_default;E:/Github/Work/SAS-Game-Dev/Builds/v1.12_platform_Bzip;E:/Github/Work/SAS-Game-Dev/Builds/Test10_4_3_ratio;E:/Github/Work/SAS-Game-Dev/Builds/Test7_itch_record;E:/Github/Work/SAS-Game-Dev/Builds/Test7;E:/Github/Work/SAS-Game-Dev/Builds/Test6;E:/Github/Work/SAS-Game-Dev/Builds/Test4_webgl\"}"
             }
         ]
     }

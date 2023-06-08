@@ -383,6 +383,7 @@
 "Assets/Scripts/MapScene/SpotManager.cs"
 "Assets/Scripts/MapScene/Spots/SpotInfo.cs"
 "Assets/Scripts/MapScene/StampBook.cs"
+"Assets/Scripts/MapScene/TestJPEGDownload.cs"
 "Assets/Scripts/Opening/OpeningManager.cs"
 "Assets/Scripts/Others/App.cs"
 "Assets/Scripts/Others/PauseMenu.cs"
