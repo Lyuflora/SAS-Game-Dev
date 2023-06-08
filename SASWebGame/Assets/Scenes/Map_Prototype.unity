@@ -124,18 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &56666005 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3520099629771572991, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
-    type: 3}
-  m_PrefabInstance: {fileID: 268676906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1feae1550284ce549ada2a30ea9bf0c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &105285220
 GameObject:
   m_ObjectHideFlags: 0
@@ -16012,7 +16000,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 56666005}
+      objectReference: {fileID: 268676913}
     - target: {fileID: 3865732062275414484, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -16033,6 +16021,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5421853098322057403, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
+        type: 3}
+      propertyPath: stamp
+      value: 
+      objectReference: {fileID: 279602266}
+    - target: {fileID: 5593649527468650257, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 268676912}
     - target: {fileID: 7978801387180961345, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -16135,6 +16133,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &268676913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5593649527468650257, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 268676906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268676911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1feae1550284ce549ada2a30ea9bf0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &279602264
 GameObject:
   m_ObjectHideFlags: 0
@@ -30527,7 +30537,7 @@ PrefabInstance:
     - target: {fileID: 1020469318884497320, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
       propertyPath: m_Name
-      value: PixelButton
+      value: StampbookButton
       objectReference: {fileID: 0}
     - target: {fileID: 1170989283078238682, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
@@ -30538,7 +30548,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 56666005}
+      objectReference: {fileID: 268676913}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Popup
+      objectReference: {fileID: 0}
     - target: {fileID: 8217125520239036961, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
       propertyPath: m_Pivot.x

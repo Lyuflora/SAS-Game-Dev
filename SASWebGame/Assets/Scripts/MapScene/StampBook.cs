@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class StampBook : MonoBehaviour
 {
     [SerializeField] float pageSpeed = 0.5f;
     [SerializeField] List<Transform> pages;
-    int index = -1;
+    [SerializeField] int index = -1;
     bool rotate = false;
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
@@ -108,6 +109,8 @@ public class StampBook : MonoBehaviour
 
         }
     }
+
+
 
 
 }
