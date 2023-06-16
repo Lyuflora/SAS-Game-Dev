@@ -38,6 +38,18 @@
             "icon": null
           },
           {
+            "name": "Avatar",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AvatarMask",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Motion",
             "scenes": [],
             "dependencyType": 1,
@@ -48,6 +60,12 @@
             "scenes": [],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
           }
         ]
       },
@@ -112,6 +130,12 @@
             ],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
           }
         ]
       },
@@ -524,6 +548,12 @@
             "icon": "package/com.unity.modules.audio"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by Grid Module",
             "scenes": [],
             "dependencyType": 2,
@@ -534,6 +564,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.imgui"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -552,6 +588,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -664,6 +706,17 @@
         ]
       },
       {
+        "name": "Director",
+        "dependencies": [
+          {
+            "name": "PlayableDirector",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "Grid",
         "dependencies": [
           {
@@ -698,6 +751,10 @@
             "icon": "package/com.unity.modules.uielements"
           }
         ]
+      },
+      {
+        "name": "ImageConversion",
+        "dependencies": []
       },
       {
         "name": "Input",
@@ -765,6 +822,23 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.xr"
+          }
+        ]
+      },
+      {
+        "name": "ParticleSystem",
+        "dependencies": [
+          {
+            "name": "ParticleSystem",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "ParticleSystemRenderer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
           }
         ]
       },
@@ -881,6 +955,12 @@
             "icon": "package/com.unity.modules.core"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by Grid Module",
             "scenes": [],
             "dependencyType": 2,
@@ -891,6 +971,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.imgui"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -909,6 +995,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",

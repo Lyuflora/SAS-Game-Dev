@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - Aris.Utils.DebugToUIManager
     - Bunker
@@ -18,7 +16,6 @@ ScriptsOnlyBuild:
     - PlayerController
     - PlayerStatus
     - Projectile
-    - Readme
     - RewardUIManager
     - SAS.App
     - SAS.Manifest
@@ -28,6 +25,7 @@ ScriptsOnlyBuild:
     - SpotInfo
     - SpotManager
     - StampBook
+    - TestJPEGDownload
     - TravelEventUI
     - UGS_Analytics
     Fungus:
@@ -145,7 +143,10 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRendererData
     - UnityEngine.Rendering.Universal.XRSystemData
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -161,6 +162,8 @@ ScriptsOnlyBuild:
     - TimelinePreferences
     - UnityEditor.Timeline.SequenceHierarchy
     - UnityEditor.Timeline.TimelineWindow
+    Unity.Timeline.dll:
+    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -322,9 +325,6 @@ ScriptsOnlyBuild:
     methodName: ResetDebugManager
   - assembly: Assembly-CSharp
     fullTypeName: StampBook
-    methodName: Popup
-  - assembly: Assembly-CSharp
-    fullTypeName: StampBook
     methodName: Close
   - assembly: Assembly-CSharp
     fullTypeName: StampBook
@@ -333,6 +333,9 @@ ScriptsOnlyBuild:
     fullTypeName: StampBook
     methodName: RotateForward
   - assembly: Assembly-CSharp
+    fullTypeName: StampBook
+    methodName: Popup
+  - assembly: Assembly-CSharp
     fullTypeName: SpotManager
     methodName: TriggerTravelEvent
   - assembly: Assembly-CSharp
@@ -347,15 +350,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: SwitchPauseStatus
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: SwitchPauseStatus
-  - assembly: Assembly-CSharp
-    fullTypeName: SceneSwitcher
-    methodName: LoadScene
   - assembly: Assembly-CSharp
     fullTypeName: SceneSwitcher
     methodName: LoadSpaceInvaderScene
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: SwitchPauseStatus
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadScene
   - assembly: Assembly-CSharp
     fullTypeName: SceneSwitcher
     methodName: LoadScene
@@ -421,6 +424,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5926}
     - Class: 114
+      Script: {instanceID: 7448}
+    - Class: 114
       Script: {instanceID: 7548}
     - Class: 114
       Script: {instanceID: 8914}
@@ -443,11 +448,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13442}
     - Class: 114
-      Script: {instanceID: 13990}
+      Script: {instanceID: 13994}
     - Class: 114
-      Script: {instanceID: 14068}
+      Script: {instanceID: 14072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -590,13 +595,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 12838}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13566}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 13748}
+      Script: {instanceID: 13570}
+    - Class: 114
+      Script: {instanceID: 13752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -855,11 +862,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13608}
     - Class: 114
-      Script: {instanceID: 13922}
+      Script: {instanceID: 13926}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1105,7 +1112,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: 02710a998d9700bc22dd0df8958a2cdb
+      Hash: 1cfc6ef9392f52608c50cf9df824a803
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StampBook
@@ -4069,6 +4076,12 @@ ScriptsOnlyBuild:
     className: Vector4Variable
   - hash:
       serializedVersion: 2
+      Hash: 4dc4ed5b81abee77f755c96fcf2095d0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TestJPEGDownload
+  - hash:
+      serializedVersion: 2
       Hash: cbeae481a2d84852b10934497de78d29
     assemblyName: FungusExamples
     namespaceName: Fungus.Examples
@@ -4408,4 +4421,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Opening.unity
   - Assets/Scenes/Map_Prototype.unity
   - Assets/Scenes/Level_SpaceInvader.unity
-  playerPath: "E:/\u5BFC\u51FA\u4E34\u65F6\u70B9/SAS/Build"
+  playerPath: E:/Github/Work/SAS-Game-Dev/Builds/v1.17_AdjustWinUI

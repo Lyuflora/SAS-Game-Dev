@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.2/staging' branch; Version is '2022.2.15f1 (30d813e1a2a9) revision 3201043'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'zh' Physical Memory: 65327 MB
+OS: 'Windows 10  (10.0.19045) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16151 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-E:\_Software\Unity\2022.2.15f1\Editor\Unity.exe
+D:\Programs\Unity\Unity Editors\2022.2.15f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-E:/Git/SAS-Game-Dev/SASWebGame
+E:/Github/Work/SAS-Game-Dev/SASWebGame
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-2453
-Successfully changed project path to: E:/Git/SAS-Game-Dev/SASWebGame
-E:/Git/SAS-Game-Dev/SASWebGame
+5266
+Successfully changed project path to: E:/Github/Work/SAS-Game-Dev/SASWebGame
+E:/Github/Work/SAS-Game-Dev/SASWebGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,63 +47,63 @@ E:/Git/SAS-Game-Dev/SASWebGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [54056] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1995070064 [EditorId] 1995070064 [Version] 1048832 [Id] WindowsEditor(7,ALEKS-WIN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10092] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1521324265 [EditorId] 1521324265 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [54056] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1995070064 [EditorId] 1995070064 [Version] 1048832 [Id] WindowsEditor(7,ALEKS-WIN) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10092] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1521324265 [EditorId] 1521324265 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 12.99 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 17.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.15f1 (30d813e1a2a9)
-[Subsystems] Discovering subsystems at path E:/_Software/Unity/2022.2.15f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/Git/SAS-Game-Dev/SASWebGame/Assets
+[Subsystems] Discovering subsystems at path D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Github/Work/SAS-Game-Dev/SASWebGame/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
     Vendor:   NVIDIA
-    VRAM:     12010 MB
-    Driver:   31.0.15.2849
+    VRAM:     6023 MB
+    Driver:   31.0.15.1694
 Initialize mono
-Mono path[0] = 'E:/_Software/Unity/2022.2.15f1/Editor/Data/Managed'
-Mono path[1] = 'E:/_Software/Unity/2022.2.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'E:/_Software/Unity/2022.2.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Mono path[0] = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/_Software/Unity/2022.2.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: E:/_Software/Unity/2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003563 seconds.
-- Loaded All Assemblies, in  0.322 seconds
+Register platform support module: D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.017911 seconds.
+- Loaded All Assemblies, in  0.356 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.268 seconds
+- Finished resetting the current domain, in  0.207 seconds
 Domain Reload Profiling:
-	ReloadAssembly (190ms)
-		BeginReloadAssembly (100ms)
+	ReloadAssembly (223ms)
+		BeginReloadAssembly (118ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (99ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (129ms)
-				TypeCache.Initialize (128ms)
-					TypeCache.ScanAssembly (126ms)
+			SetupTypeCache (116ms)
+				TypeCache.Initialize (116ms)
+					TypeCache.ScanAssembly (114ms)
 				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (213ms)
+			SetupLoadedEditorAssemblies (162ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (149ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				ProcessInitializeOnLoadAttributes (111ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -111,187 +111,51 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-0000020659FFB710 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A128010 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A16F7B0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.AI.Navigation.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020659FFB710 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Burst.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657E02220 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0011C0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0011C0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0157D0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0157D0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A5F8010 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A62F620 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658313010 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A15B030 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Authentication.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.CloudSave.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\PPv2URPConverters.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658345A20 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020659CA4420 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Burst.CodeGen.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0257E0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A54C020 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576E4BE0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576E4BE0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576E6DF0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A564630 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A564630 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A564630 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Burst.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576152A0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576EB250 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A564630 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576EB250 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576F8D70 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576EB250 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658368050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206576EB250 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658368050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657791580 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A57C440 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657E29010 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020659E3D620 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657E7A420 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000206577F2F60 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A5A0050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020659E3D620 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658368050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Analytics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020634BE66D0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657E7A420 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658368050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Authentication.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020658368050 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A729850 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020634BE66D0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.InternalAPIEditorBridgeDev.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020634BE66D0 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A729850 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020657E8A830 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0F3E50 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0F3E50 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0F3E50 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.CloudSave.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A0FE020 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A747460 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A755470 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.Play.Publisher.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A755470 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002065A755470 doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\ScriptAssemblies\Unity.ShaderGraph.Utilities.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image E:\Git\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.776 seconds
-Refreshing native plugins compatible for Editor in 1.96 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.783 seconds
+Refreshing native plugins compatible for Editor in 3.56 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.775 seconds
+- Finished resetting the current domain, in  0.552 seconds
 Domain Reload Profiling:
-	ReloadAssembly (191ms)
-		BeginReloadAssembly (116ms)
+	ReloadAssembly (223ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		LoadAllAssembliesAndSetupDomain (586ms)
-			LoadAssemblies (325ms)
+			CreateAndSetChildDomain (19ms)
+		LoadAllAssembliesAndSetupDomain (556ms)
+			LoadAssemblies (353ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (314ms)
-				TypeCache.Initialize (269ms)
-					TypeCache.ScanAssembly (261ms)
-				ResolveRequiredComponents (14ms)
+			SetupTypeCache (278ms)
+				TypeCache.Initialize (243ms)
+					TypeCache.ScanAssembly (238ms)
+				ResolveRequiredComponents (12ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (601ms)
+			SetupLoadedEditorAssemblies (409ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (5ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (3ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (94ms)
-				ProcessInitializeOnLoadAttributes (393ms)
-				ProcessInitializeOnLoadMethodAttributes (101ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (255ms)
+				ProcessInitializeOnLoadMethodAttributes (64ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
-Refreshing native plugins compatible for Editor in 3.48 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 3.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6347 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 82 unused Assets / (78.8 KB). Loaded Objects now: 6804.
-Memory consumption went from 224.3 MB to 224.2 MB.
-Total: 9.112300 ms (FindLiveObjects: 1.515300 ms CreateObjectMapping: 1.974300 ms MarkObjects: 5.135900 ms  DeleteObjects: 0.484800 ms)
+Unloading 6349 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 83 unused Assets / (79.5 KB). Loaded Objects now: 6805.
+Memory consumption went from 224.1 MB to 224.0 MB.
+Total: 3.481500 ms (FindLiveObjects: 0.445600 ms CreateObjectMapping: 0.231700 ms MarkObjects: 2.651800 ms  DeleteObjects: 0.151500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -301,14 +165,92 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3290830.686989 seconds.
-  path: Assets/Scripts/MapScene/Spots/SpotInfos/Spot0.asset
-  artifactKey: Guid(f40a127c7dc1a9d4eb2badb363121e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MapScene/Spots/SpotInfos/Spot0.asset using Guid(f40a127c7dc1a9d4eb2badb363121e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e1125bcbaaf78b83405b1bbf8bd1a3') in 0.030964 seconds
+  Time since last request: 149994.500625 seconds.
+  path: Assets/_ArtAssets
+  artifactKey: Guid(135255f028f2b23439b9217430003f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets using Guid(135255f028f2b23439b9217430003f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2221a08829d6acd612c0a9bfdb1c93e0') in 0.002827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(8105016687592461f977c054a80ce2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(8105016687592461f977c054a80ce2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b11e6936975384c89f4f7e6268c69a') in 0.009079 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.856999 seconds.
+  path: Assets/_ArtAssets/Temp_Assets/Spot.png
+  artifactKey: Guid(6bbd8d9fa95d5d740b399e13c43753d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Temp_Assets/Spot.png using Guid(6bbd8d9fa95d5d740b399e13c43753d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea095795fdf3072a7b5f493e45aa49f7') in 0.076514 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 2.359881 seconds.
+  path: Assets/_ArtAssets/StampBook/cardAugust.png
+  artifactKey: Guid(83a893c88bca92a408b3c0c198d0f261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardAugust.png using Guid(83a893c88bca92a408b3c0c198d0f261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7284193ede232602e48b991f25e759fd') in 0.010697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/_ArtAssets/StampBook/cardFebruary.png
+  artifactKey: Guid(df80e47bfdf146c458407a28b39f7b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardFebruary.png using Guid(df80e47bfdf146c458407a28b39f7b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fa23eccdd072b3dcaaeecee161e1c6b') in 0.034674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/_ArtAssets/StampBook/cardDecember.png
+  artifactKey: Guid(3457875160b301d41ada6a9433f60156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardDecember.png using Guid(3457875160b301d41ada6a9433f60156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4283577ef8bbb20795bdb4f9610a6ee6') in 0.032074 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/_ArtAssets/StampBook/cover.png
+  artifactKey: Guid(c297874db4036754fb6b1a6fa1315024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cover.png using Guid(c297874db4036754fb6b1a6fa1315024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcc7b44cb7ac91c013d6d256f86562d') in 0.039395 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/_ArtAssets/StampBook/cardJuly.png
+  artifactKey: Guid(d0a69e39a5a745f40a0aedf8e8516bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardJuly.png using Guid(d0a69e39a5a745f40a0aedf8e8516bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa24b2c2c77e8eb259be8211fe6c71be') in 0.007539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/_ArtAssets/StampBook/cardNovember.png
+  artifactKey: Guid(fc5f58ee932daff4db07e878d09581d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardNovember.png using Guid(fc5f58ee932daff4db07e878d09581d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eacfd8dd47ebb1b388ce0b908ae9c36') in 0.021912 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_ArtAssets/StampBook/cardJanuary.png
+  artifactKey: Guid(95ba015a1fac40946bd7998b5105902c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardJanuary.png using Guid(95ba015a1fac40946bd7998b5105902c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66130a7b0ac257eda1cbd6c6db41d3c0') in 0.017444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -140,4 +140,9 @@ public class MapSpot : MonoBehaviour, IClickable
         m_SpriteRenderer.color = m_Normal;
         SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
     }
+
+    public SpotInfo GetSpotInfo()
+    {
+        return m_SpotInfo;
+    }
 }

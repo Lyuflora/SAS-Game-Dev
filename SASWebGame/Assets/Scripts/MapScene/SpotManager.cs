@@ -11,7 +11,7 @@ public class SpotManager : MonoBehaviour
 {
     public static SpotManager m_Instance;
 
-    [FormerlySerializedAs("m_SpotInfoList")] public List<MapSpot> m_SpotList;
+    public List<MapSpot> m_SpotList;
     public MapSpot CurrentSpot { get; set; }
     [SerializeField] private MapSpot firstSpot;
     public Flowchart spotFlowchart;
@@ -23,6 +23,8 @@ public class SpotManager : MonoBehaviour
     public Sprite question;
 
     public GameObject player;
+    public SaveInfoNewer SaveInfo;
+ 
 
     private void Awake()
     {
@@ -33,9 +35,25 @@ public class SpotManager : MonoBehaviour
     public void Start()
     {
         InitializeSpots();
+        // load
+        SaveInfoNewer.m_Instance.LoadData();
+        foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
+        {
+            if (SaveInfoNewer.m_Instance.data.ContainsKey(spotPreset.spotInfo.name))
+            {
+                spotPreset.spotInfo.status = SaveInfoNewer.m_Instance.data[spotPreset.spotInfo.name];
+            }
+            else
+            {
+                spotPreset.spotInfo.status = SpotStatus.Unvisited;
+                    SaveInfoNewer.m_Instance.data.Add(spotPreset.spotInfo.name, SpotStatus.Unvisited);
+            }
+        }
+
     }
 
     // set spots initial status
+    // Use the Reset Button
     public void InitializeSpots()
     {
         foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
@@ -67,7 +85,9 @@ public class SpotManager : MonoBehaviour
         // should find the spot-scene relation
         // do some changes...
         CurrentSpot.mapSpotEvent.Invoke();
-        
+
+        SaveAKey();
+        SaveSpotHistory(CurrentSpot.GetSpotInfo());
     }
 
     public void TriggerTravelEvent()
@@ -88,6 +108,7 @@ public class SpotManager : MonoBehaviour
     public void EnterSpaceInvader()
     {
         SceneSwitcher.m_Instance.LoadSpaceInvaderScene();
+        SaveActiveSpot(CurrentSpot.GetSpotInfo());
     }
 
     public void SetPlayerPos(Vector3 r_position)
@@ -95,5 +116,36 @@ public class SpotManager : MonoBehaviour
         player.transform.position = r_position;
         player.GetComponent<Animator>().SetTrigger("Hooray");
     }
+    #endregion
+
+    #region SaveMapHistory
+
+
+    void SaveAKey()
+    {
+        
+    }
+    
+    void SaveSpotHistory(SpotInfo spotInfo)
+    {
+        if (SaveInfoNewer.m_Instance.data.ContainsKey(spotInfo.name))
+        {
+            SaveInfoNewer.m_Instance.data[spotInfo.name] = SpotStatus.Visited;
+        }
+        else
+        {
+            SaveInfoNewer.m_Instance.data.Add(spotInfo.name, SpotStatus.Visited);
+            
+        }
+        Debug.Log(SaveInfoNewer.m_Instance.data[spotInfo.name]);
+        SaveInfoNewer.m_Instance.SaveData();
+    }
+
+    void SaveActiveSpot(SpotInfo spotInfo)
+    {
+        SaveInfoNewer.m_Instance.data.Add(spotInfo.name, SpotStatus.Active);
+        SaveInfoNewer.m_Instance.SaveData();
+    }    
+
     #endregion
 }

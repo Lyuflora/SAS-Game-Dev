@@ -14,10 +14,10 @@ public class SceneInfo
 [Serializable]
 public enum SpotStatus
 {
-    Unvisited = 0,
-    Visited,
-    Active,
-    Locked,
+    Unvisited = 0,  // not visited
+    Visited,    // visited, but not current
+    Active, // current
+    Locked, // not available *
 }
 
 [Serializable]
