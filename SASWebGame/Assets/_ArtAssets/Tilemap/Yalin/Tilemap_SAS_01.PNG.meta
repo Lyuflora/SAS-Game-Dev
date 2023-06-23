@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -1784,7 +1786,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1805,7 +1807,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1826,7 +1828,7 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1834,6 +1836,27 @@ TextureImporter:
       bones: []
       spriteID: 109799d4d7b2e9443b1db527b68c8dc5
       internalID: -84218036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_01_82
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32553977b97bd0342b8d98ef1b1f4001
+      internalID: 1614651319
       vertices: []
       indices: 
       edges: []
@@ -1849,91 +1872,91 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tilemap_SAS_01_34: -1577009869
-      Tilemap_SAS_01_13: 1704244186
-      Tilemap_SAS_01_37: 68900380
-      Tilemap_SAS_01_60: 240529425
-      Tilemap_SAS_01_43: 1957241409
-      Tilemap_SAS_01_50: -1477786241
-      Tilemap_SAS_01_81: -84218036
-      Tilemap_SAS_01_27: -1168201222
-      Tilemap_SAS_01_12: -946314235
-      Tilemap_SAS_01_23: 1077766927
-      Tilemap_SAS_01_69: 1569102561
-      Tilemap_SAS_01_2: 1027742675
-      Tilemap_SAS_01_66: -558802099
-      Tilemap_SAS_01_26: -862510624
-      Tilemap_SAS_01_48: -1448265550
+      Tilemap_SAS_01_0: 366683960
+      Tilemap_SAS_01_1: 846033470
       Tilemap_SAS_01_10: 1108504391
-      Tilemap_SAS_01_52: -867529316
-      Tilemap_SAS_01_9: -1225551784
-      Tilemap_SAS_01_21: 31057403
-      Tilemap_SAS_01_67: 566492427
-      Tilemap_SAS_01_7: 1216745692
-      Tilemap_SAS_01_16: 89406254
-      Tilemap_SAS_01_36: 485169674
-      Tilemap_SAS_01_58: -737733303
-      Tilemap_SAS_01_70: -1870459757
+      Tilemap_SAS_01_11: -1196312173
+      Tilemap_SAS_01_12: -946314235
+      Tilemap_SAS_01_13: 1704244186
+      Tilemap_SAS_01_14: 558924647
       Tilemap_SAS_01_15: -2089644220
-      Tilemap_SAS_01_71: -461753890
-      Tilemap_SAS_01_80: 550790445
-      Tilemap_SAS_01_79: -1425759823
-      Tilemap_SAS_01_59: -339495058
+      Tilemap_SAS_01_16: 89406254
+      Tilemap_SAS_01_17: -1780413401
+      Tilemap_SAS_01_18: -1434269580
+      Tilemap_SAS_01_19: -975680260
+      Tilemap_SAS_01_2: 1027742675
+      Tilemap_SAS_01_20: -1275243106
+      Tilemap_SAS_01_21: 31057403
+      Tilemap_SAS_01_22: -1905520950
+      Tilemap_SAS_01_23: 1077766927
+      Tilemap_SAS_01_24: 1684517320
+      Tilemap_SAS_01_25: -1066521402
+      Tilemap_SAS_01_26: -862510624
+      Tilemap_SAS_01_27: -1168201222
+      Tilemap_SAS_01_28: 1975034133
+      Tilemap_SAS_01_29: 1150423332
+      Tilemap_SAS_01_3: 957826807
+      Tilemap_SAS_01_30: 66777223
+      Tilemap_SAS_01_31: 1951112563
+      Tilemap_SAS_01_32: 654348249
+      Tilemap_SAS_01_33: 63256200
+      Tilemap_SAS_01_34: -1577009869
+      Tilemap_SAS_01_35: -1387228784
+      Tilemap_SAS_01_36: 485169674
+      Tilemap_SAS_01_37: 68900380
+      Tilemap_SAS_01_38: -1890004093
+      Tilemap_SAS_01_39: 1918114266
+      Tilemap_SAS_01_4: 19258009
+      Tilemap_SAS_01_40: 1879959705
+      Tilemap_SAS_01_41: 34128021
+      Tilemap_SAS_01_42: -1319665863
+      Tilemap_SAS_01_43: 1957241409
+      Tilemap_SAS_01_44: 840357646
+      Tilemap_SAS_01_45: -68831564
+      Tilemap_SAS_01_46: -1320947105
+      Tilemap_SAS_01_47: -516358684
+      Tilemap_SAS_01_48: -1448265550
+      Tilemap_SAS_01_49: 1546149872
+      Tilemap_SAS_01_5: 1649806788
+      Tilemap_SAS_01_50: -1477786241
+      Tilemap_SAS_01_51: -569131193
+      Tilemap_SAS_01_52: -867529316
+      Tilemap_SAS_01_53: -982850367
+      Tilemap_SAS_01_54: 1101001603
       Tilemap_SAS_01_55: -2094510574
       Tilemap_SAS_01_56: 1532221097
-      Tilemap_SAS_01_74: 1715612055
+      Tilemap_SAS_01_57: -398789853
+      Tilemap_SAS_01_58: -737733303
+      Tilemap_SAS_01_59: -339495058
+      Tilemap_SAS_01_6: 1093694147
+      Tilemap_SAS_01_60: 240529425
+      Tilemap_SAS_01_61: -995464148
+      Tilemap_SAS_01_62: 794407702
+      Tilemap_SAS_01_63: -919192362
+      Tilemap_SAS_01_64: 498336202
+      Tilemap_SAS_01_65: 146763177
+      Tilemap_SAS_01_66: -558802099
+      Tilemap_SAS_01_67: 566492427
+      Tilemap_SAS_01_68: -1192642490
+      Tilemap_SAS_01_69: 1569102561
+      Tilemap_SAS_01_7: 1216745692
+      Tilemap_SAS_01_70: -1870459757
+      Tilemap_SAS_01_71: -461753890
       Tilemap_SAS_01_72: -1213746913
-      Tilemap_SAS_01_46: -1320947105
-      Tilemap_SAS_01_1: 846033470
-      Tilemap_SAS_01_17: -1780413401
-      Tilemap_SAS_01_53: -982850367
+      Tilemap_SAS_01_73: -2031468434
+      Tilemap_SAS_01_74: 1715612055
       Tilemap_SAS_01_75: 1559719674
       Tilemap_SAS_01_76: 1181717661
-      Tilemap_SAS_01_31: 1951112563
-      Tilemap_SAS_01_0: 366683960
-      Tilemap_SAS_01_19: -975680260
-      Tilemap_SAS_01_6: 1093694147
-      Tilemap_SAS_01_51: -569131193
-      Tilemap_SAS_01_63: -919192362
-      Tilemap_SAS_01_24: 1684517320
-      Tilemap_SAS_01_65: 146763177
-      Tilemap_SAS_01_30: 66777223
-      Tilemap_SAS_01_78: 1558533925
-      Tilemap_SAS_01_42: -1319665863
-      Tilemap_SAS_01_44: 840357646
-      Tilemap_SAS_01_62: 794407702
-      Tilemap_SAS_01_73: -2031468434
-      Tilemap_SAS_01_35: -1387228784
-      Tilemap_SAS_01_45: -68831564
-      Tilemap_SAS_01_22: -1905520950
-      Tilemap_SAS_01_54: 1101001603
-      Tilemap_SAS_01_5: 1649806788
-      Tilemap_SAS_01_39: 1918114266
-      Tilemap_SAS_01_20: -1275243106
-      Tilemap_SAS_01_47: -516358684
-      Tilemap_SAS_01_57: -398789853
-      Tilemap_SAS_01_29: 1150423332
-      Tilemap_SAS_01_61: -995464148
-      Tilemap_SAS_01_11: -1196312173
-      Tilemap_SAS_01_14: 558924647
-      Tilemap_SAS_01_33: 63256200
-      Tilemap_SAS_01_18: -1434269580
-      Tilemap_SAS_01_40: 1879959705
-      Tilemap_SAS_01_68: -1192642490
-      Tilemap_SAS_01_8: -1613499734
-      Tilemap_SAS_01_4: 19258009
-      Tilemap_SAS_01_38: -1890004093
-      Tilemap_SAS_01_28: 1975034133
-      Tilemap_SAS_01_41: 34128021
-      Tilemap_SAS_01_3: 957826807
-      Tilemap_SAS_01_49: 1546149872
-      Tilemap_SAS_01_32: 654348249
-      Tilemap_SAS_01_25: -1066521402
-      Tilemap_SAS_01_64: 498336202
       Tilemap_SAS_01_77: 1255357966
-  spritePackingTag: 
+      Tilemap_SAS_01_78: 1558533925
+      Tilemap_SAS_01_79: -1425759823
+      Tilemap_SAS_01_8: -1613499734
+      Tilemap_SAS_01_80: 550790445
+      Tilemap_SAS_01_81: -84218036
+      Tilemap_SAS_01_82: 1614651319
+      Tilemap_SAS_01_9: -1225551784
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
