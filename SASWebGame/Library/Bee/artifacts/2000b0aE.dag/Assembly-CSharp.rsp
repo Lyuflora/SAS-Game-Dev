@@ -399,6 +399,7 @@
 "Assets/Scripts/RPG/PickUp.cs"
 "Assets/Scripts/RPG/PlayerController.cs"
 "Assets/Scripts/SavePlayerData/SaveInfoNewer.cs"
+"Assets/Scripts/SavePlayerData/SaveSerial.cs"
 "Assets/Scripts/SheetData/FormData.cs"
 "Assets/Scripts/SheetData/TextInputHandler.cs"
 "Assets/Scripts/SpaceInvader/Bunker.cs"

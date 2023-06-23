@@ -58,6 +58,7 @@ extern void SpotManager_get_CurrentSpot_m45055C1859246C23178707554177C286BB64FF0
 extern void SpotManager_set_CurrentSpot_m5DF4F2DC825E7EFE9C6751A86775BED479EAB53B (void);
 extern void SpotManager_Awake_m51ED539B7A786E2C6103F2082AE6AFCC59276E80 (void);
 extern void SpotManager_Start_m9848EFABCD1F5A17EA575C5F3D2636093FB819D4 (void);
+extern void SpotManager_UsePreset_m8553F4A39F00DEB7F59E4EB7C99EA37ED36278E1 (void);
 extern void SpotManager_InitializeSpots_mEA6DC94D37E6B09A1375DD6057BF95E39130307F (void);
 extern void SpotManager_SetCurSpot_mADC6CC91F07B8F809C5922771372B6C1003EBE7F (void);
 extern void SpotManager_TryEnterSpot_m2A102FC2CFEED9F4EA4E5C689B6278E50FFDF402 (void);
@@ -69,6 +70,12 @@ extern void SpotManager_SaveAKey_mE97558C728134AFB856CAF38FB338E4304A62858 (void
 extern void SpotManager_SaveSpotHistory_mEC35385D2ED823982AFB4483EC8B3870F77F5621 (void);
 extern void SpotManager_SaveActiveSpot_mE7593683DDE4AA7539810D2EAD3EABF338D8E75F (void);
 extern void SpotManager__ctor_mAB2385B2D0EC154B0324DE84FDCFC0250FD48CCE (void);
+extern void U3CUsePresetU3Ed__15__ctor_m9002D046A60AD333E2AD3B627090A18E5CBDC47D (void);
+extern void U3CUsePresetU3Ed__15_System_IDisposable_Dispose_mCAED3C45CAA1ED7FB4295304F18C2644B198532D (void);
+extern void U3CUsePresetU3Ed__15_MoveNext_m648CCCF50402426DC59CE01370D9E46B9B7780DA (void);
+extern void U3CUsePresetU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m63294980C907253A3367DEC283CC3BC23625560F (void);
+extern void U3CUsePresetU3Ed__15_System_Collections_IEnumerator_Reset_m7A5E40A2A6AFC18A566331FABA3311E04ECFAD81 (void);
+extern void U3CUsePresetU3Ed__15_System_Collections_IEnumerator_get_Current_m975A498EDEC4347CBABDFE1927ED67D6DEDA95BE (void);
 extern void SpotInfo__ctor_m6A33DC69C96E9188B591FF27356FB47BDB68097F (void);
 extern void StampBook_Start_m2FC77A748A6E3D1F189DA68E9B539ACAA7C569D6 (void);
 extern void StampBook_Popup_mA8EC4EAB1A81FE921172E68CD015DC7AE674693A (void);
@@ -191,6 +198,12 @@ extern void SaveInfoNewer_Awake_mE7D26B1A4762DF44D2C0ABD5DE851518861494D0 (void)
 extern void SaveInfoNewer_LoadData_m7D751206B6F2EBA88AB7E83B8EE7C3060B6FBC5A (void);
 extern void SaveInfoNewer_SaveData_m749523A2ABF184256F8C6FCCB4328B252E583A62 (void);
 extern void SaveInfoNewer__ctor_mA40A86FC1AB0EAEAD4C46FB52F7B807C0B6F624D (void);
+extern void SaveSerial_OnGUI_m7B12D4D89670B28DFF2ABFE761ACC29F82C4DDAB (void);
+extern void SaveSerial_SaveGame_mAED453FB532357A63F49BE70C12DB636556DEB2B (void);
+extern void SaveSerial_LoadGame_m8C7CA26F9875415E407F77A8ED286AED8A603670 (void);
+extern void SaveSerial_ResetData_mBF33C2C6E7645DD7E3B9AD5FA8F773B431810D3D (void);
+extern void SaveSerial__ctor_mB4BBDE73C1261256D9A1C1373F47BBE2873B71FF (void);
+extern void SaveData__ctor_m921322C7493A73E1469536431062F942C19A03EA (void);
 extern void FormData_get_Instance_mCE53EF6E038A65F541A4A94730D1DC8EEBB1301A (void);
 extern void FormData_Awake_mC1918BD861BDD39BF03A225BE29B593DD35B10BA (void);
 extern void FormData_FillForm_mBBAFECEA06D7D31B5D24DD518D38439B719EA5AE (void);
@@ -278,7 +291,7 @@ extern void SpotPreset__ctor_mB62D7F09115B74B65280172DB36E5DC25D118A55 (void);
 extern void App_Awake_mAA3B69F8C82A87839C9BCF7DDFFA58929BB7B18A (void);
 extern void App_GetLevel1Preset_mAF19CBEE12F7A36826265955EC8CF5840BDBC3B2 (void);
 extern void App__ctor_m091C7A9FF43E18DA3102D59F133EEEC2EBCC1BCC (void);
-static Il2CppMethodPointer s_methodPointers[274] = 
+static Il2CppMethodPointer s_methodPointers[287] = 
 {
 	InitWithDefault_Start_m57BBFBF876A01907CECC270B79990B6834DC7530,
 	InitWithDefault__ctor_m063BA086BF30E89E6B3C3D85EA82903FE1C2BC89,
@@ -328,6 +341,7 @@ static Il2CppMethodPointer s_methodPointers[274] =
 	SpotManager_set_CurrentSpot_m5DF4F2DC825E7EFE9C6751A86775BED479EAB53B,
 	SpotManager_Awake_m51ED539B7A786E2C6103F2082AE6AFCC59276E80,
 	SpotManager_Start_m9848EFABCD1F5A17EA575C5F3D2636093FB819D4,
+	SpotManager_UsePreset_m8553F4A39F00DEB7F59E4EB7C99EA37ED36278E1,
 	SpotManager_InitializeSpots_mEA6DC94D37E6B09A1375DD6057BF95E39130307F,
 	SpotManager_SetCurSpot_mADC6CC91F07B8F809C5922771372B6C1003EBE7F,
 	SpotManager_TryEnterSpot_m2A102FC2CFEED9F4EA4E5C689B6278E50FFDF402,
@@ -339,6 +353,12 @@ static Il2CppMethodPointer s_methodPointers[274] =
 	SpotManager_SaveSpotHistory_mEC35385D2ED823982AFB4483EC8B3870F77F5621,
 	SpotManager_SaveActiveSpot_mE7593683DDE4AA7539810D2EAD3EABF338D8E75F,
 	SpotManager__ctor_mAB2385B2D0EC154B0324DE84FDCFC0250FD48CCE,
+	U3CUsePresetU3Ed__15__ctor_m9002D046A60AD333E2AD3B627090A18E5CBDC47D,
+	U3CUsePresetU3Ed__15_System_IDisposable_Dispose_mCAED3C45CAA1ED7FB4295304F18C2644B198532D,
+	U3CUsePresetU3Ed__15_MoveNext_m648CCCF50402426DC59CE01370D9E46B9B7780DA,
+	U3CUsePresetU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m63294980C907253A3367DEC283CC3BC23625560F,
+	U3CUsePresetU3Ed__15_System_Collections_IEnumerator_Reset_m7A5E40A2A6AFC18A566331FABA3311E04ECFAD81,
+	U3CUsePresetU3Ed__15_System_Collections_IEnumerator_get_Current_m975A498EDEC4347CBABDFE1927ED67D6DEDA95BE,
 	SpotInfo__ctor_m6A33DC69C96E9188B591FF27356FB47BDB68097F,
 	StampBook_Start_m2FC77A748A6E3D1F189DA68E9B539ACAA7C569D6,
 	StampBook_Popup_mA8EC4EAB1A81FE921172E68CD015DC7AE674693A,
@@ -467,6 +487,12 @@ static Il2CppMethodPointer s_methodPointers[274] =
 	NULL,
 	NULL,
 	SaveInfoNewer__ctor_mA40A86FC1AB0EAEAD4C46FB52F7B807C0B6F624D,
+	SaveSerial_OnGUI_m7B12D4D89670B28DFF2ABFE761ACC29F82C4DDAB,
+	SaveSerial_SaveGame_mAED453FB532357A63F49BE70C12DB636556DEB2B,
+	SaveSerial_LoadGame_m8C7CA26F9875415E407F77A8ED286AED8A603670,
+	SaveSerial_ResetData_mBF33C2C6E7645DD7E3B9AD5FA8F773B431810D3D,
+	SaveSerial__ctor_mB4BBDE73C1261256D9A1C1373F47BBE2873B71FF,
+	SaveData__ctor_m921322C7493A73E1469536431062F942C19A03EA,
 	FormData_get_Instance_mCE53EF6E038A65F541A4A94730D1DC8EEBB1301A,
 	FormData_Awake_mC1918BD861BDD39BF03A225BE29B593DD35B10BA,
 	FormData_FillForm_mBBAFECEA06D7D31B5D24DD518D38439B719EA5AE,
@@ -570,7 +596,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] =
 	{ 0x0600000E, U3CStartU3Ed__1_MoveNext_mCAE593CD30BACB5A07D4FE12B896A9D420F5AB6E_AdjustorThunk },
 	{ 0x0600000F, U3CStartU3Ed__1_SetStateMachine_m08FFE91F97BF22E53072189CF59DA393230B096B_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[274] = 
+static const int32_t s_InvokerIndices[287] = 
 {
 	7415,
 	7415,
@@ -620,6 +646,7 @@ static const int32_t s_InvokerIndices[274] =
 	5984,
 	7415,
 	7415,
+	7268,
 	7415,
 	5984,
 	7415,
@@ -631,6 +658,12 @@ static const int32_t s_InvokerIndices[274] =
 	5984,
 	5984,
 	7415,
+	5949,
+	7415,
+	7156,
+	7268,
+	7415,
+	7268,
 	7415,
 	7415,
 	7415,
@@ -648,7 +681,7 @@ static const int32_t s_InvokerIndices[274] =
 	7268,
 	7415,
 	7268,
-	10480,
+	10484,
 	3434,
 	7415,
 	7415,
@@ -663,8 +696,8 @@ static const int32_t s_InvokerIndices[274] =
 	7415,
 	7415,
 	7415,
-	11477,
-	11477,
+	11481,
+	11481,
 	7415,
 	7268,
 	5984,
@@ -759,7 +792,13 @@ static const int32_t s_InvokerIndices[274] =
 	0,
 	0,
 	7415,
-	11432,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	11436,
 	7415,
 	2752,
 	7268,
@@ -769,7 +808,7 @@ static const int32_t s_InvokerIndices[274] =
 	3183,
 	7415,
 	7415,
-	11477,
+	11481,
 	5949,
 	7415,
 	7156,
@@ -810,7 +849,7 @@ static const int32_t s_InvokerIndices[274] =
 	7415,
 	7415,
 	7415,
-	11406,
+	11410,
 	7156,
 	7415,
 	7415,
@@ -835,7 +874,7 @@ static const int32_t s_InvokerIndices[274] =
 	7415,
 	7415,
 	7415,
-	11488,
+	11492,
 	7415,
 	7415,
 	5984,
@@ -849,9 +888,9 @@ static const int32_t s_InvokerIndices[274] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x0200001C, { 0, 2 } },
-	{ 0x060000B9, { 2, 1 } },
-	{ 0x060000BA, { 3, 1 } },
+	{ 0x0200001D, { 0, 2 } },
+	{ 0x060000C0, { 2, 1 } },
+	{ 0x060000C1, { 3, 1 } },
 };
 extern const uint32_t g_rgctx_Optional_1_t25468D0BE4A31FDC94D87F153BF3F2AC2F8D11FF;
 extern const uint32_t g_rgctx_T_tA6B1907605C4F07AA51DDA90BE1C5CA20937C3A4;
@@ -868,7 +907,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	274,
+	287,
 	s_methodPointers,
 	6,
 	s_adjustorThunks,
