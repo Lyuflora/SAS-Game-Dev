@@ -36,21 +36,29 @@ public class SpotManager : MonoBehaviour
     {
         InitializeSpots();
         // load
-        SaveInfoNewer.m_Instance.LoadData();
+        // SaveInfoNewer.m_Instance.LoadData();
+        // StartCoroutine(nameof(UsePreset));
+    }
+
+    IEnumerator UsePreset()
+    {
+        yield return new WaitForSeconds(1f);
         foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
         {
+            Debug.Log("data? "+SaveInfoNewer.m_Instance.data!=null);
+            
             if (SaveInfoNewer.m_Instance.data.ContainsKey(spotPreset.spotInfo.name))
             {
-                spotPreset.spotInfo.status = SaveInfoNewer.m_Instance.data[spotPreset.spotInfo.name];
+                spotPreset.spotInfo.status = (SpotStatus)SaveInfoNewer.m_Instance.data[spotPreset.spotInfo.name];
             }
             else
             {
                 spotPreset.spotInfo.status = SpotStatus.Unvisited;
-                    SaveInfoNewer.m_Instance.data.Add(spotPreset.spotInfo.name, SpotStatus.Unvisited);
+                SaveInfoNewer.m_Instance.data.Add(spotPreset.spotInfo.name, (int)SpotStatus.Unvisited);
             }
         }
-
     }
+    
 
     // set spots initial status
     // Use the Reset Button
@@ -59,7 +67,6 @@ public class SpotManager : MonoBehaviour
         foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
         {
             spotPreset.spotInfo.status = spotPreset.statusPreset;
-            Debug.Log(spotPreset.spotInfo.status);
         }
         
         // set the first spot
@@ -87,7 +94,7 @@ public class SpotManager : MonoBehaviour
         CurrentSpot.mapSpotEvent.Invoke();
 
         SaveAKey();
-        SaveSpotHistory(CurrentSpot.GetSpotInfo());
+        // SaveSpotHistory(CurrentSpot.GetSpotInfo());
     }
 
     public void TriggerTravelEvent()
@@ -130,11 +137,11 @@ public class SpotManager : MonoBehaviour
     {
         if (SaveInfoNewer.m_Instance.data.ContainsKey(spotInfo.name))
         {
-            SaveInfoNewer.m_Instance.data[spotInfo.name] = SpotStatus.Visited;
+            SaveInfoNewer.m_Instance.data[spotInfo.name] = (int)SpotStatus.Visited;
         }
         else
         {
-            SaveInfoNewer.m_Instance.data.Add(spotInfo.name, SpotStatus.Visited);
+            SaveInfoNewer.m_Instance.data.Add(spotInfo.name, (int)SpotStatus.Visited);
             
         }
         Debug.Log(SaveInfoNewer.m_Instance.data[spotInfo.name]);
@@ -143,7 +150,7 @@ public class SpotManager : MonoBehaviour
 
     void SaveActiveSpot(SpotInfo spotInfo)
     {
-        SaveInfoNewer.m_Instance.data.Add(spotInfo.name, SpotStatus.Active);
+        SaveInfoNewer.m_Instance.data.Add(spotInfo.name, (int)SpotStatus.Active);
         SaveInfoNewer.m_Instance.SaveData();
     }    
 

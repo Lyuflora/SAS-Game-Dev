@@ -12,9 +12,11 @@ public class SaveInfoNewer : MonoBehaviour
 {
     // public SlotLoader SlotLoader;
     //data is what is finally saved
-    public Dictionary<string, SpotStatus> data;
+    public Dictionary<string, int> data;
 
     public static SaveInfoNewer m_Instance;
+
+    public string path;
     
     void Awake()
     {
@@ -24,13 +26,12 @@ public class SaveInfoNewer : MonoBehaviour
         //WARNING! data.Clear() deletes EVERYTHING
         //data.Clear();
         //SaveData();
-        data= new Dictionary<string, SpotStatus>();
     }
  
     public void LoadData()
     {
         //this loads the data
-        data = SaveInfoNewer.DeserializeData<Dictionary<string, SpotStatus>>("PleaseWork.save");
+        data = SaveInfoNewer.DeserializeData<Dictionary<string, int>>("PleaseWork.save");
         Debug.Log(data);
     }
  
