@@ -92,8 +92,7 @@ public class SpotManager : MonoBehaviour
         // should find the spot-scene relation
         // do some changes...
         CurrentSpot.mapSpotEvent.Invoke();
-
-        SaveAKey();
+        
         // SaveSpotHistory(CurrentSpot.GetSpotInfo());
     }
 
@@ -127,11 +126,7 @@ public class SpotManager : MonoBehaviour
 
     #region SaveMapHistory
 
-
-    void SaveAKey()
-    {
-        
-    }
+    
     
     void SaveSpotHistory(SpotInfo spotInfo)
     {

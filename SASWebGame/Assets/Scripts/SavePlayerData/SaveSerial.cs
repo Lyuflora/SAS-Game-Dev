@@ -40,6 +40,8 @@ public class SaveSerial : MonoBehaviour
         public int savedInt;
         public float savedFloat;
         public bool savedBool;
+
+        public List<MapSpot> savedSpots;
     }
     
     void SaveGame()
@@ -51,6 +53,9 @@ public class SaveSerial : MonoBehaviour
         data.savedInt = intToSave;
         data.savedFloat = floatToSave;
         data.savedBool = boolToSave;
+
+        // SpotManager.m_Instance.m_SpotList.ForEach(i=>data.savedSpots.Add(i));
+
         bf.Serialize(file, data);
         file.Close();
         Debug.Log("Game data saved!");
