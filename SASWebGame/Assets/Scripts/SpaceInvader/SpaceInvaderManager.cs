@@ -12,6 +12,15 @@ public class SpaceInvaderManager : MonoBehaviour
     public GameObject m_LosePanel;
 
     public UGS_Analytics m_Analytics;
+
+    [Header("Sounds")] 
+    public AudioClip bgm;
+    public AudioClip shootSFX;
+    public AudioClip winSFX;
+    public AudioClip loseSFX;
+    public AudioClip hitSFX;
+    
+    
     private void Awake()
     {
         m_Instance = this;
@@ -21,6 +30,7 @@ public class SpaceInvaderManager : MonoBehaviour
     {
         m_WinPanel.SetActive(false);
         m_LosePanel.SetActive(false);
+        SoundManager.Instance.PlayMusic(bgm);
     }
 
     public void WinSpaceInvader()
