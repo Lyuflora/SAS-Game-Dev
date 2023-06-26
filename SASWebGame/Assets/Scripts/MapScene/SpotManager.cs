@@ -46,7 +46,7 @@ public class SpotManager : MonoBehaviour
                     m_SpotList[i].GetSpotInfo().status = (SpotStatus)(gameDataManager.recordsToSave[i]);
                 else
                 {
-                    m_SpotList[i].GetSpotInfo().status = SpotStatus.Unvisited;
+                    
                 }
             }
             // set the first spot

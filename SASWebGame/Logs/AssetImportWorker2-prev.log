@@ -1,0 +1,408 @@
+Using pre-set license
+Built from '2022.2/staging' branch; Version is '2022.2.15f1 (30d813e1a2a9) revision 3201043'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16151 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Programs\Unity\Unity Editors\2022.2.15f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+E:/Github/Work/SAS-Game-Dev/SASWebGame
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+13524
+Successfully changed project path to: E:/Github/Work/SAS-Game-Dev/SASWebGame
+E:/Github/Work/SAS-Game-Dev/SASWebGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [30372] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 1067471420 [EditorId] 1067471420 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [30372] Host "[IP] 192.168.1.106 [Port] 0 [Flags] 2 [Guid] 1067471420 [EditorId] 1067471420 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 9.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.2.15f1 (30d813e1a2a9)
+[Subsystems] Discovering subsystems at path D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Github/Work/SAS-Game-Dev/SASWebGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   31.0.15.1694
+Initialize mono
+Mono path[0] = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Programs/Unity/Unity Editors/2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011822 seconds.
+- Loaded All Assemblies, in  0.296 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.204 seconds
+Domain Reload Profiling:
+	ReloadAssembly (177ms)
+		BeginReloadAssembly (87ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		LoadAllAssembliesAndSetupDomain (0ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (105ms)
+				TypeCache.Initialize (104ms)
+					TypeCache.ScanAssembly (103ms)
+				ResolveRequiredComponents (0ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (161ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (111ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.637 seconds
+Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.479 seconds
+Domain Reload Profiling:
+	ReloadAssembly (184ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		LoadAllAssembliesAndSetupDomain (451ms)
+			LoadAssemblies (248ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (258ms)
+				TypeCache.Initialize (223ms)
+					TypeCache.ScanAssembly (219ms)
+				ResolveRequiredComponents (12ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (354ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6352 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 83 unused Assets / (80.4 KB). Loaded Objects now: 6810.
+Memory consumption went from 224.4 MB to 224.4 MB.
+Total: 3.501200 ms (FindLiveObjects: 0.428300 ms CreateObjectMapping: 0.212000 ms MarkObjects: 2.706800 ms  DeleteObjects: 0.153000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 162593.154374 seconds.
+  path: Assets/_ArtAssets/Temp_Assets
+  artifactKey: Guid(bf901ee2016a7934f9ff2b2553cea917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Temp_Assets using Guid(bf901ee2016a7934f9ff2b2553cea917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f007d96efb9c2aa65c46af28d26fbbe9') in 0.002503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 36.171911 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_02.png
+  artifactKey: Guid(2b32e765563ec404ca200ad92fbbc42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_02.png using Guid(2b32e765563ec404ca200ad92fbbc42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8355ab90f36b91c20343a9f80aaf3828') in 0.073931 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 241.711853 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb4d3417a69f9a40667df268194f57c') in 0.037002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 18.602752 seconds.
+  path: Assets/_ArtAssets/GUI/GUI.png
+  artifactKey: Guid(9a6f8c77004ba6342877e58c700ab116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/GUI/GUI.png using Guid(9a6f8c77004ba6342877e58c700ab116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0148e837e4adba452d90635927ff4c93') in 0.146509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 97
+========================================================================
+Received Import Request.
+  Time since last request: 255.150057 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24bb0533a273f7786f5f43a79d3a89ae') in 0.043056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 32.089625 seconds.
+  path: Assets/_ArtAssets/FungusUI/SayDialog_Opening.prefab
+  artifactKey: Guid(1101f5e09533a9e4f869b6539c0170e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/SayDialog_Opening.prefab using Guid(1101f5e09533a9e4f869b6539c0170e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3f63aebee659e2282ea3c08b7de7fa0') in 0.020763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 53
+========================================================================
+Received Import Request.
+  Time since last request: 5.628210 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a147126e48a9d50bd044a484e24649') in 0.006480 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 63
+========================================================================
+Received Import Request.
+  Time since last request: 13.753962 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2949ba5ca0b5ecf22edffff56904f294') in 0.003662 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 8.646612 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6fbf87f194e574f4353d0de57341e20') in 0.003500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 4.430803 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f97451fb3877ef2e7ed8b219a2b85e43') in 0.003251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 8.669657 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c8bdda82270baa074fd254c9a787727') in 0.004561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 2.204468 seconds.
+  path: Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab
+  artifactKey: Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/PixelMenuDialog.prefab using Guid(4588b79346011ed4c88e0f6f1a16db0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a472789bf9f23ee4bbb78563dcd85298') in 0.003399 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 64
+========================================================================
+Received Import Request.
+  Time since last request: 89.106922 seconds.
+  path: Assets/_ArtAssets/FungusUI/SayDialog_0 Variant.prefab
+  artifactKey: Guid(c311903127192eb4ea973cd4740a2c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/SayDialog_0 Variant.prefab using Guid(c311903127192eb4ea973cd4740a2c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05711eca1b0ec524a6937cbc1c4cdcc0') in 0.033275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 12.283291 seconds.
+  path: Assets/_ArtAssets/StampBook/cover.png
+  artifactKey: Guid(c297874db4036754fb6b1a6fa1315024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cover.png using Guid(c297874db4036754fb6b1a6fa1315024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcc7b44cb7ac91c013d6d256f86562d') in 0.009986 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.682131 seconds.
+  path: Assets/_ArtAssets/GUI/GUI_1.png
+  artifactKey: Guid(8cef121a7cfcf554695796f003437a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/GUI/GUI_1.png using Guid(8cef121a7cfcf554695796f003437a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a881b8bf149dda7ce6b755603a305c17') in 0.010023 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 7.934642 seconds.
+  path: Assets/_ArtAssets/FungusUI/SayDialog_0 Variant.prefab
+  artifactKey: Guid(c311903127192eb4ea973cd4740a2c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/FungusUI/SayDialog_0 Variant.prefab using Guid(c311903127192eb4ea973cd4740a2c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6236c8a9cfdf289ec21752b54aa1326') in 0.016900 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 66.231559 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0f4386790f66e63a88b5f50031bdd6') in 0.031417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 54.824713 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8020614424760d4ccc77229ad5cc89') in 0.031544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 14.836833 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33cce801548a76273cae73d552ee90a4') in 0.030189 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 9.260069 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7593bb6c7209735e0fe64482627bc72') in 0.032729 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 10.980874 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066b172ca737734319dca75e25300d9b') in 0.042785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 110.467268 seconds.
+  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png
+  artifactKey: Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_03.png using Guid(3d444faa3d372254498625cf991862ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d3c9321ea8e6ab4d70fcc20ceed2d60') in 0.032160 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 5.764159 seconds.
+  path: Assets/_ArtAssets/SpaceInvaders/Sprites/Bunker.png
+  artifactKey: Guid(8b83c0380df4c9843abd512bf5985cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/SpaceInvaders/Sprites/Bunker.png using Guid(8b83c0380df4c9843abd512bf5985cd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fb45860d3fbf19d94e19b28dc15a389') in 0.008062 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/_ArtAssets/StampBook/cardFebruary.png
+  artifactKey: Guid(df80e47bfdf146c458407a28b39f7b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardFebruary.png using Guid(df80e47bfdf146c458407a28b39f7b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fa23eccdd072b3dcaaeecee161e1c6b') in 0.043275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/_ArtAssets/StampBook/cardDecember.png
+  artifactKey: Guid(3457875160b301d41ada6a9433f60156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardDecember.png using Guid(3457875160b301d41ada6a9433f60156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4283577ef8bbb20795bdb4f9610a6ee6') in 0.008856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/_ArtAssets/StampBook/cardOctober.png
+  artifactKey: Guid(c5e645a724e17b54dbd838cf4d856bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardOctober.png using Guid(c5e645a724e17b54dbd838cf4d856bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05febc94c4cae66c49b0be4da51a7d0d') in 0.008624 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/_ArtAssets/StampBook/cardJune.png
+  artifactKey: Guid(f6cd0e526987d6e4895536cfbafcb8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardJune.png using Guid(f6cd0e526987d6e4895536cfbafcb8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39cf9b83156f8666944ccfd936026959') in 0.008249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/_ArtAssets/StampBook/cardJanuary.png
+  artifactKey: Guid(95ba015a1fac40946bd7998b5105902c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardJanuary.png using Guid(95ba015a1fac40946bd7998b5105902c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66130a7b0ac257eda1cbd6c6db41d3c0') in 0.007703 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.677995 seconds.
+  path: Assets/_ArtAssets/StampBook/cardSeptember.png
+  artifactKey: Guid(78f74f15ac884514494b1fb2f5b90616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ArtAssets/StampBook/cardSeptember.png using Guid(78f74f15ac884514494b1fb2f5b90616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c268e6cfe17d354a317d3d425aa76f39') in 0.010311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

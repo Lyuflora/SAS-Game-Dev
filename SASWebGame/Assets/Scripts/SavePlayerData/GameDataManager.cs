@@ -6,6 +6,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.Serialization;
 
+namespace SAS
+{
+    
+
 public class GameDataManager : MonoBehaviour
 {
     
@@ -139,14 +143,14 @@ public class GameDataManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("There is no save data!");
+            Debug.LogError("There is no save data!");
             // create a new save
             recordsToSave = new List<int>();
             recordsToSave.Clear();
+            recordsToSave.Add(1);
             recordsToSave.Add(0);
             recordsToSave.Add(0);
-            recordsToSave.Add(0);
-            recordsToSave.Add(0);
+            recordsToSave.Add(3);
 
             return false;
         }
@@ -163,15 +167,20 @@ public class GameDataManager : MonoBehaviour
             floatToSave = 0.0f;
             boolToSave = false;
             
-            for (int i =1; i < recordsToSave.Count; i++)
+            // for (int i =1; i < recordsToSave.Count; i++)
+            // {
+            //     recordsToSave[i] = 0;
+            // }
+            for (int i=0;i< App.m_Instance.GetLevel1Preset().m_Preset.Count;i++)
             {
-                recordsToSave[i] = 0;
+                recordsToSave[i] = (int)App.m_Instance.GetLevel1Preset().m_Preset[i].statusPreset;
             }
-
+            
             SpotManager.m_Instance.LoadForFirstTime();
             Debug.Log("Data reset complete!");
         }
         else
             Debug.LogWarning("No save data to delete.");
     }
+}
 }

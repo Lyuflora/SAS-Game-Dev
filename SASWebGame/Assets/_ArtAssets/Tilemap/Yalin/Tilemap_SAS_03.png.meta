@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 4
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,18 +117,326 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Stampboo
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 459
+        width: 153
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 24, z: 24, w: 24}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18120028d29a46146b78ca6b22681791
+      internalID: -2085801412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Settings
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 556
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797563d66da040e43ad7e6adb61e8a3f
+      internalID: -1268608807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Reset
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 556
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ef57adbfed8ae4b847fa643d7c4ea8
+      internalID: -1637475975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Stampbook
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 508
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d06a0afea95c8544ac619304afc48d7
+      internalID: 418971670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_DefaultButton
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 432
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 9, z: 9, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816346f24b39c0048a75ddfeec0bb823
+      internalID: -1726812694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 432
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b4752b14dc90447a571d59cb6f7440
+      internalID: 1521614339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_EventPanel
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 283
+        width: 153
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 24, z: 24, w: 24}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ceb9f19e478af45b4e49f09906d486
+      internalID: 525680231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_MenuBtn
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 244
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bef48bd0c92ce40af4eac93edd686b
+      internalID: -1031904146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 244
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4247421c1baf07a479e69506242899ef
+      internalID: 1589316860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 244
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a584a3d91dae24f9279f1ff14236e2
+      internalID: 1333399944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 212
+        width: 97
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13937265b12f30142b09f5477849d7c0
+      internalID: 431101419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_DialogName
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 180
+        width: 97
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 11, z: 24, w: 11}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30d9fd20220a5a41a1ac64d86468e67
+      internalID: -1603615129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Dialogue
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 113
+        width: 242
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 24, z: 24, w: 24}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae2c51f0c8c78b40bc75f42d1c63f02
+      internalID: 2051457054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 28
+        width: 242
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175f1af6ff3a56c41b1614704a6d6ade
+      internalID: 1553103179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6acdee28eaeab5b4a91349c4bad5c3e4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tilemap_SAS_03_10: 431101419
+      Tilemap_SAS_03_13: 1553103179
+      Tilemap_SAS_03_5: 1521614339
+      Tilemap_SAS_03_8: 1589316860
+      Tilemap_SAS_03_9: 1333399944
+      Tilemap_SAS_03_DefaultButton: -1726812694
+      Tilemap_SAS_03_DialogName: -1603615129
+      Tilemap_SAS_03_Dialogue: 2051457054
+      Tilemap_SAS_03_EventPanel: 525680231
+      Tilemap_SAS_03_MenuBtn: -1031904146
+      Tilemap_SAS_03_Reset: -1637475975
+      Tilemap_SAS_03_Settings: -1268608807
+      Tilemap_SAS_03_Stampboo: -2085801412
+      Tilemap_SAS_03_Stampbook: 418971670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

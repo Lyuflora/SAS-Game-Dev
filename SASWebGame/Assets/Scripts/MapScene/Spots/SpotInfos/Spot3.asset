@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aa9a4bd17ae234bae22e828db360bd, type: 3}
   m_Name: Spot3
   m_EditorClassIdentifier: 
-  spotPict: {fileID: -339495058, guid: 83fdfc2ef1db8644bb0c1a9d49ad4586, type: 3}
-  status: 3
+  spotPict: {fileID: 1923773787, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotPictVisited: {fileID: -1324126318, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotPictLocked: {fileID: 65386850, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  status: 0
   comments: 

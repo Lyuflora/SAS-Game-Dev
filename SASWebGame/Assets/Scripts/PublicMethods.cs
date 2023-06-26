@@ -16,8 +16,10 @@ public enum SpotStatus
 {
     Unvisited = 0,  // not visited
     Visited,    // visited, but not current
-    Active, // current
+    Active, // current, only for debugging
     Locked, // not available *
+
+
 }
 
 [Serializable]
