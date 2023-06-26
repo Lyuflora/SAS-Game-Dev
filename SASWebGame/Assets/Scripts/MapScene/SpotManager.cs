@@ -54,12 +54,7 @@ public class SpotManager : MonoBehaviour
         }
         else
         {
-            foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
-            {
-                spotPreset.spotInfo.status = spotPreset.statusPreset;
-            }
-            // set the first spot
-            SetCurSpot(defaultFirstSpot);
+            LoadForFirstTime();
         }
         InitializeSpots();
     }
@@ -82,7 +77,16 @@ public class SpotManager : MonoBehaviour
             }
         }
     }
-    
+
+    public void LoadForFirstTime()
+    {
+        foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
+        {
+            spotPreset.spotInfo.status = spotPreset.statusPreset;
+        }
+        // set the first spot
+        SetCurSpot(defaultFirstSpot);
+    }
 
     // set spots initial status
     // Use the Reset Button

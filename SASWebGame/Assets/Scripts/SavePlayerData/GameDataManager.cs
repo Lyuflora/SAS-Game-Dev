@@ -25,7 +25,7 @@ public class GameDataManager : MonoBehaviour
     }
     int intToSave;
     float floatToSave;
-    bool boolToSave;
+    bool boolToSave;   
     public List<int> recordsToSave;
     public MapSpot currentSpotToSave;
     
@@ -163,13 +163,15 @@ public class GameDataManager : MonoBehaviour
             floatToSave = 0.0f;
             boolToSave = false;
             
-            for (int i =0; i < recordsToSave.Count; i++)
+            for (int i =1; i < recordsToSave.Count; i++)
             {
                 recordsToSave[i] = 0;
             }
+
+            SpotManager.m_Instance.LoadForFirstTime();
             Debug.Log("Data reset complete!");
         }
         else
-            Debug.LogError("No save data to delete.");
+            Debug.LogWarning("No save data to delete.");
     }
 }
