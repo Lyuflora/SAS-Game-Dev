@@ -76,4 +76,4 @@ GameAssembly.a
 #/Library/Bee/artifacts/WebGL/il2cppOutput/build/
 
 #/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/
-libburst-Ilvm-14.dylib
+libburst-llvm-14.dylib
