@@ -24133,7 +24133,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 700}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -24380,18 +24380,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1050217518}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1050217518}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2107753170}
     - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetData
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VisitSpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: InitializeSpots
       objectReference: {fileID: 0}
     - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: SpotManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180628584961315780, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8217125520239036961, guid: cf3c8d1e9cfc5e545997792f37ab48ee,
         type: 3}
@@ -24853,6 +24918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
@@ -24961,7 +25031,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -24971,7 +25041,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -24982,7 +25052,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2107753170}
+      objectReference: {fileID: 1050217518}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -25001,7 +25071,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: EnterSpaceInvader
+      value: VisitSpot
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -25011,7 +25081,12 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SpotManager, Assembly-CSharp
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -25082,6 +25157,7 @@ GameObject:
   - component: {fileID: 1050217516}
   - component: {fileID: 1050217515}
   - component: {fileID: 1050217517}
+  - component: {fileID: 1050217518}
   m_Layer: 0
   m_Name: SaveInfo
   m_TagString: Untagged
@@ -25129,6 +25205,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c5e7eb9c61b094681843344b0c8ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1050217518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050217514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbf5edec9f3b59429b22dfc4770e213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordsToSave: 
+  currentSpotToSave: {fileID: 2126879792}
 --- !u!1001 &1059174313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25210,6 +25300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
@@ -25282,12 +25377,42 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1050217518}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VisitSpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878641, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -25307,7 +25432,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878641, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.6875
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3171301043964183108, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -26547,6 +26672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
@@ -26635,7 +26765,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -26644,12 +26774,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2107753170}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1050217518}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
@@ -26659,12 +26804,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VisitSpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SpotManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878641, guid: 53901b5c4912b6746942c44576780ddf,
@@ -30824,13 +30989,15 @@ MonoBehaviour:
   - {fileID: 1019580367}
   - {fileID: 1120360563}
   - {fileID: 229300267}
-  firstSpot: {fileID: 2126879792}
+  defaultFirstSpot: {fileID: 2126879792}
   spotFlowchart: {fileID: 2054429439}
   travelEventUI: {fileID: 481202249}
   check: {fileID: -1713288760, guid: 8cef121a7cfcf554695796f003437a52, type: 3}
   question: {fileID: 247953436, guid: 8cef121a7cfcf554695796f003437a52, type: 3}
   player: {fileID: 1376148623}
   SaveInfo: {fileID: 1050217515}
+  saveSerial: {fileID: 1050217517}
+  gameDataManager: {fileID: 1050217518}
 --- !u!114 &2107753171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31129,7 +31296,7 @@ PrefabInstance:
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
@@ -31138,12 +31305,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2107753170}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1050217518}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
@@ -31153,12 +31335,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: VisitSpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SpotManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
         type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameDataManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
       propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575320403483878640, guid: 53901b5c4912b6746942c44576780ddf,
+        type: 3}
+      propertyPath: mapSpotEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -18,12 +18,14 @@ public class MapSpot : MonoBehaviour, IClickable
     [SerializeField] private Color m_Press;
     [SerializeField] private Color m_Disabled;
 
-    [SerializeField] public SpotStatus m_Status { get; set; }
+    [SerializeField] public SpotStatus m_Status;
     [SerializeField] private string blockName;
 
     public UnityEvent mapSpotEvent;
     [SerializeField] private Optional<TravelEvent> travelEvent = new Optional<TravelEvent>();
 
+    public int id;
+    
     private void Awake()
     {
     }
@@ -57,7 +59,9 @@ public class MapSpot : MonoBehaviour, IClickable
         }
         else if (m_Status == SpotStatus.Active)
         {
-            m_Marker.enabled = false;
+            m_Marker.enabled = true;
+            m_Marker.sprite = SpotManager.m_Instance.check;
+            // m_Marker.enabled = false;
             // set player position
             SpotManager.m_Instance.SetPlayerPos(m_PlayerTrans.position);
         }
@@ -115,9 +119,11 @@ public class MapSpot : MonoBehaviour, IClickable
         SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
         SpotManager.m_Instance.CurrentSpot.SetSpotLook();
 
-        SpotManager.m_Instance.CurrentSpot = this;
+        SpotManager.m_Instance.SetCurSpot(this);
+        // SpotManager.m_Instance.CurrentSpot = this;
         this.m_Status = SpotStatus.Active;
         this.SetSpotLook();
+ 
 
         // spot dialogue
         StartCoroutine(nameof(ExecuteSpotBlock));

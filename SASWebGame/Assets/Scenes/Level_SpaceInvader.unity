@@ -354,9 +354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1482ba7e8d1eff94281fbfd1f63515e5, type: 2}
-  m_sharedMaterial: {fileID: -3191884962327915447, guid: 1482ba7e8d1eff94281fbfd1f63515e5,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1634,9 +1633,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Died.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1482ba7e8d1eff94281fbfd1f63515e5, type: 2}
-  m_sharedMaterial: {fileID: -3191884962327915447, guid: 1482ba7e8d1eff94281fbfd1f63515e5,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2930,9 +2928,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1482ba7e8d1eff94281fbfd1f63515e5, type: 2}
-  m_sharedMaterial: {fileID: -3191884962327915447, guid: 1482ba7e8d1eff94281fbfd1f63515e5,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3148,9 +3145,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Win!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1482ba7e8d1eff94281fbfd1f63515e5, type: 2}
-  m_sharedMaterial: {fileID: -3191884962327915447, guid: 1482ba7e8d1eff94281fbfd1f63515e5,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3782,7 +3778,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 700}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4319,6 +4315,11 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4857511010317871650, guid: 0f9aecd04b163e541b142780e8a83784,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6059482976087170194, guid: 0f9aecd04b163e541b142780e8a83784,
         type: 3}
       propertyPath: sceneName
@@ -4484,7 +4485,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 700}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

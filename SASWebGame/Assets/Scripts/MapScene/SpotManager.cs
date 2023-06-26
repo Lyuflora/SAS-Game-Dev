@@ -13,7 +13,7 @@ public class SpotManager : MonoBehaviour
 
     public List<MapSpot> m_SpotList;
     public MapSpot CurrentSpot { get; set; }
-    [SerializeField] private MapSpot firstSpot;
+    public MapSpot defaultFirstSpot;
     public Flowchart spotFlowchart;
 
     [Header("Event UI")] public TravelEventUI travelEventUI;
@@ -24,7 +24,8 @@ public class SpotManager : MonoBehaviour
 
     public GameObject player;
     public SaveInfoNewer SaveInfo;
- 
+    public SaveSerial saveSerial;
+    public GameDataManager gameDataManager;
 
     private void Awake()
     {
@@ -34,10 +35,33 @@ public class SpotManager : MonoBehaviour
 
     public void Start()
     {
-        InitializeSpots();
         // load
         // SaveInfoNewer.m_Instance.LoadData();
         // StartCoroutine(nameof(UsePreset));
+        if (gameDataManager.LoadGame())
+        {
+            for (int i = 0; i < m_SpotList.Count; i++)
+            {
+                if(gameDataManager.recordsToSave!=null)
+                    m_SpotList[i].GetSpotInfo().status = (SpotStatus)(gameDataManager.recordsToSave[i]);
+                else
+                {
+                    m_SpotList[i].GetSpotInfo().status = SpotStatus.Unvisited;
+                }
+            }
+            // set the first spot
+            SetCurSpot(gameDataManager.currentSpotToSave);
+        }
+        else
+        {
+            foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
+            {
+                spotPreset.spotInfo.status = spotPreset.statusPreset;
+            }
+            // set the first spot
+            SetCurSpot(defaultFirstSpot);
+        }
+        InitializeSpots();
     }
 
     IEnumerator UsePreset()
@@ -64,14 +88,6 @@ public class SpotManager : MonoBehaviour
     // Use the Reset Button
     public void InitializeSpots()
     {
-        foreach (var spotPreset in App.m_Instance.GetLevel1Preset().m_Preset)
-        {
-            spotPreset.spotInfo.status = spotPreset.statusPreset;
-        }
-        
-        // set the first spot
-        SetCurSpot(firstSpot);
-
         foreach (var spot in m_SpotList)
         {
             spot.Init();
@@ -84,6 +100,7 @@ public class SpotManager : MonoBehaviour
     {
         Debug.Log(spot.name);
         CurrentSpot = spot;
+        SetPlayerPos(spot.m_PlayerTrans.position);
     }
 
     // Here is the start, called by fungus
@@ -91,9 +108,12 @@ public class SpotManager : MonoBehaviour
     {
         // should find the spot-scene relation
         // do some changes...
+        // gameDataManager.VisitSpot();
         CurrentSpot.mapSpotEvent.Invoke();
         
         // SaveSpotHistory(CurrentSpot.GetSpotInfo());
+
+        gameDataManager.SaveGame();
     }
 
     public void TriggerTravelEvent()
@@ -114,7 +134,7 @@ public class SpotManager : MonoBehaviour
     public void EnterSpaceInvader()
     {
         SceneSwitcher.m_Instance.LoadSpaceInvaderScene();
-        SaveActiveSpot(CurrentSpot.GetSpotInfo());
+        SaveActiveSpot(CurrentSpot);
     }
 
     public void SetPlayerPos(Vector3 r_position)
@@ -143,10 +163,9 @@ public class SpotManager : MonoBehaviour
         SaveInfoNewer.m_Instance.SaveData();
     }
 
-    void SaveActiveSpot(SpotInfo spotInfo)
+    void SaveActiveSpot(MapSpot spot)
     {
-        SaveInfoNewer.m_Instance.data.Add(spotInfo.name, (int)SpotStatus.Active);
-        SaveInfoNewer.m_Instance.SaveData();
+        gameDataManager.currentSpotToSave = spot;
     }    
 
     #endregion
