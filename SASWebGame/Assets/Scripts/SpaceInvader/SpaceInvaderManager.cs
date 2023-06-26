@@ -37,7 +37,9 @@ public class SpaceInvaderManager : MonoBehaviour
     {
         m_WinPanel.SetActive(true);
         PlayerPrefs.SetInt("spStatus",1);   // 1 for winning, 0 for losing, -1 for not initialized
-
+        // to do: save
+        
+        SoundManager.Instance.Play(winSFX);
         m_Analytics.SPWinCustomEvent(m_player.playerScore + 100-(int)Time.realtimeSinceStartup);
     }
 
@@ -49,8 +51,17 @@ public class SpaceInvaderManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("spStatus",0);
         }
-        
+        SoundManager.Instance.Play(loseSFX);
         m_Analytics.SPLoseCustomEvent(m_player.playerScore);
     }
-    
+
+    public void PlayKillSFX()
+    {
+        SoundManager.Instance.Play(hitSFX);
+    }
+
+    public void PlayShootSFX()
+    {
+        SoundManager.Instance.Play(shootSFX);
+    }
 }

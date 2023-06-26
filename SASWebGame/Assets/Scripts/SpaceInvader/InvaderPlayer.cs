@@ -177,6 +177,8 @@ public class InvaderPlayer : MonoBehaviour
             laserActive = true;
             Debug.Log("Shoot");
             projectile.destroyed += LayserDestroyed;
+            //sfx
+            SpaceInvaderManager.m_Instance.PlayShootSFX();
         }
     }
 
