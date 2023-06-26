@@ -25,6 +25,11 @@ public class StampBook : MonoBehaviour
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
     }
+
+    public void PopupSFX()
+    {
+        SoundManager.Instance.Play(MapSoundLibrary.m_Instance.openSFX);
+    }
     public void Close()
     {
         animator.SetBool("Open", false);

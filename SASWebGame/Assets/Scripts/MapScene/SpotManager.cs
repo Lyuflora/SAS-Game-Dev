@@ -35,6 +35,8 @@ public class SpotManager : MonoBehaviour
 
     public void Start()
     {
+
+
         // load
         // SaveInfoNewer.m_Instance.LoadData();
         // StartCoroutine(nameof(UsePreset));

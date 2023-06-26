@@ -119,6 +119,7 @@ public class MapSpot : MonoBehaviour, IClickable
         m_SpriteRenderer.color = m_Press;
         Debug.Log("go" + this.name);
         PlayerStatus.m_Instance.DisableInteraction();
+        MapSoundLibrary.m_Instance.PlaySpotSFX();
 
         // SpotManager.m_Instance.TryEnterSpot(this);
         m_Status = SpotStatus.Active;

@@ -14,6 +14,7 @@ public class OpeningManager : MonoBehaviour
     private string m_StartBlockName;
 
     public GameObject m_StartButton;
+    public AudioClip m_BtnClip;
     
     private void Awake()
     {
@@ -28,6 +29,9 @@ public class OpeningManager : MonoBehaviour
         
         // Hide the start button
         m_StartButton.SetActive(false);
+
+        SoundManager.Instance.Play(m_BtnClip);
     }
+
     
 }

@@ -49,6 +49,11 @@ public class TravelEventUI : MonoBehaviour
         SetEventPanelContent(SpotManager.m_Instance.CurrentSpot.GetTravelEvent().Value);
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
+        
+    }
+    public void PopupSFX()
+    {
+        SoundManager.Instance.Play(MapSoundLibrary.m_Instance.popupSFX);
     }
     public void Close()
     {
