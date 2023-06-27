@@ -34,7 +34,7 @@ public class SpaceInvaderManager : MonoBehaviour
         SoundManager.Instance.PlayMusic(bgm);
         
         // debugging
-        // SaveSPWin();
+        SaveSPWin();
     }
 
     public void WinSpaceInvader()
@@ -76,7 +76,7 @@ public class SpaceInvaderManager : MonoBehaviour
     {
         GameDataManager.Instance.LoadGame();
         GameDataManager.Instance.boolToSave = true;
-        GameDataManager.Instance.recordsToSave[3] = 0;
+
         GameDataManager.Instance.SaveGame();
     }
     

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2575320403483878642}
   - component: {fileID: 2575320403483878641}
   - component: {fileID: 2575320403483878640}
+  - component: {fileID: 5451918513789252254}
   m_Layer: 0
   m_Name: MapSpot
   m_TagString: Untagged
@@ -191,6 +192,27 @@ MonoBehaviour:
     enabled: 0
     value: {fileID: 0}
   id: 0
+--- !u!95 &5451918513789252254
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575320403483878637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af14f414a22fe8449acbe56ca641ac7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3121736205703478929
 GameObject:
   m_ObjectHideFlags: 0

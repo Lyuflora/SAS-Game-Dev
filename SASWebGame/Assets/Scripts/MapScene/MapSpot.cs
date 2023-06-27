@@ -158,4 +158,14 @@ public class MapSpot : MonoBehaviour, IClickable
     {
         return m_SpotInfo;
     }
+
+    public void SpotUnlock()
+    {
+        GetComponent<Animator>().SetTrigger("unlock");
+    }
+
+    public void SetUnlockSprite()
+    {
+        SetSpotLook();
+    }
 }

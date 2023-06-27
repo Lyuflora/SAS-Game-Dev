@@ -53,22 +53,28 @@ public class SpotManager : MonoBehaviour
             }
             // set the first spot
             SetCurSpot(gameDataManager.currentSpotToSave);
-            if (gameDataManager.boolToSave)
-            {
-                // Unlock the spot3
-                Debug.LogWarning("Player Win");
-                
-            }
-            else
-            {
-                Debug.LogWarning("Player Lose");
-            }
+            
         }
         else
         {
             LoadForFirstTime();
         }
         InitializeSpots();
+        
+        if (gameDataManager.boolToSave)
+        {
+            // Unlock the spot3
+            Debug.LogWarning("Player Win");
+            m_SpotList[3].m_Status = SpotStatus.Unvisited;
+            GameDataManager.Instance.recordsToSave[3] = 0;
+            m_SpotList[3].SpotUnlock();
+            GameDataManager.Instance.SaveGame();
+
+        }
+        else
+        {
+            Debug.LogWarning("Player Lose");
+        }
     }
 
     IEnumerator UsePreset()
