@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0343ba960644bc47b71440a340acdd9, type: 3}
+  m_Name: Spot3Event
+  m_EditorClassIdentifier: 
+  eventPict: {fileID: 21300000, guid: c5e0a3a60f7a156459b6734f764e8b5b, type: 3}
+  eventTitle: Someone is missing
+  eventText: At night, the Griffith Observatory is exceptionally quiet under the
+    moonlight. The scenery here is undoubtedly beautiful, but one can clearly hear
+    the faint sounds of a distant zombie horde. It seems like it's time to leave
+    this place as soon as possible. Unfortunately, Joanna Stones realizes there's
+    one less person in the group...
+  eventOptionBlock: Spot3_Event
+  OptionList:
+  - option: Bravely Go
+    block: Spot2_Go
+  - option: Don't go
+    block: Spot2_Not Go

@@ -18,7 +18,7 @@ public class GameDataManager : MonoBehaviour
     {
         public int savedInt;
         public float savedFloat;
-        public bool savedBool;
+        public bool savedBool;  //  sp
 
         public int spot0;
         public int spot1;
@@ -29,10 +29,28 @@ public class GameDataManager : MonoBehaviour
     }
     int intToSave;
     float floatToSave;
-    bool boolToSave;   
+    public bool boolToSave;   
     public List<int> recordsToSave;
     public MapSpot currentSpotToSave;
-    
+
+    public static GameDataManager Instance = null;
+    private void Awake()
+    {
+        // If there is not already an instance of SoundManager, set it to this.
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        //If an instance already exists, destroy whatever this object is to enforce the singleton.
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
+        DontDestroyOnLoad (gameObject);
+    }
+
     // void OnGUI()
     // {
     //     if (GUI.Button(new Rect(0, 0, 125, 50), "Raise Integer"))

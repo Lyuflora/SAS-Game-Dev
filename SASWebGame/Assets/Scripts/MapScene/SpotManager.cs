@@ -53,6 +53,16 @@ public class SpotManager : MonoBehaviour
             }
             // set the first spot
             SetCurSpot(gameDataManager.currentSpotToSave);
+            if (gameDataManager.boolToSave)
+            {
+                // Unlock the spot3
+                Debug.LogWarning("Player Win");
+                
+            }
+            else
+            {
+                Debug.LogWarning("Player Lose");
+            }
         }
         else
         {
