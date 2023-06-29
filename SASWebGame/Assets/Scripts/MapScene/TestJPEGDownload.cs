@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TestJPEGDownload : MonoBehaviour
 {
-    public Sprite sprite;
+    [SerializeField] private Sprite sprite;
     public Image stamp;
     public UnityEngine.UI.Button button;
     #region ImageSave
@@ -36,6 +36,7 @@ public class TestJPEGDownload : MonoBehaviour
         byte[] photoByte = getImageSprite();//获取jpeg图像的字节流
         if (photoByte != null) {
             DownloadImage(photoByte, sprite.name + ".png");
+            Debug.Log("Downloading "+sprite.name + ".png");
         }else{
             Debug.LogError("Save Failed.");
         }
@@ -43,7 +44,8 @@ public class TestJPEGDownload : MonoBehaviour
 
     private byte[] getImageSprite()
     {
-        sprite = stamp.sprite;
+        sprite = GetComponent<StampBook>().GetCurrentStampSprite();
+        // sprite = stamp.sprite;
         if (sprite) {
             //return sprite.texture.EncodeToJPG();
             return sprite.texture.EncodeToPNG();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StampBook : MonoBehaviour
 {
@@ -110,12 +111,25 @@ public class StampBook : MonoBehaviour
                 break;
 
             }
+            for(int i=0; i<pages[index].transform.childCount; i++)
+            {
+                pages[index].transform.GetChild(i).gameObject.SetActive(!forward);
+            }
             yield return null;
 
         }
     }
 
 
+    public Sprite GetCurrentStampSprite()
+    {
+        foreach (Transform tr in pages[index + 1])
+        {
+            if(!tr.GetComponentInChildren<Image>().sprite)
+                return tr.GetComponentInChildren<Image>().sprite;
+        }
 
+        return null;
+    }
 
 }
