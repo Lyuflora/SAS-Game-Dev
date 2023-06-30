@@ -27,6 +27,8 @@ public class SpotManager : MonoBehaviour
     public SaveSerial saveSerial;
     public GameDataManager gameDataManager;
 
+    public GameObject topMap;
+    
     private void Awake()
     {
         m_Instance = this;
@@ -75,6 +77,9 @@ public class SpotManager : MonoBehaviour
         {
             Debug.LogWarning("Player Lose");
         }
+        
+        topMap.SetActive(false);
+        
     }
 
     IEnumerator UsePreset()
@@ -191,4 +196,11 @@ public class SpotManager : MonoBehaviour
     }    
 
     #endregion
+
+
+    public void OpenTopMap()
+    {
+        topMap.SetActive(!topMap.activeInHierarchy);
+        
+    }
 }

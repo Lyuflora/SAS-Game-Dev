@@ -58,3 +58,6 @@ TagManager:
   - name: PickUp
     uniqueID: 2001301923
     locked: 0
+  - name: Overlay
+    uniqueID: 1967984887
+    locked: 0

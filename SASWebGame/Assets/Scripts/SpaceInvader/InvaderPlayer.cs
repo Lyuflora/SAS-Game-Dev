@@ -6,6 +6,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+namespace SAS
+{
+    
+
 public class InvaderPlayer : MonoBehaviour
 {
     public Projectile laserPrefab;
@@ -19,86 +23,14 @@ public class InvaderPlayer : MonoBehaviour
     public bool isGameStarted = false;
 
     public InvaderGenerator invaderGenerator;
-    
+
     public int playerScore;
 
     [SerializeField] private GameObject moveButtons;
+    private float objectHeight;
+    private float objectWidth;
 
     private Vector2 screenBounds;
-    private float objectWidth;
-    private float objectHeight;
-    
-    public void ToggleGameStart()
-    {
-        if (!isGameStarted)
-        {
-            isGameStarted = true;
-            invaderGenerator.StartMissleAttack();
-            playerScore = 0;
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    #region WebGL is on mobile check
-
-    [DllImport("__Internal")]
-    private static extern bool IsMobile();
-
-    public bool isMobile()
-    {
-#if !UNITY_EDITOR && UNITY_WEBGL
-        return IsMobile();
-#endif
-        return false;
-    }
-
-    #endregion
-
-    private void EnableOrDisableButtonsBasedOnPlatform()
-    {
-        if(isMobile() == true)    return;
-        
-        moveButtons.SetActive(false);
-    }
-    private void PlayerMovement()
-    {
-        if (isMobile() == false)
-        {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                this.transform.position += Vector3.left * speed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                this.transform.position += Vector3.right * speed * Time.deltaTime;
-            }
-        }
-        else
-        {
-            // use buttons
-            return;
-        }
-    }
-
-    private void PlayerAttack()
-    {
-        if (isMobile() == false)
-        {
-            if (Input.GetKey(KeyCode.Space) || autoShoot)
-            {
-                Shoot();
-            }
-
-        }
-        else
-        {
-            // use button
-            return;
-        }
-    }
 
     private void Start()
     {
@@ -158,6 +90,64 @@ public class InvaderPlayer : MonoBehaviour
         transform.position = viewPos;
     }
 
+    public void ToggleGameStart()
+    {
+        if (!isGameStarted)
+        {
+            isGameStarted = true;
+            invaderGenerator.StartMissleAttack();
+            playerScore = 0;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void EnableOrDisableButtonsBasedOnPlatform()
+    {
+        if(isMobile() == true)    return;
+        
+        moveButtons.SetActive(false);
+    }
+
+    private void PlayerMovement()
+    {
+        if (isMobile() == false)
+        {
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                this.transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                this.transform.position += Vector3.right * speed * Time.deltaTime;
+            }
+        }
+        else
+        {
+            // use buttons
+            return;
+        }
+    }
+
+    private void PlayerAttack()
+    {
+        if (isMobile() == false)
+        {
+            if (Input.GetKey(KeyCode.Space) || autoShoot)
+            {
+                Shoot();
+            }
+
+        }
+        else
+        {
+            // use button
+            return;
+        }
+    }
+
     public void MoveLeft()
     {
         this.transform.position += Vector3.left * speed * Time.deltaTime;
@@ -197,4 +187,21 @@ public class InvaderPlayer : MonoBehaviour
     {
         playerScore++;
     }
+
+    #region WebGL is on mobile check
+
+    [DllImport("__Internal")]
+    private static extern bool IsMobile();
+
+    public bool isMobile()
+    {
+#if !UNITY_EDITOR && UNITY_WEBGL
+        return IsMobile();
+#endif
+        return false;
+    }
+
+    #endregion
+}
+
 }

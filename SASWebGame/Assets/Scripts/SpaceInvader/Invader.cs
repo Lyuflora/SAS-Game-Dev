@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SAS
+{
+
 public class Invader : MonoBehaviour
 {
     public Sprite[] animatedSprites;
@@ -47,4 +50,6 @@ public class Invader : MonoBehaviour
             other.gameObject.GetComponent<InvaderPlayer>().PlayerDamage();
         }
     }
+}
+    
 }

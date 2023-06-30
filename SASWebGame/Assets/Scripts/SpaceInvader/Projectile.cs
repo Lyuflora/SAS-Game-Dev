@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SAS
+{
+    
+
 public class Projectile : MonoBehaviour
 {
     public Vector3 direction;
@@ -50,4 +54,5 @@ public class Projectile : MonoBehaviour
         }
 
     }
+}
 }

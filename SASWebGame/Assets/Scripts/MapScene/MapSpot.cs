@@ -114,9 +114,21 @@ public class MapSpot : MonoBehaviour, IClickable
 
     #endregion
 
+    public bool CanGoSpot()
+    {
+        SpotInfo currentSpot = SpotManager.m_Instance.CurrentSpot.m_SpotInfo;
+        return (currentSpot.adjacentSpots.Contains(this.m_SpotInfo)||currentSpot==this.m_SpotInfo);
+    }
     public void Interact()
     {
         m_SpriteRenderer.color = m_Press;
+
+        if (!CanGoSpot())
+        {
+            return;
+        }
+        
+        
         Debug.Log("go" + this.name);
         PlayerStatus.m_Instance.DisableInteraction();
         MapSoundLibrary.m_Instance.PlaySpotSFX();

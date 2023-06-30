@@ -11,4 +11,6 @@ public class SpotInfo : ScriptableObject
     public SpotStatus status;
     [TextArea(3,10)]
     public string comments;
+
+    public List<SpotInfo> adjacentSpots;
 }
