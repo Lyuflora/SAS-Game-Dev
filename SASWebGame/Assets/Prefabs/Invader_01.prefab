@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 191544834262479457, guid: 6db2cd13f20a1024f92f2b60965a5de5,
@@ -16,7 +17,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b5f20663b636d4b4eb010e7fb8012499,
+      objectReference: {fileID: 21300000, guid: 032f170bafe4d8a44b2312fb5f1e6197,
         type: 3}
     - target: {fileID: 191544834262479458, guid: 6db2cd13f20a1024f92f2b60965a5de5,
         type: 3}
@@ -116,12 +117,12 @@ PrefabInstance:
     - target: {fileID: 191544834262479460, guid: 6db2cd13f20a1024f92f2b60965a5de5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 191544834262479460, guid: 6db2cd13f20a1024f92f2b60965a5de5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 191544834262479460, guid: 6db2cd13f20a1024f92f2b60965a5de5,
         type: 3}
@@ -137,13 +138,16 @@ PrefabInstance:
         type: 3}
       propertyPath: animatedSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: b5f20663b636d4b4eb010e7fb8012499,
+      objectReference: {fileID: 21300000, guid: 032f170bafe4d8a44b2312fb5f1e6197,
         type: 3}
     - target: {fileID: 4367309557471008743, guid: 6db2cd13f20a1024f92f2b60965a5de5,
         type: 3}
       propertyPath: animatedSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 695deb1fbb284dd46be3ecd6ad6b2c49,
+      objectReference: {fileID: 21300000, guid: 75a34887d90b430439dc99a51d1696ae,
         type: 3}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db2cd13f20a1024f92f2b60965a5de5, type: 3}

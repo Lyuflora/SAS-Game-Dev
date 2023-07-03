@@ -37,7 +37,7 @@ namespace SAS
                 float width = 2.0f * (cols - 1);
                 float height = 2.0f * (rows - 1);
                 Vector2 centering = new Vector2(-width / 2, -height / 2);
-                Vector3 rowPosition = new Vector3(centering.x, centering.y + (row * 2.0f), 0.0f);
+                Vector3 rowPosition = new Vector3(centering.x, centering.y + (row * 4.0f), 0.0f);
 
 
                 for (int col = 0; col < cols; col++)
@@ -45,7 +45,7 @@ namespace SAS
                     Invader invader = Instantiate(invaders[row], transform);
                     invader.killed += InvaderKilled;
                     Vector3 position = rowPosition;
-                    position.x += col * 2.0f;
+                    position.x += col * 4.0f;
                     invader.transform.localPosition = position;
                 }
             }
