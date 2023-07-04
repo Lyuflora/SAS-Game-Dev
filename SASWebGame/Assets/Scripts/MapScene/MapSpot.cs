@@ -179,4 +179,9 @@ public class MapSpot : MonoBehaviour, IClickable
     {
         SetSpotLook();
     }
+
+    public void GetSpotStamp()
+    {
+        StampBook.m_Instance.CollectStamp(this.transform.GetSiblingIndex());
+    }
 }

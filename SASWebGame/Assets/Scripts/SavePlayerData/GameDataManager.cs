@@ -176,6 +176,8 @@ public class GameDataManager : MonoBehaviour
             }
             
             SpotManager.m_Instance.LoadForFirstTime();
+            StampBook.m_Instance.stampRecord = 0;
+            StampBook.m_Instance.LoadRecord();
             Debug.Log("Data reset complete!");
         }
         else

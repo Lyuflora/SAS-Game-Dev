@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Runtime.InteropServices;
+using SAS;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +16,11 @@ public class StampBook : MonoBehaviour
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
 
+    
     // save the stamps
     public int stampRecord;
-
+    [SerializeField] private Byte[] record;
+    
     public Animator animator;
 
     public static StampBook m_Instance;
@@ -32,18 +35,31 @@ public class StampBook : MonoBehaviour
         InitialState();
     }
 
+    public void LoadRecord()
+    {
+        pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+        for (int i=0; i<pages.Count; i++)
+        {
+            pages[i].GetComponent<SAS.StampbookPage>().ControlPage();
+        }
+
+        record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
+        if (index + 1 < pages.Count)
+        {
+            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+            pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
+            pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[index+1] != 0);
+        }
+    }
     public void Popup()
     {
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
-        
-        var stampRecordList=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
 
-        pages[0].GetComponent<SAS.Page>().isFacingUp = true;
-        for (int i=0; i<pages.Count; i++)
-        {
-            pages[i].GetComponent<SAS.Page>().ControlPage();
-        }
+        LoadRecord();
+
+
+
     }
 
     public void PopupSFX()
@@ -74,14 +90,19 @@ public class StampBook : MonoBehaviour
         ForwardButtonActions();
         pages[index].SetAsLastSibling();
         StartCoroutine(Rotate(angle, true));
-        pages[index].GetComponent<SAS.Page>().isFacingUp = false;
-        pages[index].GetComponent<SAS.Page>().ControlPage();
+        
+        record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
+        pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
+        pages[index].GetComponent<SAS.StampbookPage>().ControlPage();
+        pages[index].GetComponent<StampbookPage>().stampImage.enabled = (record[index*2+1] != 0);
         if (index+1 < pages.Count)
         {
-            pages[index+1].GetComponent<SAS.Page>().isFacingUp = true;
-            pages[index+1].GetComponent<SAS.Page>().ControlPage();
+            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+            pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
+            pages[index + 1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index + 1)*2] != 0);
         }
-        
+
+
     }
 
     public void ForwardButtonActions()
@@ -104,12 +125,17 @@ public class StampBook : MonoBehaviour
         BackButtonActions();
         StartCoroutine(Rotate(angle, false));
         
-        pages[index+1].GetComponent<SAS.Page>().isFacingUp = true;
-        pages[index+1].GetComponent<SAS.Page>().ControlPage();
+        record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
+        pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+        pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
+        pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
+
         if (index > 0)
         {
-            pages[index].GetComponent<SAS.Page>().isFacingUp = false;
-            pages[index].GetComponent<SAS.Page>().ControlPage();
+            pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
+            pages[index].GetComponent<SAS.StampbookPage>().ControlPage();
+            pages[index].GetComponent<StampbookPage>().stampImage.enabled = (record[index*2+1] != 0);
+
         }
     }
 
@@ -164,6 +190,14 @@ public class StampBook : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void CollectStamp(int spotId)
+    {
+        record=stampRecord.ToBinaryBits(8); 
+        record[spotId] = 1;
+        stampRecord = record.FromBinaryToInt(); 
+        GameDataManager.Instance.SaveGame();
     }
 
 }
