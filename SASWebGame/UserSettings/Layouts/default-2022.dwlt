@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 421}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 190
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 81
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 82
+  controlID: 21
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 256
     height: 473.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -242,8 +242,8 @@ MonoBehaviour:
     y: 0
     width: 500
     height: 473.6
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 142
+  controlID: 102
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -351,8 +351,8 @@ MonoBehaviour:
     y: 0
     width: 388
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 27}
   m_Panes:
   - {fileID: 26}
@@ -1982,9 +1982,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d2baf7ff
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7486f8ff102bfbff1efbffffe2780000fa7800004e7900007e790000ca790000ea790000ec790000ee79000058d2000042d4000058f5000042f70000
+      m_ExpandedIDs: 7efaffff1efbffffe4780000fc780000d0790000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2556,7 +2556,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 159.80002}
     m_SelectedIDs: 8e810000
     m_LastClickedID: 33166
-    m_ExpandedIDs: 00000000b8800000d88000009081000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d0800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2584,7 +2584,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8800000
+    m_ExpandedIDs: 00000000d0800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2688,23 +2688,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_ArtAssets/Tilemap/Yalin
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 78
   m_LastFolders:
-  - Assets/_ArtAssets/Tilemap/Yalin
+  - Assets
   m_LastFoldersGridSize: 78
   m_LastProjectPath: E:\Github\Work\SAS-Game-Dev\SASWebGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 159.80002}
-    m_SelectedIDs: 8e810000
-    m_LastClickedID: 33166
-    m_ExpandedIDs: 00000000b8800000d8800000e68000009081000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: d0800000
+    m_LastClickedID: 32976
+    m_ExpandedIDs: 00000000d0800000f08000003e81000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2732,7 +2732,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8800000
+    m_ExpandedIDs: 00000000d0800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2759,7 +2759,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: a47d0000907d00003c7d00007a7d0000600c0300fa2b080086c50000642f00008e8200004e2c0600a461060020890000ea920000ea3a000024360000668a020004ae000042ae0000d23a000038a30000d21f070022920000d21b070010950000a0a00000bca00000320d1200148e0000288e00006c86000040750000000000003aad0000968b0000707900001c9400006c7b00006a7b0000307b0000d47b0000367b00008c7b0000067d0000e6790000347c00004e7c0000787c000042830000c8a30000f07900003e7a0000ea7e0000287c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2784,7 +2784,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 4124.8}
+    m_ScrollPosition: {x: 0, y: 508.40002}
     m_GridSize: 78
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 256
@@ -2825,7 +2825,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 30946
+  m_LastSelectedObjectID: 30948
 --- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52

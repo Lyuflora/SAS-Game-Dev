@@ -37,7 +37,16 @@ public class StampBook : MonoBehaviour
 
     public void LoadRecord()
     {
-        pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+        if (index + 1 < pages.Count)
+        {
+            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+        }
+
+        if (index>0)
+        {
+            pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
+        }
+        
         for (int i=0; i<pages.Count; i++)
         {
             pages[i].GetComponent<SAS.StampbookPage>().ControlPage();
@@ -48,7 +57,7 @@ public class StampBook : MonoBehaviour
         {
             pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
             pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
-            pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[index+1] != 0);
+            pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
         }
     }
     public void Popup()
