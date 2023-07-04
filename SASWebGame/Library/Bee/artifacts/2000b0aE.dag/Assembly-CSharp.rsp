@@ -380,6 +380,7 @@
 "Assets/Scripts/MapScene/MapSoundLibrary.cs"
 "Assets/Scripts/MapScene/MapSpot.cs"
 "Assets/Scripts/MapScene/MapUIManager.cs"
+"Assets/Scripts/MapScene/Page.cs"
 "Assets/Scripts/MapScene/PlayerStatus.cs"
 "Assets/Scripts/MapScene/RewardUIManager.cs"
 "Assets/Scripts/MapScene/SceneSwitcher.cs"

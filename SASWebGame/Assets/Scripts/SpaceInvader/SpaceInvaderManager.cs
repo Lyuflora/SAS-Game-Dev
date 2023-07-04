@@ -78,7 +78,7 @@ public class SpaceInvaderManager : MonoBehaviour
     public void SaveSPWin()
     {
         GameDataManager.Instance.LoadGame();
-        GameDataManager.Instance.boolToSave = true;
+        GameDataManager.Instance.isWinSP = true;
 
         GameDataManager.Instance.SaveGame();
     }

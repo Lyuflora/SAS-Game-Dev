@@ -29,7 +29,7 @@ public class GameDataManager : MonoBehaviour
     }
     int intToSave;
     float floatToSave;
-    public bool boolToSave;   
+    [FormerlySerializedAs("boolToSave")] public bool isWinSP;   
     public List<int> recordsToSave;
     public MapSpot currentSpotToSave;
 
@@ -105,7 +105,7 @@ public class GameDataManager : MonoBehaviour
         SaveData data = new SaveData();
         data.savedInt = intToSave;
         data.savedFloat = floatToSave;
-        data.savedBool = boolToSave;
+        data.savedBool = isWinSP;
 
         data.spot0 = recordsToSave[0];
         data.spot1 = recordsToSave[1];
@@ -137,7 +137,7 @@ public class GameDataManager : MonoBehaviour
             file.Close();
             intToSave = data.savedInt;
             floatToSave = data.savedFloat;
-            boolToSave = data.savedBool;
+            isWinSP = data.savedBool;
 
             recordsToSave = new List<int>();
             recordsToSave.Clear();
@@ -183,7 +183,7 @@ public class GameDataManager : MonoBehaviour
                         + "/MySaveData.dat");
             intToSave = 0;
             floatToSave = 0.0f;
-            boolToSave = false;
+            isWinSP = false;
             
             // for (int i =1; i < recordsToSave.Count; i++)
             // {

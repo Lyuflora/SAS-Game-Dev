@@ -63,13 +63,19 @@ public class SpotManager : MonoBehaviour
         }
         InitializeSpots();
         
-        if (gameDataManager.boolToSave)
+        if (gameDataManager.isWinSP)
         {
             // Unlock the spot3
             Debug.LogWarning("Player Win");
-            m_SpotList[3].m_Status = SpotStatus.Unvisited;
-            GameDataManager.Instance.recordsToSave[3] = 0;
-            m_SpotList[3].SpotUnlock();
+            
+            if (m_SpotList[3].m_Status == SpotStatus.Locked)
+            {
+                m_SpotList[3].m_Status = SpotStatus.Unvisited;
+                GameDataManager.Instance.recordsToSave[3] = 0;
+                m_SpotList[3].SpotUnlock();
+            }
+
+
             GameDataManager.Instance.SaveGame();
 
         }

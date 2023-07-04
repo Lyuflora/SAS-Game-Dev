@@ -50,7 +50,7 @@ public class MapSpot : MonoBehaviour, IClickable
         {
             // m_SpriteRenderer.color = m_Disabled;
             m_SpriteRenderer.sprite = m_SpotInfo.spotPictLocked;
-            //m_Marker.enabled = true;
+            m_Marker.enabled = false;
             //m_Marker.sprite = SpotManager.m_Instance.question;
             Debug.Log("not active " + this.name);
         }
@@ -58,13 +58,13 @@ public class MapSpot : MonoBehaviour, IClickable
         {
             m_SpriteRenderer.sprite = m_SpotInfo.spotPict;
             //m_SpriteRenderer.color = m_Normal;
-            //m_Marker.enabled = true;
+            m_Marker.enabled = false;
             //m_Marker.sprite = SpotManager.m_Instance.question;
         }
         else if (m_Status == SpotStatus.Active)
         {
             m_SpriteRenderer.sprite = m_SpotInfo.spotPictVisited;
-            // m_Marker.enabled = true;
+            m_Marker.enabled = true;
             // m_Marker.sprite = SpotManager.m_Instance.check;
             // m_Marker.enabled = false;
             // set player position
@@ -73,7 +73,7 @@ public class MapSpot : MonoBehaviour, IClickable
         else if (m_Status == SpotStatus.Visited)
         {
             m_SpriteRenderer.sprite = m_SpotInfo.spotPictVisited;
-            // m_Marker.enabled = true;
+            m_Marker.enabled = false;
             // m_Marker.sprite = SpotManager.m_Instance.check;
         }
     }

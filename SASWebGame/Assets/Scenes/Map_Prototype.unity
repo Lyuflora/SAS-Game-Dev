@@ -2172,6 +2172,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -556150256, guid: 9a6f8c77004ba6342877e58c700ab116,
         type: 3}
+    - target: {fileID: 5101457168992600487, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5421853098322057403, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
         type: 3}
       propertyPath: stamp
@@ -4400,7 +4405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfbf5edec9f3b59429b22dfc4770e213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolToSave: 0
+  isWinSP: 0
   recordsToSave: 
   currentSpotToSave: {fileID: 2126879792}
 --- !u!1001 &1059174313
