@@ -1872,6 +1872,7 @@ GameObject:
   - component: {fileID: 1626863337}
   - component: {fileID: 1626863338}
   - component: {fileID: 1626863339}
+  - component: {fileID: 1626863340}
   m_Layer: 0
   m_Name: OpeningFlowchart
   m_TagString: Untagged
@@ -2026,9 +2027,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 185
+    x: 184
     y: 42
-    width: 109
+    width: 110
     height: 40
   tint: {r: 1, g: 0.8649639, b: 0.6924528, a: 1}
   useCustomTint: 1
@@ -2048,6 +2049,7 @@ MonoBehaviour:
   - {fileID: 1626863334}
   - {fileID: 1626863315}
   - {fileID: 1626863332}
+  - {fileID: 1626863340}
   - {fileID: 1626863325}
   - {fileID: 1626863337}
   - {fileID: 1626863331}
@@ -2079,7 +2081,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1626863322}
   selectedCommands:
-  - {fileID: 1626863339}
+  - {fileID: 1626863340}
   variables:
   - {fileID: 1626863318}
   description: 
@@ -2178,7 +2180,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 52.799988
     y: 44.300003
-    width: 95
+    width: 96.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2363,6 +2365,24 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1626863340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626863314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.5
+  durationOLD: 0
 --- !u!1 &1733551075
 GameObject:
   m_ObjectHideFlags: 0

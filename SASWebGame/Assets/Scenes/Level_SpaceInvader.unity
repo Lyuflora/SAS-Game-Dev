@@ -1738,6 +1738,7 @@ MonoBehaviour:
   winSFX: {fileID: 8300000, guid: e5f483415a0df4c48a38cd34fb48a27f, type: 3}
   loseSFX: {fileID: 8300000, guid: f4eab4c6080c1f044ba4e875db2137c0, type: 3}
   hitSFX: {fileID: 8300000, guid: 82262e962f0022c46b99197838fa435f, type: 3}
+  pauseMenu: {fileID: 8263819158868520026}
 --- !u!1 &941937634
 GameObject:
   m_ObjectHideFlags: 0

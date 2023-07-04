@@ -17,6 +17,11 @@ namespace SAS
             m_Instance = this;
         }
 
+        private void Start()
+        {
+            Application.targetFrameRate = 20;
+        }
+
         public Manifest GetLevel1Preset()
         {
             return m_level1;

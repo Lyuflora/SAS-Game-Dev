@@ -15,10 +15,12 @@ public class Invader : MonoBehaviour
 
     public System.Action killed;
 
+    public Animator animator;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -37,12 +39,19 @@ public class Invader : MonoBehaviour
         spriteRenderer.sprite = animatedSprites[animationFrame];
     }
 
+    public void HideInvader()
+    {
+        this.gameObject.SetActive(false);
+    }
+    
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Projectile")
         {
             this.killed.Invoke();
-            this.gameObject.SetActive(false);
+            this.GetComponent<Collider2D>().enabled = false;
+            this.animator.SetTrigger("Killed");
+            
         }
 
         if (other.gameObject.tag == "Player")

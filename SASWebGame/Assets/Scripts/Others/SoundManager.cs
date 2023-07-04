@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+	
+	public float globalVolum=.5f;
+	
 	// Audio players components.
 	public AudioSource EffectsSource;
 	public AudioSource MusicSource;
@@ -32,7 +35,10 @@ public class SoundManager : MonoBehaviour
 		//Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
 		DontDestroyOnLoad (gameObject);
 	}
-
+	private void Start()
+	{
+		AudioListener.volume = globalVolum;
+	}
 	// Play a single clip through the sound effects source.
 	public void Play(AudioClip clip)
 	{

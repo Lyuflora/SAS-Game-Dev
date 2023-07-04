@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,14 @@ public class SceneSwitcher : MonoBehaviour
     public static SceneSwitcher m_Instance;
     public Animator transtionAnim;
     private string sceneName;
+
     private void Awake()
     {
         m_Instance = this;
     }
+
+
+
     public void LoadSpaceInvaderScene()
     {
         sceneName = "Level_SpaceInvader";

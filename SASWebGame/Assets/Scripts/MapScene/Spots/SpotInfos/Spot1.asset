@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aa9a4bd17ae234bae22e828db360bd, type: 3}
   m_Name: Spot1
   m_EditorClassIdentifier: 
-  spotPict: {fileID: 1563553928, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
-  spotPictVisited: {fileID: -638955727, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
-  spotPictLocked: {fileID: -1564254461, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotPict: {fileID: 585561091, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotPictVisited: {fileID: 547716729, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotPictLocked: {fileID: -222598747, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
+  spotStamp: {fileID: 198780889, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
   status: 1
   comments: 
   adjacentSpots:

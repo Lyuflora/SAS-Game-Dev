@@ -412,6 +412,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_ArrowLeft
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 428
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cb40cacd879e040b9daf1a97799cd8
+      internalID: 1189817271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_ArrowRight
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 428
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6becd4507145ab442bb185bd5a94907e
+      internalID: 548933086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_ArrowLeft_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 392
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1cf00bc113ee84cb580bb45826b15b
+      internalID: -257706742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_ArrowRight_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 392
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fe22169ba7b364e840048fea7832c3
+      internalID: 1375584937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Continue
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 487
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa6696c3f2514342bc2356457bbc95e
+      internalID: 1286366102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -428,6 +533,11 @@ TextureImporter:
       Tilemap_SAS_03_5: 1521614339
       Tilemap_SAS_03_8: 1589316860
       Tilemap_SAS_03_9: 1333399944
+      Tilemap_SAS_03_ArrowLeft: 1189817271
+      Tilemap_SAS_03_ArrowLeft_2: -257706742
+      Tilemap_SAS_03_ArrowRight: 548933086
+      Tilemap_SAS_03_ArrowRight_2: 1375584937
+      Tilemap_SAS_03_Continue: 1286366102
       Tilemap_SAS_03_DefaultButton: -1726812694
       Tilemap_SAS_03_DialogName: -1603615129
       Tilemap_SAS_03_Dialogue: 2051457054
