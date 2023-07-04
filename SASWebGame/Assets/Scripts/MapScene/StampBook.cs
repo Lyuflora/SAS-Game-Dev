@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -14,8 +15,18 @@ public class StampBook : MonoBehaviour
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
 
+    // save the stamps
+    public int stampRecord;
+
     public Animator animator;
-    
+
+    public static StampBook m_Instance;
+
+    private void Awake()
+    {
+        m_Instance = this;
+    }
+
     private void Start()
     {
         InitialState();
@@ -25,6 +36,14 @@ public class StampBook : MonoBehaviour
     {
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
+        
+        var stampRecordList=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
+
+        pages[0].GetComponent<SAS.Page>().isFacingUp = true;
+        for (int i=0; i<pages.Count; i++)
+        {
+            pages[i].GetComponent<SAS.Page>().ControlPage();
+        }
     }
 
     public void PopupSFX()
@@ -55,7 +74,14 @@ public class StampBook : MonoBehaviour
         ForwardButtonActions();
         pages[index].SetAsLastSibling();
         StartCoroutine(Rotate(angle, true));
-
+        pages[index].GetComponent<SAS.Page>().isFacingUp = false;
+        pages[index].GetComponent<SAS.Page>().ControlPage();
+        if (index+1 < pages.Count)
+        {
+            pages[index+1].GetComponent<SAS.Page>().isFacingUp = true;
+            pages[index+1].GetComponent<SAS.Page>().ControlPage();
+        }
+        
     }
 
     public void ForwardButtonActions()
@@ -77,6 +103,14 @@ public class StampBook : MonoBehaviour
         pages[index].SetAsLastSibling();
         BackButtonActions();
         StartCoroutine(Rotate(angle, false));
+        
+        pages[index+1].GetComponent<SAS.Page>().isFacingUp = true;
+        pages[index+1].GetComponent<SAS.Page>().ControlPage();
+        if (index > 0)
+        {
+            pages[index].GetComponent<SAS.Page>().isFacingUp = false;
+            pages[index].GetComponent<SAS.Page>().ControlPage();
+        }
     }
 
     public void BackButtonActions()

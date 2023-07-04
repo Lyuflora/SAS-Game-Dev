@@ -26,9 +26,12 @@ public class GameDataManager : MonoBehaviour
         public int spot3;
 
         public int savedCurrentSpot;
+
+        public int stampRecord;
     }
     int intToSave;
     float floatToSave;
+
     [FormerlySerializedAs("boolToSave")] public bool isWinSP;   
     public List<int> recordsToSave;
     public MapSpot currentSpotToSave;
@@ -50,31 +53,6 @@ public class GameDataManager : MonoBehaviour
         //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad (gameObject);
     }
-
-    // void OnGUI()
-    // {
-    //     if (GUI.Button(new Rect(0, 0, 125, 50), "Raise Integer"))
-    //         intToSave++;
-    //     if (GUI.Button(new Rect(0, 100, 125, 50), "Raise Float"))
-    //         floatToSave += 0.1f;
-    //     if (GUI.Button(new Rect(0, 200, 125, 50), "Change Bool"))
-    //         boolToSave = boolToSave ? boolToSave 
-    //             = false : boolToSave = true;
-    //     GUI.Label(new Rect(375, 0, 125, 50), "Integer value is " 
-    //                                          + intToSave);
-    //     GUI.Label(new Rect(375, 100, 125, 50), "Float value is " 
-    //                                            + floatToSave.ToString("F1"));
-    //     GUI.Label(new Rect(375, 200, 125, 50), "Bool value is " 
-    //                                            + boolToSave);
-    //     if (GUI.Button(new Rect(750, 0, 125, 50), "Save Your Game"))
-    //         SaveGame();
-    //     if (GUI.Button(new Rect(750, 100, 125, 50), 
-    //             "Load Your Game"))
-    //         LoadGame();
-    //     if (GUI.Button(new Rect(750, 200, 125, 50), 
-    //             "Reset Save Data"))
-    //         ResetData();
-    // }
 
 
     public void VisitSpot(int spotId)
@@ -113,6 +91,7 @@ public class GameDataManager : MonoBehaviour
         data.spot3 = recordsToSave[3];
 
         data.savedCurrentSpot = SpotManager.m_Instance.CurrentSpot.id;
+        data.stampRecord = StampBook.m_Instance.stampRecord;
         
         Debug.Log("save records");
         foreach (var r in recordsToSave)
@@ -148,6 +127,8 @@ public class GameDataManager : MonoBehaviour
 
             currentSpotToSave = SpotManager.m_Instance.m_SpotList[data.savedCurrentSpot];
             currentSpotToSave.m_Status = SpotStatus.Active;
+
+            StampBook.m_Instance.stampRecord = data.stampRecord;
             
             Debug.Log("load records");
             foreach (var r in recordsToSave)

@@ -134,7 +134,6 @@ public class MapSpot : MonoBehaviour, IClickable
         MapSoundLibrary.m_Instance.PlaySpotSFX();
 
         // SpotManager.m_Instance.TryEnterSpot(this);
-        m_Status = SpotStatus.Active;
         SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
         SpotManager.m_Instance.CurrentSpot.SetSpotLook();
 
