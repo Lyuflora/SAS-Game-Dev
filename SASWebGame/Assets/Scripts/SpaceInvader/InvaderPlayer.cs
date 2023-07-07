@@ -43,6 +43,9 @@ public class InvaderPlayer : MonoBehaviour
 
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x/2;
         objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y/2;
+        
+        Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("Waiting"));
+
     }
 
     private void Update()
@@ -97,6 +100,9 @@ public class InvaderPlayer : MonoBehaviour
             isGameStarted = true;
             invaderGenerator.StartMissleAttack();
             playerScore = 0;
+            //GetComponent<SpriteRenderer>().color = new Color(255, 245, 180);
+            Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("Game Started!"));
+
         }
         else
         {

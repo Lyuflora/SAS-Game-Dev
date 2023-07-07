@@ -67,12 +67,16 @@ public class StampBook : MonoBehaviour
     {
         openedLeft.SetActive(true);
         openedRight.SetActive(true);
+        GetComponent<TestJPEGDownload>().ResetBtn();
+        
         if (index == -1)
         {
             openedLeft.SetActive(false);
+            GetComponent<TestJPEGDownload>().HideLeftBtn();
         }else if (index == pages.Count-1)
         {
             openedRight.SetActive(false);
+            GetComponent<TestJPEGDownload>().HideRightBtn();
         }
     }
     
@@ -83,9 +87,6 @@ public class StampBook : MonoBehaviour
         UpdateCoverPage();
         
         LoadRecord();
-
-
-
     }
 
     public void PopupSFX()
@@ -212,15 +213,26 @@ public class StampBook : MonoBehaviour
 
     public Sprite GetCurrentStampSprite()
     {
-        foreach (Transform tr in pages[index + 1])
-        {
-            if(!tr.GetComponentInChildren<Image>().sprite)
-                return tr.GetComponentInChildren<Image>().sprite;
-        }
+        // foreach (Transform tr in pages[index + 1])
+        // {
+        //     if(!tr.GetComponentInChildren<Image>().sprite)
+        //         return tr.GetComponentInChildren<Image>().sprite;
+        // }
 
+        if (index + 1 >= pages.Count) return null;
+        var currentPage = pages[index + 1].GetComponent<StampbookPage>();
+        if (!currentPage.stampImage.sprite)
+            return currentPage.stampImage.sprite;
         return null;
     }
-
+    public Sprite GetPreviousStampSprite()
+    {
+        if (index < 0) return null;
+        var currentPage = pages[index].GetComponent<StampbookPage>();
+        if (!currentPage.stampImage.sprite)
+            return currentPage.stampImage.sprite;
+        return null;
+    }
     public void CollectStamp(int spotId)
     {
         record=stampRecord.ToBinaryBits(8); 
