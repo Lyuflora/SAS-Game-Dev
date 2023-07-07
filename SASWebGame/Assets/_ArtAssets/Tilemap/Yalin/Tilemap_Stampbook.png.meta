@@ -224,12 +224,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemap_Stampbook_5
+      name: Tilemap_Stampbook_L
       rect:
         serializedVersion: 2
         x: 240
         y: 478
-        width: 183
+        width: 93
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -316,7 +316,7 @@ TextureImporter:
         width: 77
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,6 +324,48 @@ TextureImporter:
       bones: []
       spriteID: 5bdb557eca95f784ab49cad320a689be
       internalID: -1440436763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_Stampbook_10
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 660
+        width: 162
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fab909dce10b9f409764ffd75f96d64
+      internalID: -229328254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_Stampbook_R
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 478
+        width: 91
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fde7ae143ac3a45b32a6a7c3fd1379
+      internalID: -2142843275
       vertices: []
       indices: 
       edges: []
@@ -341,14 +383,16 @@ TextureImporter:
     nameFileIdTable:
       Tilemap_Stampbook_0: -1366958918
       Tilemap_Stampbook_1: 2019564150
+      Tilemap_Stampbook_10: -229328254
       Tilemap_Stampbook_2: 700112389
       Tilemap_Stampbook_3: 1647246794
       Tilemap_Stampbook_4: 1915635819
-      Tilemap_Stampbook_5: 1497707055
       Tilemap_Stampbook_6: -1803428873
       Tilemap_Stampbook_7: -979805773
       Tilemap_Stampbook_8: -850012792
       Tilemap_Stampbook_9: -1440436763
+      Tilemap_Stampbook_L: 1497707055
+      Tilemap_Stampbook_R: -2142843275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

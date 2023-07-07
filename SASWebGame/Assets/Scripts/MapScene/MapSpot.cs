@@ -64,7 +64,7 @@ public class MapSpot : MonoBehaviour, IClickable
         else if (m_Status == SpotStatus.Active)
         {
             m_SpriteRenderer.sprite = m_SpotInfo.spotPictVisited;
-            m_Marker.enabled = true;
+            m_Marker.enabled = false;
             // m_Marker.sprite = SpotManager.m_Instance.check;
             // m_Marker.enabled = false;
             // set player position

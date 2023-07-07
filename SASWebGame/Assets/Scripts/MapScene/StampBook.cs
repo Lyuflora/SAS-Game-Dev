@@ -16,6 +16,8 @@ public class StampBook : MonoBehaviour
     [SerializeField] GameObject backButton;
     [SerializeField] GameObject forwardButton;
 
+    [SerializeField] private GameObject openedLeft;
+    [SerializeField] private GameObject openedRight;
     
     // save the stamps
     public int stampRecord;
@@ -60,11 +62,26 @@ public class StampBook : MonoBehaviour
             pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
         }
     }
+
+    private void UpdateCoverPage()
+    {
+        openedLeft.SetActive(true);
+        openedRight.SetActive(true);
+        if (index == -1)
+        {
+            openedLeft.SetActive(false);
+        }else if (index == pages.Count-1)
+        {
+            openedRight.SetActive(false);
+        }
+    }
+    
     public void Popup()
     {
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
-
+        UpdateCoverPage();
+        
         LoadRecord();
 
 
@@ -111,6 +128,7 @@ public class StampBook : MonoBehaviour
             pages[index + 1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index + 1)*2] != 0);
         }
 
+        UpdateCoverPage();
 
     }
 
@@ -146,6 +164,8 @@ public class StampBook : MonoBehaviour
             pages[index].GetComponent<StampbookPage>().stampImage.enabled = (record[index*2+1] != 0);
 
         }
+
+        UpdateCoverPage();
     }
 
     public void BackButtonActions()
