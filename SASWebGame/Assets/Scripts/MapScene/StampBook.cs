@@ -67,14 +67,20 @@ public class StampBook : MonoBehaviour
     {
         openedLeft.SetActive(true);
         openedRight.SetActive(true);
-        GetComponent<TestJPEGDownload>().ResetBtn();
+        // GetComponent<TestJPEGDownload>().ResetBtn();
+        GetComponent<TestJPEGDownload>().HideLeftBtn();GetComponent<TestJPEGDownload>().HideRightBtn();
+
         
         if (index == -1)
         {
+            
+            Debug.Log("Hide Left");
             openedLeft.SetActive(false);
             GetComponent<TestJPEGDownload>().HideLeftBtn();
         }else if (index == pages.Count-1)
         {
+                        
+            Debug.Log("Hide Right");
             openedRight.SetActive(false);
             GetComponent<TestJPEGDownload>().HideRightBtn();
         }
@@ -82,6 +88,11 @@ public class StampBook : MonoBehaviour
     
     public void Popup()
     {
+        
+        InitialState();
+        index = -1;
+        UpdateCoverPage();
+        forwardButton.SetActive(true); 
         animator.SetBool("Open", true);
         PlayerStatus.m_Instance.DisableInteraction();
         UpdateCoverPage();
@@ -148,16 +159,21 @@ public class StampBook : MonoBehaviour
     public void RotateBack()
     {
         if (rotate == true) { return; }
+
         float angle = 0; //in order to rotate the page back, you need to set the rotation to 0 degrees around the y axis
         pages[index].SetAsLastSibling();
         BackButtonActions();
         StartCoroutine(Rotate(angle, false));
         
         record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
-        pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
-        pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
-        pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
 
+        if (index + 1 < pages.Count)
+        {
+            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+            pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
+            pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
+        }
+        
         if (index > 0)
         {
             pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
@@ -196,6 +212,10 @@ public class StampBook : MonoBehaviour
                 if (forward == false)
                 {
                     index--;
+                    if (index == -1)
+                    {
+                        UpdateCoverPage();
+                    }
                 }
                 rotate = false;
                 break;
@@ -203,8 +223,9 @@ public class StampBook : MonoBehaviour
             }
             for(int i=0; i<pages[index].transform.childCount; i++)
             {
-                pages[index].transform.GetChild(i).gameObject.SetActive(!forward);
+                // pages[index].transform.GetChild(i).gameObject.SetActive(!forward);
             }
+            
             yield return null;
 
         }
