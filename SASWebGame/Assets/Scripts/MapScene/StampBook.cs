@@ -73,13 +73,11 @@ public class StampBook : MonoBehaviour
         
         if (index == -1)
         {
-            
             Debug.Log("Hide Left");
             openedLeft.SetActive(false);
             GetComponent<TestJPEGDownload>().HideLeftBtn();
         }else if (index == pages.Count-1)
         {
-                        
             Debug.Log("Hide Right");
             openedRight.SetActive(false);
             GetComponent<TestJPEGDownload>().HideRightBtn();

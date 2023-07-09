@@ -421,7 +421,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -442,7 +442,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -458,12 +458,12 @@ TextureImporter:
       name: Tilemap_SAS_03_ArrowLeft_2
       rect:
         serializedVersion: 2
-        x: 208
+        x: 209
         y: 392
         width: 33
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -479,12 +479,12 @@ TextureImporter:
       name: Tilemap_SAS_03_ArrowRight_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 257
         y: 392
         width: 33
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -505,7 +505,7 @@ TextureImporter:
         width: 12
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -513,6 +513,27 @@ TextureImporter:
       bones: []
       spriteID: aaa6696c3f2514342bc2356457bbc95e
       internalID: 1286366102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_03_Close
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 360
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f99e2d21b2c6634786e28f4f2f7c981
+      internalID: -666944632
       vertices: []
       indices: 
       edges: []
@@ -537,6 +558,7 @@ TextureImporter:
       Tilemap_SAS_03_ArrowLeft_2: -257706742
       Tilemap_SAS_03_ArrowRight: 548933086
       Tilemap_SAS_03_ArrowRight_2: 1375584937
+      Tilemap_SAS_03_Close: -666944632
       Tilemap_SAS_03_Continue: 1286366102
       Tilemap_SAS_03_DefaultButton: -1726812694
       Tilemap_SAS_03_DialogName: -1603615129

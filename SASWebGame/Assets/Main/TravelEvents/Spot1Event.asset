@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0343ba960644bc47b71440a340acdd9, type: 3}
   m_Name: Spot1Event
   m_EditorClassIdentifier: 
-  eventPict: {fileID: 21300000, guid: c5e645a724e17b54dbd838cf4d856bcd, type: 3}
+  eventPict: {fileID: 198780889, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
   eventTitle: Zombies!!
   eventText: Defeat the zombies, and survive.
   eventOptionBlock: Spot1_Event
