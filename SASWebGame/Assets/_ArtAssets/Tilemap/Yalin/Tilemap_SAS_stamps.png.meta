@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,9 +122,9 @@ TextureImporter:
       name: Tilemap_SAS_stamps_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 13
         y: 311
-        width: 65
+        width: 92
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,9 +143,9 @@ TextureImporter:
       name: Tilemap_SAS_stamps_0_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 127
         y: 311
-        width: 65
+        width: 92
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -164,12 +164,12 @@ TextureImporter:
       name: Tilemap_SAS_stamps_1
       rect:
         serializedVersion: 2
-        x: 171
+        x: 219
         y: 311
-        width: 65
+        width: 92
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,12 +185,12 @@ TextureImporter:
       name: Tilemap_SAS_stamps_1_1
       rect:
         serializedVersion: 2
-        x: 249
-        y: 311
-        width: 65
+        x: 335
+        y: 312
+        width: 92
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,12 +206,12 @@ TextureImporter:
       name: Tilemap_SAS_stamps_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 152
-        width: 65
+        x: 13
+        y: 135
+        width: 92
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: Tilemap_SAS_stamps_3
       rect:
         serializedVersion: 2
-        x: 65
-        y: 152
-        width: 83
+        x: 127
+        y: 135
+        width: 92
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,6 +240,48 @@ TextureImporter:
       bones: []
       spriteID: ebc2eb724c69aef44bb1b5968be992e2
       internalID: 1848526414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_stamps_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 135
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a5feb9de3f5c24088d208ae55c0869
+      internalID: 2010004436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_SAS_stamps_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 135
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc187634cd356c498e56cbb22bbc8a1
+      internalID: 1797665028
       vertices: []
       indices: 
       edges: []
@@ -261,6 +303,8 @@ TextureImporter:
       Tilemap_SAS_stamps_1_1: 1004339567
       Tilemap_SAS_stamps_2: 1766161616
       Tilemap_SAS_stamps_3: 1848526414
+      Tilemap_SAS_stamps_4: 2010004436
+      Tilemap_SAS_stamps_5: 1797665028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -221,7 +221,7 @@ public class StampBook : MonoBehaviour
             }
             for(int i=0; i<pages[index].transform.childCount; i++)
             {
-                // pages[index].transform.GetChild(i).gameObject.SetActive(!forward);
+                pages[index].transform.GetChild(i).gameObject.SetActive(!forward);
             }
             
             yield return null;
