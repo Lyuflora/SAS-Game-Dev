@@ -55,9 +55,11 @@ public class InvaderPlayer : MonoBehaviour
             Debug.Log("any key");
             ToggleGameStart();
         }
+        
+        // ===Debug===
         if (!isGameStarted)
         {
-            return;
+            //return;
         }
 
 
@@ -91,6 +93,8 @@ public class InvaderPlayer : MonoBehaviour
         viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x *(- 1f) + objectWidth, screenBounds.x - objectWidth);
         viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y *(- 1f) + objectHeight, screenBounds.y - objectHeight);
         transform.position = viewPos;
+        
+        Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("isGameStarted: {0}", isGameStarted));
     }
 
     public void ToggleGameStart()

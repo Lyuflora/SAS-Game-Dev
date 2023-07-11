@@ -1962,7 +1962,7 @@ MonoBehaviour:
     type: 3}
   speed: 12
   laserActive: 0
-  autoShoot: 1
+  autoShoot: 0
   isGameStarted: 0
   invaderGenerator: {fileID: 806193479}
   playerScore: 0
