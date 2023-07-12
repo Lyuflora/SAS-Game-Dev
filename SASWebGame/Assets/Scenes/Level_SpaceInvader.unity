@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1963,7 +1963,7 @@ MonoBehaviour:
     type: 3}
   speed: 12
   laserActive: 0
-  autoShoot: 0
+  autoShoot: 1
   isGameStarted: 0
   invaderGenerator: {fileID: 806193479}
   playerScore: 0

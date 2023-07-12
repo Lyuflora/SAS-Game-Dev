@@ -1,0 +1,134 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void CustomScript_MyFunction_mFA296AFE572716D6E4E5375CC0E6F22A0FB3CA7C (void);
+extern void CustomScript_MyCoroutine_m12B252E230D794870EEEF82E03D7EDDB4A1C3A59 (void);
+extern void CustomScript__ctor_m7EE805AAD9284BD161F26AB33EBE9CE3C0026873 (void);
+extern void U3CMyCoroutineU3Ed__3__ctor_m0C901FF39311E428EA55CCDC6AD69010C2E0701B (void);
+extern void U3CMyCoroutineU3Ed__3_System_IDisposable_Dispose_mA8BFE8AE77A0B67CB389D49C88768B507FE3FF65 (void);
+extern void U3CMyCoroutineU3Ed__3_MoveNext_m652AEB91E8F476214631A7309D40366D7FA7872E (void);
+extern void U3CMyCoroutineU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE558A7EF1DA77846E9790577D58E35BA07599E4F (void);
+extern void U3CMyCoroutineU3Ed__3_System_Collections_IEnumerator_Reset_m8AB4A2BAFF35A5E9B9D72F59B6E65E2B288A138E (void);
+extern void U3CMyCoroutineU3Ed__3_System_Collections_IEnumerator_get_Current_m71944F3928581317EC63E7D11B35FA389A53DD6A (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mFEFB58FB40D84FD08130295B31B6AE7F497E8DCE (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mC6BD6D56CE39E2D12AFE705E74935F45CE3142D2 (void);
+extern void ForceCursorVisible_Update_m9C9880EAFDC00C5E26E103AA6055306F6D41C798 (void);
+extern void ForceCursorVisible__ctor_m9A7F69E310827676B27B9CF875CD58E5BECA589E (void);
+extern void FPDemoPriorityRouter_OnEnable_mEB43F3EFF10A067049FC43525D3D5198B868B7E5 (void);
+extern void FPDemoPriorityRouter_OnDisable_mC6ECD4290CA2AACDB6799CD9F62BF4687B2D2262 (void);
+extern void FPDemoPriorityRouter_FungusPrioritySignals_OnFungusPriorityEnd_m619AE0F0F2DF02F92C057E35E087BFDF2E589D19 (void);
+extern void FPDemoPriorityRouter_FungusPrioritySignals_OnFungusPriorityStart_m6A415935C5ACDD942DE3073241CF8AB1D591300A (void);
+extern void FPDemoPriorityRouter_Update_m218A431CCFDB4FA5255EB26FBF68270EB86EEA92 (void);
+extern void FPDemoPriorityRouter__ctor_m531E08595948FFE687F3187615337483BB4F0C96 (void);
+extern void LookingAtDoor_ActivateNow_mDB10C222198E3834274472E025FF06F995783F3E (void);
+extern void LookingAtDoor_Update_m880DDEBC9C605B98DB9B1AB9D75A70EE692F4BB9 (void);
+extern void LookingAtDoor__ctor_m91EF9708E2CA251F9BD6FBCF97D0A844D2DB5FC9 (void);
+extern void SimpleForceMovement_FixedUpdate_m3A1FE193CE5CEF73CF5E2AADE49FC2A8EAB2DE64 (void);
+extern void SimpleForceMovement__ctor_mEBCCE4C926AE81102A783AD49F55D7C622375EA3 (void);
+extern void SimpleMouseLook_Update_m7C5FBBE055456D6E83E6209AA50329AE96A6405F (void);
+extern void SimpleMouseLook__ctor_mB5E14B295B3FB820A0FB81353703C66892748668 (void);
+extern void SpriteColorChangeFromFungusMouseEvent_Start_m32CA87DD4B7BEE85853918102A2E6F6CD5435C95 (void);
+extern void SpriteColorChangeFromFungusMouseEvent_OnMouseEventFromFungus_m0700B02DA732EE29AA7716BA65E2AE8E65C013AF (void);
+extern void SpriteColorChangeFromFungusMouseEvent__ctor_m4A98390F848B4A1BC2AF2C8B983CB8648AB53770 (void);
+extern void TMProLinkStylingDemo_Awake_mBB86FD6130EFF069928C20BD6EE1C2FD15417532 (void);
+extern void TMProLinkStylingDemo__ctor_m4FEDE5E9D82B7F69DDC82BB43F9A6CCD7BDAAEDD (void);
+static Il2CppMethodPointer s_methodPointers[31] = 
+{
+	CustomScript_MyFunction_mFA296AFE572716D6E4E5375CC0E6F22A0FB3CA7C,
+	CustomScript_MyCoroutine_m12B252E230D794870EEEF82E03D7EDDB4A1C3A59,
+	CustomScript__ctor_m7EE805AAD9284BD161F26AB33EBE9CE3C0026873,
+	U3CMyCoroutineU3Ed__3__ctor_m0C901FF39311E428EA55CCDC6AD69010C2E0701B,
+	U3CMyCoroutineU3Ed__3_System_IDisposable_Dispose_mA8BFE8AE77A0B67CB389D49C88768B507FE3FF65,
+	U3CMyCoroutineU3Ed__3_MoveNext_m652AEB91E8F476214631A7309D40366D7FA7872E,
+	U3CMyCoroutineU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE558A7EF1DA77846E9790577D58E35BA07599E4F,
+	U3CMyCoroutineU3Ed__3_System_Collections_IEnumerator_Reset_m8AB4A2BAFF35A5E9B9D72F59B6E65E2B288A138E,
+	U3CMyCoroutineU3Ed__3_System_Collections_IEnumerator_get_Current_m71944F3928581317EC63E7D11B35FA389A53DD6A,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mFEFB58FB40D84FD08130295B31B6AE7F497E8DCE,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mC6BD6D56CE39E2D12AFE705E74935F45CE3142D2,
+	ForceCursorVisible_Update_m9C9880EAFDC00C5E26E103AA6055306F6D41C798,
+	ForceCursorVisible__ctor_m9A7F69E310827676B27B9CF875CD58E5BECA589E,
+	FPDemoPriorityRouter_OnEnable_mEB43F3EFF10A067049FC43525D3D5198B868B7E5,
+	FPDemoPriorityRouter_OnDisable_mC6ECD4290CA2AACDB6799CD9F62BF4687B2D2262,
+	FPDemoPriorityRouter_FungusPrioritySignals_OnFungusPriorityEnd_m619AE0F0F2DF02F92C057E35E087BFDF2E589D19,
+	FPDemoPriorityRouter_FungusPrioritySignals_OnFungusPriorityStart_m6A415935C5ACDD942DE3073241CF8AB1D591300A,
+	FPDemoPriorityRouter_Update_m218A431CCFDB4FA5255EB26FBF68270EB86EEA92,
+	FPDemoPriorityRouter__ctor_m531E08595948FFE687F3187615337483BB4F0C96,
+	LookingAtDoor_ActivateNow_mDB10C222198E3834274472E025FF06F995783F3E,
+	LookingAtDoor_Update_m880DDEBC9C605B98DB9B1AB9D75A70EE692F4BB9,
+	LookingAtDoor__ctor_m91EF9708E2CA251F9BD6FBCF97D0A844D2DB5FC9,
+	SimpleForceMovement_FixedUpdate_m3A1FE193CE5CEF73CF5E2AADE49FC2A8EAB2DE64,
+	SimpleForceMovement__ctor_mEBCCE4C926AE81102A783AD49F55D7C622375EA3,
+	SimpleMouseLook_Update_m7C5FBBE055456D6E83E6209AA50329AE96A6405F,
+	SimpleMouseLook__ctor_mB5E14B295B3FB820A0FB81353703C66892748668,
+	SpriteColorChangeFromFungusMouseEvent_Start_m32CA87DD4B7BEE85853918102A2E6F6CD5435C95,
+	SpriteColorChangeFromFungusMouseEvent_OnMouseEventFromFungus_m0700B02DA732EE29AA7716BA65E2AE8E65C013AF,
+	SpriteColorChangeFromFungusMouseEvent__ctor_m4A98390F848B4A1BC2AF2C8B983CB8648AB53770,
+	TMProLinkStylingDemo_Awake_mBB86FD6130EFF069928C20BD6EE1C2FD15417532,
+	TMProLinkStylingDemo__ctor_m4FEDE5E9D82B7F69DDC82BB43F9A6CCD7BDAAEDD,
+};
+static const int32_t s_InvokerIndices[31] = 
+{
+	7415,
+	7268,
+	7415,
+	5949,
+	7415,
+	7156,
+	7268,
+	7415,
+	7268,
+	11491,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+	7415,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_FungusExamples_CodeGenModule;
+const Il2CppCodeGenModule g_FungusExamples_CodeGenModule = 
+{
+	"FungusExamples.dll",
+	31,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

@@ -6,23 +6,25 @@ ScriptsOnlyBuild:
     - ChallengerContoller
     - GameButton
     - InitWithDefault
-    - Invader
-    - InvaderGenerator
-    - InvaderPlayer
+    - MapSoundLibrary
     - MapSpot
     - MapUIManager
     - OpeningManager
     - PauseMenu
     - PlayerController
     - PlayerStatus
-    - Projectile
-    - RewardUIManager
     - SAS.App
+    - SAS.GameDataManager
+    - SAS.Invader
+    - SAS.InvaderGenerator
+    - SAS.InvaderPlayer
     - SAS.Manifest
+    - SAS.Projectile
+    - SAS.RewardUIManager
+    - SAS.StampbookPage
     - SAS.TravelEvent
-    - SaveInfoNewer
-    - SaveSerial
     - SceneSwitcher
+    - SoundManager
     - SpaceInvaderManager
     - SpotInfo
     - SpotManager
@@ -72,19 +74,24 @@ ScriptsOnlyBuild:
     - Fungus.LoadScene
     - Fungus.Menu
     - Fungus.MenuDialog
+    - Fungus.PlayMusic
+    - Fungus.Portrait
     - Fungus.Say
     - Fungus.SayDialog
     - Fungus.SelectOnEnable
+    - Fungus.SetActive
     - Fungus.SetSayDialog
     - Fungus.SetSprite
     - Fungus.SetText
     - Fungus.ShowSprite
     - Fungus.Stage
+    - Fungus.StopMusic
     - Fungus.StringVariable
     - Fungus.Wait
     - Fungus.Writer
     - Fungus.WriterAudio
     FungusEditor.dll:
+    - Fungus.EditorUtils.FlowchartWindow
     - Fungus.EditorUtils.FungusEditorResources
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
@@ -135,37 +142,19 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Universal.Editor.dll:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
-    - UnityEngine.Rendering.Universal.Bloom
-    - UnityEngine.Rendering.Universal.ChannelMixer
-    - UnityEngine.Rendering.Universal.ChromaticAberration
-    - UnityEngine.Rendering.Universal.ColorAdjustments
-    - UnityEngine.Rendering.Universal.ColorCurves
-    - UnityEngine.Rendering.Universal.ColorLookup
-    - UnityEngine.Rendering.Universal.DepthOfField
-    - UnityEngine.Rendering.Universal.FilmGrain
-    - UnityEngine.Rendering.Universal.LensDistortion
-    - UnityEngine.Rendering.Universal.LiftGammaGain
-    - UnityEngine.Rendering.Universal.MotionBlur
-    - UnityEngine.Rendering.Universal.PaniniProjection
     - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion
-    - UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
-    - UnityEngine.Rendering.Universal.SplitToning
-    - UnityEngine.Rendering.Universal.Tonemapping
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalAdditionalLightData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
-    - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     - UnityEngine.Rendering.Universal.UniversalRendererData
-    - UnityEngine.Rendering.Universal.Vignette
-    - UnityEngine.Rendering.Universal.WhiteBalance
     - UnityEngine.Rendering.Universal.XRSystemData
     Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
-    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
@@ -227,7 +216,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Selectable
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
     - IntStatus
@@ -239,6 +227,7 @@ ScriptsOnlyBuild:
     - Fungus.BooleanData
     - Fungus.BoundObject
     - Fungus.FloatData
+    - Fungus.GameObjectData
     - Fungus.StringData
     - Fungus.StringDataMulti
     Unity.RenderPipelines.Core.Runtime:
@@ -339,10 +328,19 @@ ScriptsOnlyBuild:
     methodName: ResetDebugManager
   - assembly: Assembly-CSharp
     fullTypeName: SpotManager
+    methodName: OpenTopMap
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.GameDataManager
+    methodName: ResetData
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.GameDataManager
+    methodName: VisitSpot
+  - assembly: Assembly-CSharp
+    fullTypeName: SpotManager
     methodName: InitializeSpots
   - assembly: Assembly-CSharp
-    fullTypeName: StampBook
-    methodName: Popup
+    fullTypeName: MapSoundLibrary
+    methodName: PlayBtnSFX
   - assembly: Assembly-CSharp
     fullTypeName: StampBook
     methodName: Close
@@ -350,30 +348,45 @@ ScriptsOnlyBuild:
     fullTypeName: StampBook
     methodName: RotateBack
   - assembly: Assembly-CSharp
+    fullTypeName: MapSoundLibrary
+    methodName: PlayBtnSFX
+  - assembly: Assembly-CSharp
     fullTypeName: StampBook
     methodName: RotateForward
   - assembly: Assembly-CSharp
-    fullTypeName: SpotManager
-    methodName: TriggerTravelEvent
+    fullTypeName: MapSoundLibrary
+    methodName: PlayBtnSFX
+  - assembly: Assembly-CSharp
+    fullTypeName: StampBook
+    methodName: Popup
   - assembly: Assembly-CSharp
     fullTypeName: SpotManager
     methodName: TriggerTravelEvent
   - assembly: Assembly-CSharp
+    fullTypeName: SAS.GameDataManager
+    methodName: VisitSpot
+  - assembly: Assembly-CSharp
     fullTypeName: SpotManager
     methodName: TriggerTravelEvent
   - assembly: Assembly-CSharp
-    fullTypeName: SceneSwitcher
-    methodName: LoadScene
+    fullTypeName: SAS.GameDataManager
+    methodName: VisitSpot
+  - assembly: Assembly-CSharp
+    fullTypeName: SpotManager
+    methodName: TriggerTravelEvent
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.GameDataManager
+    methodName: VisitSpot
+  - assembly: Assembly-CSharp
+    fullTypeName: SpotManager
+    methodName: TriggerTravelEvent
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.GameDataManager
+    methodName: VisitSpot
   - assembly: Assembly-CSharp
     fullTypeName: SceneSwitcher
     methodName: LoadSpaceInvaderScene
   - assembly: Assembly-CSharp
-    fullTypeName: SceneSwitcher
-    methodName: LoadScene
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: SwitchPauseStatus
-  - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: SwitchPauseStatus
   - assembly: Assembly-CSharp
@@ -383,16 +396,28 @@ ScriptsOnlyBuild:
     fullTypeName: PauseMenu
     methodName: SwitchPauseStatus
   - assembly: Assembly-CSharp
-    fullTypeName: InvaderPlayer
+    fullTypeName: SceneSwitcher
+    methodName: LoadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: SwitchPauseStatus
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.InvaderPlayer
     methodName: MoveRight
   - assembly: Assembly-CSharp
-    fullTypeName: InvaderPlayer
+    fullTypeName: SAS.InvaderPlayer
     methodName: ToggleGameStart
   - assembly: Assembly-CSharp
-    fullTypeName: InvaderPlayer
+    fullTypeName: SAS.InvaderPlayer
+    methodName: Shoot
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.InvaderPlayer
+    methodName: ToggleGameStart
+  - assembly: Assembly-CSharp
+    fullTypeName: SAS.InvaderPlayer
     methodName: MoveLeft
   - assembly: Assembly-CSharp
-    fullTypeName: InvaderPlayer
+    fullTypeName: SAS.InvaderPlayer
     methodName: ToggleGameStart
   sceneClasses:
     Assets/Scenes/Level_SpaceInvader.unity:
@@ -416,6 +441,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 91
@@ -425,51 +454,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1762}
-    - Class: 114
-      Script: {instanceID: 1766}
-    - Class: 114
-      Script: {instanceID: 1768}
-    - Class: 114
-      Script: {instanceID: 1772}
-    - Class: 114
       Script: {instanceID: 1774}
     - Class: 114
-      Script: {instanceID: 1788}
+      Script: {instanceID: 1778}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 2000}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 4822}
+      Script: {instanceID: 1784}
     - Class: 114
-      Script: {instanceID: 5810}
+      Script: {instanceID: 5448}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 8050}
     - Class: 114
-      Script: {instanceID: 7464}
+      Script: {instanceID: 8538}
     - Class: 114
-      Script: {instanceID: 7564}
+      Script: {instanceID: 10158}
     - Class: 114
-      Script: {instanceID: 9488}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 9744}
+      Script: {instanceID: 13514}
     - Class: 114
-      Script: {instanceID: 10474}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 10628}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 11100}
+      Script: {instanceID: 14202}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 14706}
     - Class: 114
-      Script: {instanceID: 11950}
+      Script: {instanceID: 14846}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 15006}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 15086}
     - Class: 114
-      Script: {instanceID: 14074}
+      Script: {instanceID: 15162}
+    - Class: 114
+      Script: {instanceID: 15446}
+    - Class: 114
+      Script: {instanceID: 15454}
+    - Class: 114
+      Script: {instanceID: 15742}
+    - Class: 114
+      Script: {instanceID: 16302}
+    - Class: 114
+      Script: {instanceID: 16338}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -522,15 +553,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 810}
-    - Class: 114
-      Script: {instanceID: 1756}
-    - Class: 114
-      Script: {instanceID: 1760}
-    - Class: 114
-      Script: {instanceID: 1762}
-    - Class: 114
-      Script: {instanceID: 1766}
+      Script: {instanceID: 816}
     - Class: 114
       Script: {instanceID: 1768}
     - Class: 114
@@ -538,93 +561,107 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1774}
     - Class: 114
-      Script: {instanceID: 1776}
-    - Class: 114
       Script: {instanceID: 1778}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 1788}
+      Script: {instanceID: 1782}
+    - Class: 114
+      Script: {instanceID: 1784}
     - Class: 114
       Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 1792}
-    - Class: 114
       Script: {instanceID: 1794}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 1966}
     - Class: 114
-      Script: {instanceID: 2976}
+      Script: {instanceID: 5448}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 6518}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 7118}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 8050}
     - Class: 114
-      Script: {instanceID: 4590}
+      Script: {instanceID: 8538}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 10090}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 10158}
     - Class: 114
-      Script: {instanceID: 5996}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 6152}
+      Script: {instanceID: 13546}
     - Class: 114
-      Script: {instanceID: 7220}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 7252}
+      Script: {instanceID: 13698}
     - Class: 114
-      Script: {instanceID: 7464}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 7640}
+      Script: {instanceID: 13914}
     - Class: 114
-      Script: {instanceID: 8140}
+      Script: {instanceID: 13930}
     - Class: 114
-      Script: {instanceID: 8402}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 8534}
+      Script: {instanceID: 14146}
     - Class: 114
-      Script: {instanceID: 9334}
+      Script: {instanceID: 14162}
     - Class: 114
-      Script: {instanceID: 9436}
+      Script: {instanceID: 14366}
     - Class: 114
-      Script: {instanceID: 9488}
+      Script: {instanceID: 14374}
     - Class: 114
-      Script: {instanceID: 9778}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 10122}
+      Script: {instanceID: 14454}
     - Class: 114
-      Script: {instanceID: 10300}
+      Script: {instanceID: 14486}
     - Class: 114
-      Script: {instanceID: 11100}
+      Script: {instanceID: 14510}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 14830}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 14914}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 15066}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 15134}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 15178}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 15206}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 15346}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 15486}
     - Class: 114
-      Script: {instanceID: 13074}
+      Script: {instanceID: 15502}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 15542}
     - Class: 114
-      Script: {instanceID: 13754}
+      Script: {instanceID: 15562}
     - Class: 114
-      Script: {instanceID: 32932}
+      Script: {instanceID: 15906}
+    - Class: 114
+      Script: {instanceID: 15986}
+    - Class: 114
+      Script: {instanceID: 16026}
+    - Class: 114
+      Script: {instanceID: 16086}
+    - Class: 114
+      Script: {instanceID: 16302}
+    - Class: 114
+      Script: {instanceID: 16386}
+    - Class: 114
+      Script: {instanceID: 16442}
+    - Class: 114
+      Script: {instanceID: 16502}
+    - Class: 114
+      Script: {instanceID: 16590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -689,18 +726,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1756}
-    - Class: 114
-      Script: {instanceID: 1758}
-    - Class: 114
-      Script: {instanceID: 1760}
-    - Class: 114
-      Script: {instanceID: 1762}
-    - Class: 114
-      Script: {instanceID: 1764}
-    - Class: 114
-      Script: {instanceID: 1766}
-    - Class: 114
       Script: {instanceID: 1768}
     - Class: 114
       Script: {instanceID: 1770}
@@ -729,165 +754,187 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1794}
     - Class: 114
-      Script: {instanceID: 1796}
+      Script: {instanceID: 1802}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1966}
     - Class: 114
-      Script: {instanceID: 1800}
+      Script: {instanceID: 2260}
     - Class: 114
-      Script: {instanceID: 1810}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 2544}
+      Script: {instanceID: 3262}
     - Class: 114
-      Script: {instanceID: 2556}
+      Script: {instanceID: 3328}
     - Class: 114
-      Script: {instanceID: 2950}
+      Script: {instanceID: 3462}
     - Class: 114
-      Script: {instanceID: 2976}
+      Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 4540}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 4678}
     - Class: 114
-      Script: {instanceID: 3532}
+      Script: {instanceID: 4828}
     - Class: 114
-      Script: {instanceID: 3684}
+      Script: {instanceID: 4990}
     - Class: 114
-      Script: {instanceID: 3802}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 3920}
-    - Class: 114
-      Script: {instanceID: 4048}
-    - Class: 114
-      Script: {instanceID: 4168}
-    - Class: 114
-      Script: {instanceID: 4248}
-    - Class: 114
-      Script: {instanceID: 4306}
-    - Class: 114
-      Script: {instanceID: 4542}
-    - Class: 114
-      Script: {instanceID: 5014}
-    - Class: 114
-      Script: {instanceID: 5066}
-    - Class: 114
-      Script: {instanceID: 5248}
-    - Class: 114
-      Script: {instanceID: 5384}
-    - Class: 114
-      Script: {instanceID: 5432}
+      Script: {instanceID: 5442}
     - Class: 114
       Script: {instanceID: 5448}
     - Class: 114
-      Script: {instanceID: 5590}
+      Script: {instanceID: 5514}
     - Class: 114
-      Script: {instanceID: 5940}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 5678}
     - Class: 114
-      Script: {instanceID: 6036}
+      Script: {instanceID: 5996}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6010}
     - Class: 114
-      Script: {instanceID: 6188}
+      Script: {instanceID: 6518}
     - Class: 114
-      Script: {instanceID: 6224}
+      Script: {instanceID: 6806}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 7118}
     - Class: 114
-      Script: {instanceID: 6364}
+      Script: {instanceID: 7676}
     - Class: 114
-      Script: {instanceID: 6622}
+      Script: {instanceID: 7736}
     - Class: 114
-      Script: {instanceID: 6670}
+      Script: {instanceID: 7794}
     - Class: 114
-      Script: {instanceID: 7220}
+      Script: {instanceID: 7870}
     - Class: 114
-      Script: {instanceID: 7464}
+      Script: {instanceID: 8050}
     - Class: 114
-      Script: {instanceID: 7542}
+      Script: {instanceID: 8538}
     - Class: 114
-      Script: {instanceID: 8402}
+      Script: {instanceID: 8840}
     - Class: 114
-      Script: {instanceID: 8530}
+      Script: {instanceID: 8900}
     - Class: 114
-      Script: {instanceID: 8534}
+      Script: {instanceID: 9222}
     - Class: 114
-      Script: {instanceID: 8592}
+      Script: {instanceID: 9330}
     - Class: 114
-      Script: {instanceID: 8610}
+      Script: {instanceID: 9448}
     - Class: 114
-      Script: {instanceID: 8734}
+      Script: {instanceID: 9516}
     - Class: 114
-      Script: {instanceID: 9334}
+      Script: {instanceID: 10090}
     - Class: 114
-      Script: {instanceID: 9488}
+      Script: {instanceID: 10110}
     - Class: 114
-      Script: {instanceID: 9578}
+      Script: {instanceID: 10158}
     - Class: 114
-      Script: {instanceID: 9842}
+      Script: {instanceID: 10332}
     - Class: 114
-      Script: {instanceID: 9844}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 9916}
+      Script: {instanceID: 10856}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 10974}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 11050}
     - Class: 114
-      Script: {instanceID: 10122}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 10346}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 13472}
     - Class: 114
-      Script: {instanceID: 10646}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 11322}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 13734}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 11582}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 11842}
+      Script: {instanceID: 14078}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 14146}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 12164}
+      Script: {instanceID: 14162}
     - Class: 114
-      Script: {instanceID: 12284}
+      Script: {instanceID: 14258}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 14510}
     - Class: 114
-      Script: {instanceID: 12506}
+      Script: {instanceID: 14534}
     - Class: 114
-      Script: {instanceID: 12596}
+      Script: {instanceID: 14586}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 14646}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 14806}
     - Class: 114
-      Script: {instanceID: 12778}
+      Script: {instanceID: 14830}
     - Class: 114
-      Script: {instanceID: 13610}
+      Script: {instanceID: 14854}
     - Class: 114
-      Script: {instanceID: 13928}
+      Script: {instanceID: 14898}
+    - Class: 114
+      Script: {instanceID: 15074}
+    - Class: 114
+      Script: {instanceID: 15154}
+    - Class: 114
+      Script: {instanceID: 15270}
+    - Class: 114
+      Script: {instanceID: 15498}
+    - Class: 114
+      Script: {instanceID: 15502}
+    - Class: 114
+      Script: {instanceID: 15542}
+    - Class: 114
+      Script: {instanceID: 15594}
+    - Class: 114
+      Script: {instanceID: 15738}
+    - Class: 114
+      Script: {instanceID: 15766}
+    - Class: 114
+      Script: {instanceID: 15810}
+    - Class: 114
+      Script: {instanceID: 15906}
+    - Class: 114
+      Script: {instanceID: 15926}
+    - Class: 114
+      Script: {instanceID: 15962}
+    - Class: 114
+      Script: {instanceID: 16014}
+    - Class: 114
+      Script: {instanceID: 16026}
+    - Class: 114
+      Script: {instanceID: 16086}
+    - Class: 114
+      Script: {instanceID: 16198}
+    - Class: 114
+      Script: {instanceID: 16274}
+    - Class: 114
+      Script: {instanceID: 16302}
+    - Class: 114
+      Script: {instanceID: 16386}
+    - Class: 114
+      Script: {instanceID: 16502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -959,12 +1006,6 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 6f67dd406ddfc18c9b3f8a90725c6266
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: RawImage
-  - hash:
-      serializedVersion: 2
       Hash: 6498fc76484598db46c5c1a11bab42fa
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -975,18 +1016,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 94f8303fca6ba25383fc62595e324b7b
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: LayoutElement
-  - hash:
-      serializedVersion: 2
-      Hash: c92e03126f82226c2e517b0c562a3094
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: EventTrigger
   - hash:
       serializedVersion: 2
       Hash: 1acffdc47de1ca014dae3d384c3d1086
@@ -1001,58 +1030,22 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
+      Hash: 94f8303fca6ba25383fc62595e324b7b
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
       Hash: b18151310f999106767addd7177d1a99
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 0e28d8006f33a4c6bf3ef39e20820f9c
+      Hash: c92e03126f82226c2e517b0c562a3094
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
-    className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 751d867553f413cde86fe5db0b02780d
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: bcdedb1b3a567eb05111be4716618ce1
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: EventSystem
-  - hash:
-      serializedVersion: 2
-      Hash: 892b5093967522535ba980d28ce42084
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Slider
-  - hash:
-      serializedVersion: 2
-      Hash: 1ed2c6278a809fcb97c4b0e845bbecc5
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Selectable
-  - hash:
-      serializedVersion: 2
-      Hash: 2b006c27b595e55e112de0e713333574
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: RectMask2D
-  - hash:
-      serializedVersion: 2
-      Hash: 142264d9d6b0842e37d4aad2e8ff56d0
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: ea1569413d805748b7cef2dcb4622c85
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Outline
+    className: EventTrigger
   - hash:
       serializedVersion: 2
       Hash: 7b4effb6af892385b0b70f6aad73fafd
@@ -1061,28 +1054,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector2
   - hash:
       serializedVersion: 2
-      Hash: 865353386fa411cc79be78ee1cf1c691
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SaveVariable
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: d110645821ab9091974192c3e9f071e2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ForEach
-  - hash:
-      serializedVersion: 2
-      Hash: ad5b0416a79bade09fc80710330fe371
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopBlock
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1091,34 +1066,16 @@ ScriptsOnlyBuild:
     className: UnityOnScrollbarValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e0b61aabeb1ed357df954c2c35aef7e2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetDraggable2D
-  - hash:
-      serializedVersion: 2
-      Hash: d3eb140d98c538091fbc3e0e3684423d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UGS_Analytics
-  - hash:
-      serializedVersion: 2
-      Hash: 2d4f6d58e93797a1f4d42674a5ff9c61
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LookTo
+      Hash: 1ed2c6278a809fcb97c4b0e845bbecc5
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Selectable
   - hash:
       serializedVersion: 2
       Hash: 1368c4766518a64c64b0235a9d6e1502
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: DepthOfField
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PublicMethods
   - hash:
       serializedVersion: 2
       Hash: dc90caa97d497baeae83b781ee77eed5
@@ -1133,36 +1090,6 @@ ScriptsOnlyBuild:
     className: WhiteBalance
   - hash:
       serializedVersion: 2
-      Hash: 3ef3b54e027cfe7d206b0dbacdbec7da
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: InvokeMethod
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SpriteFader
-  - hash:
-      serializedVersion: 2
-      Hash: 1bc3a186bbe0432fc54a58ca02988540
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: QuaternionProperty
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: End
-  - hash:
-      serializedVersion: 2
-      Hash: ff9106daaaf5950c8835a2b68cd62a3c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: WaitFrames
-  - hash:
-      serializedVersion: 2
       Hash: a8b7fd1da21541aeec7d0fde1c075720
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1175,52 +1102,16 @@ ScriptsOnlyBuild:
     className: UnityOnDropMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 27261ef4f790b1d75e8d329838666be2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AnimatorState
-  - hash:
-      serializedVersion: 2
-      Hash: 4976d55f32dc679b8a244760fc4bd9f0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: OpenURL
-  - hash:
-      serializedVersion: 2
       Hash: cf6a30abf6c09a50fae138e5415556e9
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: ProbeVolumePerSceneData
   - hash:
       serializedVersion: 2
-      Hash: a4c976a0d6f65a32d8f7d9c5d2d20fdd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSprite
-  - hash:
-      serializedVersion: 2
       Hash: 0a660016cd7a05ac20bd94b08cf2f40a
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerToggle
-  - hash:
-      serializedVersion: 2
-      Hash: 1cfc6ef9392f52608c50cf9df824a803
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StampBook
-  - hash:
-      serializedVersion: 2
-      Hash: 7239d029c1eb5cc40b180c3ba3798146
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DragStarted
-  - hash:
-      serializedVersion: 2
-      Hash: b3cfba51552e477b7005885a2736b11f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ControllerColliderHitProperty
   - hash:
       serializedVersion: 2
       Hash: dad8b52ecc898f494ba35b6402337f79
@@ -1235,52 +1126,10 @@ ScriptsOnlyBuild:
     className: XRSystemData
   - hash:
       serializedVersion: 2
-      Hash: e1f4dfba767a0d52926a9b5de9762525
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GetToggleState
-  - hash:
-      serializedVersion: 2
-      Hash: 70d8901b43f9937f506c4e0e7f35eb24
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TransformCollection
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: fcc46e1e313b2560b6e2e4291b0a7155
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Map
-  - hash:
-      serializedVersion: 2
-      Hash: deccb0c1ff9d0a068feef215b36bd6fd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Mouse
-  - hash:
-      serializedVersion: 2
-      Hash: e70163b591feb453ad3fd3d2579dc344
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopMotionRigidBody2D
-  - hash:
-      serializedVersion: 2
-      Hash: 23a008e0aa79b806928d62aad697a0d0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MoveAdd
-  - hash:
-      serializedVersion: 2
-      Hash: 461606aa877794d72684da23acdefc16
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ResetAnimTrigger
   - hash:
       serializedVersion: 2
       Hash: bf8e7513a6a15e836c34b697fcf2ccd7
@@ -1295,12 +1144,6 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1b7a9d9fba18129b7f2d5a5379111519
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandFind
-  - hash:
-      serializedVersion: 2
       Hash: a7a4f96d026b10ead36f70cf6402f61d
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1313,22 +1156,10 @@ ScriptsOnlyBuild:
     className: ProbeReferenceVolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: d57d2f055714b5cc09eed68cc0f74b48
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Flowchart
-  - hash:
-      serializedVersion: 2
       Hash: 9ac556ec44c150f531a15ad95730c327
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerWidget
-  - hash:
-      serializedVersion: 2
-      Hash: b622e57b839318db932682c4e2b22f33
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Matrix4x4Property
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1343,64 +1174,16 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: d09ea471e3bf619653935c8cf75ced5c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ReloadScene
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnButtonClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d3027e69b55cbdac65cd2280b847bc70
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StartSwipe
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: dbfa9fae30ce8a30efa35628817bb1c4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetUIImage
-  - hash:
-      serializedVersion: 2
-      Hash: efeee56f53dbeded579e697251285f5e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaElseIf
-  - hash:
-      serializedVersion: 2
-      Hash: ed89d2cd5bfb1eef696cc59324825430
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MaterialVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 44ee1af54cf1659c52f7b65b43e9eedd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSliderValue
-  - hash:
-      serializedVersion: 2
-      Hash: d87f3439e2fbb83b9d5e7c33a90e8383
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAudioVolume
-  - hash:
-      serializedVersion: 2
-      Hash: 90fc3c03454f08dba0333eed4cc07527
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: WriterAudio
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1415,28 +1198,10 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: a8b4d69d872a41ca63f66f2908bc60bc
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FloatCollection
-  - hash:
-      serializedVersion: 2
-      Hash: b992837496124888fd9ba6cf6ad9b57b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GameObjectVariable
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDragMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0e24ce4668ab32a68d410a763250c162
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ColliderVariable
   - hash:
       serializedVersion: 2
       Hash: a8b7fd1da21541aeec7d0fde1c075720
@@ -1463,28 +1228,10 @@ ScriptsOnlyBuild:
     className: ScriptMachine
   - hash:
       serializedVersion: 2
-      Hash: 171c4e806e1588f5d38979305e12ab36
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RigidbodyProperty
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSelectMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: EventDispatcher
-  - hash:
-      serializedVersion: 2
-      Hash: 492022688e7dd43d24241712362a1845
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MenuTimer
   - hash:
       serializedVersion: 2
       Hash: cfa0bc588212b375b04e2336ce5e1315
@@ -1493,28 +1240,10 @@ ScriptsOnlyBuild:
     className: DecalRendererFeature
   - hash:
       serializedVersion: 2
-      Hash: 33a9f6c1a2fa9b54debda6465a601f90
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ScaleTo
-  - hash:
-      serializedVersion: 2
       Hash: 9ac556ec44c150f531a15ad95730c327
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerVBox
-  - hash:
-      serializedVersion: 2
-      Hash: 35aed6d637f5d1950802c8a36b136c20
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3Variable
-  - hash:
-      serializedVersion: 2
-      Hash: 438c491bd61a85390fb4cb64221dc6b6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SavePointLoaded
   - hash:
       serializedVersion: 2
       Hash: 747284d692f6c45bae4955ed655ed04c
@@ -1535,30 +1264,6 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b61ac8c07efaa480f83781e219acdae6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3Fields
-  - hash:
-      serializedVersion: 2
-      Hash: 12382781415e1dadf2c6f4683fc03b49
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GetMousePosition
-  - hash:
-      serializedVersion: 2
-      Hash: c00e0b907619eab3a07e6f37f0d89fe8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ExecuteHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 192bb9fe33e33bb990d7bdbaec614bea
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ObjectVariable
-  - hash:
-      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -1577,40 +1282,10 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 254fd1448779929c21b7d1af0052fac8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector2Property
-  - hash:
-      serializedVersion: 2
-      Hash: a1e274ab25ba09be107fcf71ea4c44d7
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LoadScene
-  - hash:
-      serializedVersion: 2
-      Hash: 1b224f64e40508db2f14629887eae3f4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopTween
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 22a78a3ced4ab89d7817f0e16a33752f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandShuffle
-  - hash:
-      serializedVersion: 2
-      Hash: d27e263a800ac2f6b7c375cda5e97fe9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StringCollection
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1619,76 +1294,16 @@ ScriptsOnlyBuild:
     className: AnalyticsLifetime
   - hash:
       serializedVersion: 2
-      Hash: 40d244afe660099fb91eb803ac22bffb
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StringVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 4330c25ff7329e531d6382b7d84b53fb
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TransformVariable
-  - hash:
-      serializedVersion: 2
-      Hash: d4f3b86ccb013b08d373d5065ce3a443
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: NPCController
-  - hash:
-      serializedVersion: 2
-      Hash: 706eb1baa2f82569719a489cee261db6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collider2DProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 9882f8bd342b03ddd81e3e35e82addae
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ShakePosition
-  - hash:
-      serializedVersion: 2
-      Hash: 865353386fa411cc79be78ee1cf1c691
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LoadVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 945785397af07592788e81fd442892b6
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpotManager
-  - hash:
-      serializedVersion: 2
-      Hash: 49e9c43b80f335fdd451df2f5585e439
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3Normalise
-  - hash:
-      serializedVersion: 2
       Hash: 13c320424e15e88a0527d7477a4188bb
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 8650cf07670106d5a5cab7ffb6317708
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: InfoText
-  - hash:
-      serializedVersion: 2
       Hash: f28210efd862f74713845b620af745bd
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: MotionBlur
-  - hash:
-      serializedVersion: 2
-      Hash: 749ea89914f42bef0fe85e4d43d66eed
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlayRandomSound
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1715,100 +1330,10 @@ ScriptsOnlyBuild:
     className: Bloom
   - hash:
       serializedVersion: 2
-      Hash: cdfc771d87ea006f2731ad7a28229b3e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaBindings
-  - hash:
-      serializedVersion: 2
-      Hash: 1782dc0153b74eaa7fd80e4b587e2a78
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3Arithmetic
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Break
-  - hash:
-      serializedVersion: 2
-      Hash: 14a6cffbcc69b434bb19e104d5321dad
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PathManager
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: NarrativeLog
-  - hash:
-      serializedVersion: 2
-      Hash: c1cacc95e49bedf0181513f17e28a2ec
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ScaleFrom
-  - hash:
-      serializedVersion: 2
-      Hash: 5bfe1f8c69869d563a0ed183baaef6b7
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GetAxis
-  - hash:
-      serializedVersion: 2
-      Hash: 62919b403f39f08656201a341dab525d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Stage
-  - hash:
-      serializedVersion: 2
-      Hash: 4ec50022a3e2e07e13b8a2bb519e3c8e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GameObjectCollection
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCancelMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 5287dbe3ebd729b3144e2a792a7fcc1d
-    assemblyName: Assembly-CSharp
-    namespaceName: SAS
-    className: TravelEvent
-  - hash:
-      serializedVersion: 2
-      Hash: e1d69a7a7c3c2225a04eb3be840c7a1e
-    assemblyName: Assembly-CSharp
-    namespaceName: SAS
-    className: Manifest
-  - hash:
-      serializedVersion: 2
-      Hash: 890bd4de0600c9a4c457d05a58599bed
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ToString
-  - hash:
-      serializedVersion: 2
-      Hash: 41adde8c35a50f7eda14a54fbe4007a8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionRandom
-  - hash:
-      serializedVersion: 2
-      Hash: 01c68a12de563b350c2fe244bcb3e857
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TextInputHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 4b29ee70770bd9342e76a0da20f268df
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SpriteVariable
   - hash:
       serializedVersion: 2
       Hash: bda7bb16fefdce6ac2b9a4abce1c9087
@@ -1823,34 +1348,10 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8f96f5f933f7ec97d4e3fed9d9f6d31b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SavePoint
-  - hash:
-      serializedVersion: 2
       Hash: ff0dee70814a7b295b59590774168466
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineEditorResources
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusPriorityReset
-  - hash:
-      serializedVersion: 2
-      Hash: 0064224d930617c33d540612e30b3c63
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FloatVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 6a2ef3bb201fae7339b53c7b4e773ffa
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: InvaderPlayer
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1859,34 +1360,16 @@ ScriptsOnlyBuild:
     className: MacroScriptableObject
   - hash:
       serializedVersion: 2
-      Hash: 5350477ed16c183fd6018b2f4f80fc34
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FromString
-  - hash:
-      serializedVersion: 2
-      Hash: 522faab158ae6f1e5e4b8cd148c8c373
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DragExited
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Stop
+      Hash: 142264d9d6b0842e37d4aad2e8ff56d0
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformChildrenChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 7c51530a500b8521ee4dba2fda1529eb
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: NarrativeLogEntryUI
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1907,36 +1390,6 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerObject
   - hash:
       serializedVersion: 2
-      Hash: 3821e36b0542f3115ce31c982a6cd29d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandIntersection
-  - hash:
-      serializedVersion: 2
-      Hash: 59a4dddf3a572eb2865b2131a8b92531
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SpawnObject
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Neg
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopMusic
-  - hash:
-      serializedVersion: 2
-      Hash: 3821e36b0542f3115ce31c982a6cd29d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandExclusive
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1953,36 +1406,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
     className: NavMeshModifierVolume
-  - hash:
-      serializedVersion: 2
-      Hash: 9d94c08e0b1a2f5973027d8e035bf71d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collider2DVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 7d469a402f68cf81562696ff410dea69
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Curve
-  - hash:
-      serializedVersion: 2
-      Hash: 22a78a3ced4ab89d7817f0e16a33752f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandUnique
-  - hash:
-      serializedVersion: 2
-      Hash: c8d9d1f76cb90d21bbfbb68adeccb87c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TextureProperty
-  - hash:
-      serializedVersion: 2
-      Hash: e20d6e3aae991273f3bb3924c3856782
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Localization
   - hash:
       serializedVersion: 2
       Hash: 2673f1d0e79e3676f5e46d368d79b12d
@@ -2027,30 +1450,6 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d4bca9d096ea7b9defeb84455d3e4f70
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MessageReceived
-  - hash:
-      serializedVersion: 2
-      Hash: 46ceb594b32743eca825f013ccdd252d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Physics2DCast
-  - hash:
-      serializedVersion: 2
-      Hash: ad9a934d2bf946b628d14a1633c111fa
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaScript
-  - hash:
-      serializedVersion: 2
-      Hash: 2fdd684fdd8357a064506422fc7ef096
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Label
-  - hash:
-      serializedVersion: 2
       Hash: e8ff0f32aede797557af213671aa1a71
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Experimental.Rendering.Universal
@@ -2063,76 +1462,16 @@ ScriptsOnlyBuild:
     className: VolumeComponent
   - hash:
       serializedVersion: 2
-      Hash: c5969909238448d8251ced01e8248aa6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: If
-  - hash:
-      serializedVersion: 2
-      Hash: 97831c3baf0860a69186680c25b42878
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: InvaderGenerator
-  - hash:
-      serializedVersion: 2
-      Hash: d8f5e715de9753991f5ab7a829d33f27
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ButtonClicked
-  - hash:
-      serializedVersion: 2
       Hash: a9996d5513cfdb2a18bf40e4b92c4518
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: ProbeTouchupVolume
   - hash:
       serializedVersion: 2
-      Hash: 5642b965a0a3aaeb1faa5e8e53500d0c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DebugLog
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Sqrt
-  - hash:
-      serializedVersion: 2
-      Hash: 5e83e3bf637575510844e6040f0a21ff
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandInsert
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: AnimatorMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 22a78a3ced4ab89d7817f0e16a33752f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandClear
-  - hash:
-      serializedVersion: 2
-      Hash: 7b8876e70e771319304681d5f2bfdc4d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FadeScreen
-  - hash:
-      serializedVersion: 2
-      Hash: 51c47f8e2b8dde66ea9178e8c6984e3e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandContainsAny
-  - hash:
-      serializedVersion: 2
-      Hash: ecf03afff9a2345b99cd04ac6679671d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GameObjectFind
   - hash:
       serializedVersion: 2
       Hash: 7a0dffef755dbed4f4799f891b173e23
@@ -2147,54 +1486,6 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 253c42b70be1f896300a59a26ac95506
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ControlAudio
-  - hash:
-      serializedVersion: 2
-      Hash: 4582e916ac2220642af3ab73cf66f930
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PunchRotation
-  - hash:
-      serializedVersion: 2
-      Hash: ea67486d6bbe14628117b11f96e15f89
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Menu
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: 
-    className: SfxrAudioPlayer
-  - hash:
-      serializedVersion: 2
-      Hash: fec6970961b0e01b0b8862f7d01760c2
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TravelEventUI
-  - hash:
-      serializedVersion: 2
-      Hash: 522faab158ae6f1e5e4b8cd148c8c373
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DragEntered
-  - hash:
-      serializedVersion: 2
-      Hash: e5779494252329a739f70ac21afde037
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAnimFloat
-  - hash:
-      serializedVersion: 2
-      Hash: f9dd588f20f25e02cc4c0b12354708e8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandResize
-  - hash:
-      serializedVersion: 2
       Hash: 7a0dffef755dbed4f4799f891b173e23
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -2207,70 +1498,10 @@ ScriptsOnlyBuild:
     className: LiftGammaGain
   - hash:
       serializedVersion: 2
-      Hash: 5e83e3bf637575510844e6040f0a21ff
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandOccurrences
-  - hash:
-      serializedVersion: 2
-      Hash: a75764e52fced7dba887a1374eea27d2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Round
-  - hash:
-      serializedVersion: 2
-      Hash: 736cf84997cb7672fd5e2dd101b1ccda
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Rigidbody2DVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 67fd9fe14e2f82b80bb110bf2aedc83d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ReadTextFile
-  - hash:
-      serializedVersion: 2
-      Hash: c2eea67388893571474f3986b7ce7b95
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetActive
-  - hash:
-      serializedVersion: 2
       Hash: 971e8ce660e35a51d5c4384a57b98990
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerVector4
-  - hash:
-      serializedVersion: 2
-      Hash: f271cbffa359e52408219ab8e10463ff
-    assemblyName: Assembly-CSharp
-    namespaceName: SAS
-    className: App
-  - hash:
-      serializedVersion: 2
-      Hash: 5bf36b0b7e2b0da851ef753bdefec9cf
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MaterialProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 3eab3f89889ebfb978059fcef8a5dea5
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LoopRange
-  - hash:
-      serializedVersion: 2
-      Hash: 17c275d149e5cdd89f2260a75014a17d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetText
-  - hash:
-      serializedVersion: 2
-      Hash: 48ba8e0a64bc1a5bcd175b258d95b6cd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: NarrativeLogMenu
   - hash:
       serializedVersion: 2
       Hash: e4831ed1a755ad7c8aee34e90d9016ed
@@ -2279,22 +1510,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerBitField
   - hash:
       serializedVersion: 2
-      Hash: c303f7939620dd533fdb7df036ffb992
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ControlStage
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStay2DMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 51aab758b1d6d271a727a6a0161a6795
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Particle
   - hash:
       serializedVersion: 2
       Hash: df70afff09fcc26f54fe08084e6042ec
@@ -2303,70 +1522,10 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: fa6026ae08be63c5ba0dc49e0b6a9bc0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Parallax
-  - hash:
-      serializedVersion: 2
       Hash: a03cf6f60c605d858f83449f4b4fc400
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: 748372bfa31fe169d57c3013ca9ef491
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AnimatorVariable
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopAmbiance
-  - hash:
-      serializedVersion: 2
-      Hash: f0837ca6ec5c991bc87323f81e205ea9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ColorVariable
-  - hash:
-      serializedVersion: 2
-      Hash: c60833fb1afee9b284236beedaeb68ea
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionVariable
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopSwipe
-  - hash:
-      serializedVersion: 2
-      Hash: 5af4097b76dbe417f4c8bdc526183e76
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MoveLean
-  - hash:
-      serializedVersion: 2
-      Hash: deccb0c1ff9d0a068feef215b36bd6fd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Render
-  - hash:
-      serializedVersion: 2
-      Hash: 3821e36b0542f3115ce31c982a6cd29d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandRemoveAllOf
-  - hash:
-      serializedVersion: 2
-      Hash: 36ec9098f57fb287c1d679fcaa53e508
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Conversation
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2375,16 +1534,16 @@ ScriptsOnlyBuild:
     className: UnityOnDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: ea1569413d805748b7cef2dcb4622c85
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
       Hash: 116a5d45ac93b8a51d0a895f4b9c4df2
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerRow
-  - hash:
-      serializedVersion: 2
-      Hash: 9edaf197924ad3977c4351f588788333
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GetKey
   - hash:
       serializedVersion: 2
       Hash: 7d4689225ec2e0d4faaa4421ded090a8
@@ -2393,34 +1552,10 @@ ScriptsOnlyBuild:
     className: LensFlareDataSRP
   - hash:
       serializedVersion: 2
-      Hash: 5a0ed2c3cb0b539230f8ed41fd556e37
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SaveMenu
-  - hash:
-      serializedVersion: 2
-      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collision2DVariable
-  - hash:
-      serializedVersion: 2
       Hash: 6790e6a34c21983b40cb4e09983b75be
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: ProbeVolume
-  - hash:
-      serializedVersion: 2
-      Hash: b4674bca8592968b6655cb427b7cdb52
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FadeUI
-  - hash:
-      serializedVersion: 2
-      Hash: 097b87143af344832ddfa1263b90844c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TMProLinkAnimator
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2429,52 +1564,16 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnter2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0f77f86c0b8e7dd48013f2106ea4e173
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3Property
-  - hash:
-      serializedVersion: 2
-      Hash: d7d56bed6ae9543ef6fa96bf1ec6c615
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Fullscreen
-  - hash:
-      serializedVersion: 2
       Hash: 34096a327d779b7c96a3e390f3559143
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 1d01c2bb5b84c7e64b943eb09c559c62
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: SimpleForceMovement
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
-  - hash:
-      serializedVersion: 2
-      Hash: 9c495beddcd141960a155bf0a3456d04
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSpriteOrder
-  - hash:
-      serializedVersion: 2
-      Hash: f717f52a4cd3ee382f2bde8660a6bcf4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Comment
-  - hash:
-      serializedVersion: 2
-      Hash: 4c599aa057c5893d4d71ad2953a14891
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAnimInteger
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2495,18 +1594,6 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: SpriteColorChangeFromFungusMouseEvent
-  - hash:
-      serializedVersion: 2
-      Hash: 045d0392440154a8750f163deac8b189
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ScaleLean
-  - hash:
-      serializedVersion: 2
       Hash: 41edf1f7828466a73580cae5e7be9b87
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -2525,46 +1612,10 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ChallengerContoller
-  - hash:
-      serializedVersion: 2
-      Hash: 986915cc1b65342846d69cc31d43e5ab
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandAddAll
-  - hash:
-      serializedVersion: 2
-      Hash: 25fd2d9aca124ea002fc20d60246a983
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: EndEdit
-  - hash:
-      serializedVersion: 2
       Hash: 02e2fe1c761d6ad8af6b7adb9e28f7a1
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: DecalProjector
-  - hash:
-      serializedVersion: 2
-      Hash: 36827fd0c678d3a91c58acee37945e5a
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: LookingAtDoor
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopTweens
-  - hash:
-      serializedVersion: 2
-      Hash: 1925359e9aac84db55ffbf0a09d4d4f7
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusState
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2573,22 +1624,10 @@ ScriptsOnlyBuild:
     className: UnityOnParticleCollisionMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d5063b0b43d23006b364ab741708f53e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Trigger
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseOverMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 91d77d8fb507377c32e153ca03f195be
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollisionProperty
   - hash:
       serializedVersion: 2
       Hash: 025cd7bab07ecd22938b0166edeab2a5
@@ -2603,12 +1642,6 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
-      Hash: 4115d3e54170deac944d6b96038b0747
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpaceInvaderManager
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -2621,28 +1654,10 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
-      Hash: 14784d0b8350fcafe9cc1ba37da5c167
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: BooleanVariable
-  - hash:
-      serializedVersion: 2
-      Hash: eaf1a5c9f33bb5d3a6b13c003da459e6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: InvokeEvent
-  - hash:
-      serializedVersion: 2
       Hash: a0b02be915afc8fcee2518ea6c94589b
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRendererData
-  - hash:
-      serializedVersion: 2
-      Hash: 731b332c7c0148f2224f3683ec18ca2e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerStatus
   - hash:
       serializedVersion: 2
       Hash: 28873fe9170abb2910f2c4b88a93bb0f
@@ -2655,30 +1670,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: Volume
-  - hash:
-      serializedVersion: 2
-      Hash: db5c85bda08caa7ac027d0da993f0c74
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: QuaternionVariable
-  - hash:
-      serializedVersion: 2
-      Hash: c5969909238448d8251ced01e8248aa6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: While
-  - hash:
-      serializedVersion: 2
-      Hash: ff4c52ae1166e2179d632ceb976aed69
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RandomFloat
-  - hash:
-      serializedVersion: 2
-      Hash: 6a334945c0ec6008b28b7fb9646b033b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ColliderCollection
   - hash:
       serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
@@ -2699,46 +1690,16 @@ ScriptsOnlyBuild:
     className: UnityOnMouseEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 90f0d37aff367ac2c6d81663d6393cbb
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CharacterControllerCollide
-  - hash:
-      serializedVersion: 2
-      Hash: 0162bd92fab2ca585adf01ab56a42311
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Destroy
-  - hash:
-      serializedVersion: 2
-      Hash: 3821e36b0542f3115ce31c982a6cd29d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandCopy
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MusicManager
+      Hash: 0e28d8006f33a4c6bf3ef39e20820f9c
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
   - hash:
       serializedVersion: 2
       Hash: a7d0addae9e8166c54c5ddbedabe8eb5
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: FreeCamera
-  - hash:
-      serializedVersion: 2
-      Hash: 351a9580f4b6621a5cf048df8b225938
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DebugBreak
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: 
-    className: LeanTween
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2753,22 +1714,10 @@ ScriptsOnlyBuild:
     className: ScreenSpaceAmbientOcclusion
   - hash:
       serializedVersion: 2
-      Hash: 8463ae9673e2333139513dbae454471c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Call
-  - hash:
-      serializedVersion: 2
       Hash: ea1569413d805748b7cef2dcb4622c85
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Shadow
-  - hash:
-      serializedVersion: 2
-      Hash: f94d52f4006ff920b6db6331033d30f9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AudioSourceProperty
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2783,66 +1732,6 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f84010480c92ce89a914cbdfc19577e9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlaySound
-  - hash:
-      serializedVersion: 2
-      Hash: b91196684244e6821d889d9c2720fc7a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ClearMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 48e88acbf8bdbac8fa7602ce973ddc89
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GameObjectProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 52006e4d61c07c7b3af90bff49053772
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Pow
-  - hash:
-      serializedVersion: 2
-      Hash: b2bd43aac0a3abb8d26878ffb5689712
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RigidbodyVariable
-  - hash:
-      serializedVersion: 2
-      Hash: c15eb06c58127711d1ee9b84a7f14b38
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RotateTo
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TaskManager
-  - hash:
-      serializedVersion: 2
-      Hash: 5d6aa21ad4fd56a5cd1799f87ab7ebb7
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Jump
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SelectOnEnable
-  - hash:
-      serializedVersion: 2
-      Hash: b49a4b2c6c586fc86572c432aff3fb00
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: InvLerp
-  - hash:
-      serializedVersion: 2
       Hash: 6deeb981863fd896320118d48b024032
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Experimental.Rendering.Universal
@@ -2855,22 +1744,10 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b6bd61f199ee715857d24d0dcf425680
-    assemblyName: FungusExamples
-    namespaceName: 
-    className: CustomScript
-  - hash:
-      serializedVersion: 2
       Hash: 63815508dfd6cf329d5c593ac8e76888
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: da08eeab278cec8d774d3d31933ac9c1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MenuDialog
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -2897,16 +1774,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerMessageBox
   - hash:
       serializedVersion: 2
-      Hash: 688508066fd127de845115f1829495a2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: NarrativeLogEntryDisplay
-  - hash:
-      serializedVersion: 2
-      Hash: f5e234dfb298e951dd0d5462453021b4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Node
+      Hash: 6f67dd406ddfc18c9b3f8a90725c6266
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RawImage
   - hash:
       serializedVersion: 2
       Hash: 1c378b9ce4c318a93ef4193babbfd740
@@ -2921,40 +1792,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerGroup
   - hash:
       serializedVersion: 2
-      Hash: d3eb140d98c538091fbc3e0e3684423d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TestCloudSave
-  - hash:
-      serializedVersion: 2
       Hash: 0028421cefb983b1ae034dc57cec4f61
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: LensFlareComponentSRP
   - hash:
       serializedVersion: 2
-      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ControllerColliderHitVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 7239d029c1eb5cc40b180c3ba3798146
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DragCancelled
-  - hash:
-      serializedVersion: 2
-      Hash: 8665cfa0d52b1b868670ef796dd7c664
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionRandomBag
-  - hash:
-      serializedVersion: 2
-      Hash: ce37db59aedfe979039bd7785a62e423
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAnimBool
+      Hash: bcdedb1b3a567eb05111be4716618ce1
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
   - hash:
       serializedVersion: 2
       Hash: 848c5c3c98557fc2f2199206a7eaa69a
@@ -2969,64 +1816,16 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 16b0565b8b46a0f3822038bb76824c81
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Physics2DOverlap
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8bf441a2d1c178876a6779747f126156
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CameraManager
-  - hash:
-      serializedVersion: 2
-      Hash: 62011cc4f25553431d48421435334320
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: IntegerVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 754c7990e342fd9b8ca33e0271f80db7
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AssertCommand
-  - hash:
-      serializedVersion: 2
-      Hash: bb16290da4e07e1e2917830b47f8c9eb
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TextureVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Sign
-  - hash:
-      serializedVersion: 2
-      Hash: 45315727f240caf2ad1df4c58d29bbae
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PunchScale
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: f20a52a730da0490e0652a20aab0cab3
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collider2DCollection
   - hash:
       serializedVersion: 2
       Hash: 34fa63a30926bcf55d7323dae76be890
@@ -3041,18 +1840,6 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: c91402d24942dc1f4e1031b791621cd5
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ToInt
-  - hash:
-      serializedVersion: 2
-      Hash: dfd22cd75a592fa4f16105630127704f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandContainsAll
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -3065,40 +1852,10 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 2747144b1a00196b3c069b25d81965d3
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ThrowException
-  - hash:
-      serializedVersion: 2
       Hash: bb1919f987f39a217a67674a47792b29
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ShadowCaster2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9903f933b7444dd5785c0cf928572473
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSaveProfile
-  - hash:
-      serializedVersion: 2
-      Hash: 0f00644f615021a2508672d4c7976eb4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Block
-  - hash:
-      serializedVersion: 2
-      Hash: 07bb628684e4586149feec8bc51638fe
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Portrait
-  - hash:
-      serializedVersion: 2
-      Hash: b67638688214d061f085bf0d9c54461f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandContains
   - hash:
       serializedVersion: 2
       Hash: a4d905db69ca7f45f45458ae380fb66f
@@ -3107,22 +1864,10 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 4ba792f62ab468623f1a92c6aef6b13b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpotInfo
-  - hash:
-      serializedVersion: 2
       Hash: 37b191fab268ddbf80fe4515fb274a73
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalAdditionalCameraData
-  - hash:
-      serializedVersion: 2
-      Hash: 7afa9dafca3c2cb9ea013940bb48b518
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Clamp
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3135,18 +1880,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: 
-    className: SfxrCacheSurrogate
-  - hash:
-      serializedVersion: 2
-      Hash: f17a1315158969b351096e5b67441ccf
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CustomTag
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -3162,33 +1895,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GlobalVariables
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
-  - hash:
-      serializedVersion: 2
-      Hash: c6893e5caa32c35c3b1eadd3cc7a5fd8
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Invader
-  - hash:
-      serializedVersion: 2
-      Hash: 8189de9e79861e301bace5ace20b1dbe
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector2Variable
-  - hash:
-      serializedVersion: 2
-      Hash: 80aefa56c28ea1c18563b64b207bffbe
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetVariable
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3197,52 +1906,10 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 3ad92dc5a7cfb07835215d5555ee4ef0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AnimatorProperty
-  - hash:
-      serializedVersion: 2
-      Hash: f059913217272ea4d409152693512332
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SaveInfoNewer
-  - hash:
-      serializedVersion: 2
-      Hash: f209229857776d5a8718a9253be6880b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Rigidbody2DProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 0fdf7cc27fc08e38252f6e5baff1e9a5
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GetText
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnControllerColliderHitMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 3b0ae7621c9753bf43f30788d16b177b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Write
-  - hash:
-      serializedVersion: 2
-      Hash: 2fdd684fdd8357a064506422fc7ef096
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DeleteSaveKey
-  - hash:
-      serializedVersion: 2
-      Hash: 76c4324df41b1631107ee5e544881b79
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: View
   - hash:
       serializedVersion: 2
       Hash: 7a0dffef755dbed4f4799f891b173e23
@@ -3251,28 +1918,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerValueTuple
   - hash:
       serializedVersion: 2
-      Hash: b78e150c854bc6795b33ea34564b6078
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: IntCollection
-  - hash:
-      serializedVersion: 2
       Hash: e10d4739aeade3b3fce790de0c3e8305
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ForwardRendererData
-  - hash:
-      serializedVersion: 2
-      Hash: 108fa64da7375a1bc03101f37de0bc27
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RotateLean
-  - hash:
-      serializedVersion: 2
-      Hash: 68483541028dff991dd71e1fa4430fdf
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DestroyOnLoad
   - hash:
       serializedVersion: 2
       Hash: 0a660016cd7a05ac20bd94b08cf2f40a
@@ -3281,82 +1930,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggleHistory
   - hash:
       serializedVersion: 2
-      Hash: 9a38e08151f74e848060a0011cf928ca
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PickUp
-  - hash:
-      serializedVersion: 2
-      Hash: 68e5487d432729f61b4619b287bc5c38
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Clickable2D
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Abs
-  - hash:
-      serializedVersion: 2
-      Hash: 5c1248faa98b1112dc40656650648e3d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Draggable2D
-  - hash:
-      serializedVersion: 2
-      Hash: 8597ea0ab0df2193ff027181ce7a472a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Say
-  - hash:
-      serializedVersion: 2
-      Hash: efeee56f53dbeded579e697251285f5e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaCondition
-  - hash:
-      serializedVersion: 2
-      Hash: 44e58892fb59646d9ee04071b131d802
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlayAmbianceSound
-  - hash:
-      serializedVersion: 2
-      Hash: f727d19e0610b2cb74ebdfc033298457
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetLanguage
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusPriorityDecrease
-  - hash:
-      serializedVersion: 2
       Hash: adfcbacf24b05b2f3b60b081fdab21dc
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerPersistentCanvas
-  - hash:
-      serializedVersion: 2
-      Hash: 67a2e7ea535b6d9152ac5fad9190b824
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Wait
-  - hash:
-      serializedVersion: 2
-      Hash: 98ae20327fd756be6fb97f40b41ce971
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Matrix4x4Variable
-  - hash:
-      serializedVersion: 2
-      Hash: f9dd588f20f25e02cc4c0b12354708e8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandRemoveAt
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3377,28 +1954,10 @@ ScriptsOnlyBuild:
     className: ShadowsMidtonesHighlights
   - hash:
       serializedVersion: 2
-      Hash: 938e3c563a63d73daeaa84d1fa68c83e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ShowSprite
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: VariablesSaver
-  - hash:
-      serializedVersion: 2
-      Hash: 22cd40885da80d2bd972248dd2bebbb1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusPriorityCount
-  - hash:
-      serializedVersion: 2
-      Hash: 269aa4b0a8f696b4d88c38d057cd0e3b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MinMax
   - hash:
       serializedVersion: 2
       Hash: 34096a327d779b7c96a3e390f3559143
@@ -3407,46 +1966,16 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: f9dd588f20f25e02cc4c0b12354708e8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandReserve
-  - hash:
-      serializedVersion: 2
-      Hash: 0f00644f615021a2508672d4c7976eb4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CommandCopyBuffer
-  - hash:
-      serializedVersion: 2
       Hash: 98db835dd0659d490ded675102354289
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 12be2c07fcbdac7e8b79f19b43d9ef37
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FadeSprite
-  - hash:
-      serializedVersion: 2
-      Hash: 2c612e2d6257829abd4ecfd60b42e5af
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ExecuteLua
-  - hash:
-      serializedVersion: 2
-      Hash: 6f4f92b9d175d2ca54f63f344ae77ae8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AudioSourceVariable
-  - hash:
-      serializedVersion: 2
-      Hash: 4785452e765809b56913e274f39ba3b6
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FormData
+      Hash: 2b006c27b595e55e112de0e713333574
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
   - hash:
       serializedVersion: 2
       Hash: 5e4b530e42afc29c170c8261ea25ae28
@@ -3455,22 +1984,10 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: d3eb140d98c538091fbc3e0e3684423d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: InitWithDefault
-  - hash:
-      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: DictionaryAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Inv
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3491,18 +2008,6 @@ ScriptsOnlyBuild:
     className: Renderer2DData
   - hash:
       serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Else
-  - hash:
-      serializedVersion: 2
-      Hash: 1530d89b510b3fa2b366d97344330947
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ScaleAdd
-  - hash:
-      serializedVersion: 2
       Hash: 6298a10412e94e11ad85ac6148c9dda1
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -3515,88 +2020,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: 3fded660c078304e64401d55208d6a02
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetMouseCursor
-  - hash:
-      serializedVersion: 2
-      Hash: 02bd20bd1498d6576086be666d66699c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SaveData
-  - hash:
-      serializedVersion: 2
-      Hash: 48331e87c1bc96318c3140de632c8b2e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Projectile
-  - hash:
-      serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 5f941b1ef90b66fbb2097cbd3b257892
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AddTorque2D
-  - hash:
-      serializedVersion: 2
-      Hash: ded3f40d4aa9928a0dec2f3401ee9109
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MenuShuffle
-  - hash:
-      serializedVersion: 2
-      Hash: 461606aa877794d72684da23acdefc16
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAnimTrigger
-  - hash:
-      serializedVersion: 2
-      Hash: 36631b45cbfe895e64c4619ed0361662
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetAudioPitch
-  - hash:
-      serializedVersion: 2
-      Hash: 64b849c4019a9ef4603c29112fc9dc48
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector3ToVector2
-  - hash:
-      serializedVersion: 2
       Hash: e4699844af1ab63f6ed6ca4ad186ddcb
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: Vignette
-  - hash:
-      serializedVersion: 2
-      Hash: deccb0c1ff9d0a068feef215b36bd6fd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TransformChanged
-  - hash:
-      serializedVersion: 2
-      Hash: 23a008e0aa79b806928d62aad697a0d0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RotateAdd
-  - hash:
-      serializedVersion: 2
-      Hash: d055dcdf1bc15b201b27dc8324db7bf1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: InteractableItem
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3611,12 +2044,6 @@ ScriptsOnlyBuild:
     className: SceneVariables
   - hash:
       serializedVersion: 2
-      Hash: 6642d1948da1ae380dd6aa1f013c860e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MoveFrom
-  - hash:
-      serializedVersion: 2
       Hash: 3a09ae0a4d0e75b36abda223b76ab1ea
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -3627,24 +2054,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnEndDragMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusPriorityIncrease
-  - hash:
-      serializedVersion: 2
-      Hash: f6ab2d91c0159948751e8c4efb0b43e6
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SceneSwitcher
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SaveManager
   - hash:
       serializedVersion: 2
       Hash: 0cadf67970140b3a7997770202c43c70
@@ -3665,22 +2074,10 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStayMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4582e916ac2220642af3ab73cf66f930
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ShakeRotation
-  - hash:
-      serializedVersion: 2
       Hash: b34d1a74e3bc4f15d725cdad24279997
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: Tonemapping
-  - hash:
-      serializedVersion: 2
-      Hash: 2722ae184ee083c816d7a70b8fa77935
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: TransformProperty
   - hash:
       serializedVersion: 2
       Hash: 5880b607bb27b23d364722759f08e794
@@ -3689,16 +2086,16 @@ ScriptsOnlyBuild:
     className: Light2D
   - hash:
       serializedVersion: 2
-      Hash: 22a78a3ced4ab89d7817f0e16a33752f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandSort
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: GlobalMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 892b5093967522535ba980d28ce42084
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Slider
   - hash:
       serializedVersion: 2
       Hash: 4971791e3fdadf654bdde2398c8ec417
@@ -3707,28 +2104,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector3
   - hash:
       serializedVersion: 2
-      Hash: adbbe15d56b15bf02e821e5acd4fff96
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SayDialog
-  - hash:
-      serializedVersion: 2
-      Hash: 736d82cc0552ae8e4589d998d55898b3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: OpeningManager
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerExitMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a7cb5a00fbd5ac80334dcf5c757abd78
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CallMethod
   - hash:
       serializedVersion: 2
       Hash: 1b4a83f2a2f1a4def12cdc9223cce72c
@@ -3741,48 +2120,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ChannelMixer
-  - hash:
-      serializedVersion: 2
-      Hash: 6f14dd5429262e06a515c68d45726498
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Log
-  - hash:
-      serializedVersion: 2
-      Hash: f6c9afae2b50ca47f2f2b964d6ac328e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FadeToView
-  - hash:
-      serializedVersion: 2
-      Hash: 187d6872003374c1d04c97e8d807366c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ColorProperty
-  - hash:
-      serializedVersion: 2
-      Hash: 174c24d137764cfdcf1b15d9e4b8f768
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector4Property
-  - hash:
-      serializedVersion: 2
-      Hash: 223b9efe917aae2dade1497917cc393a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RotateFrom
-  - hash:
-      serializedVersion: 2
-      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollisionVariable
-  - hash:
-      serializedVersion: 2
-      Hash: efeee56f53dbeded579e697251285f5e
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaIf
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -3803,46 +2140,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
-      Hash: 45315727f240caf2ad1df4c58d29bbae
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ShakeScale
-  - hash:
-      serializedVersion: 2
-      Hash: 8d257aeb18c3af059b906e8bcdcdcef8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopTweensLean
-  - hash:
-      serializedVersion: 2
-      Hash: 6e73d7f6d6fce7d0f7827f71101406cf
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ToggleChanged
-  - hash:
-      serializedVersion: 2
-      Hash: b0fb8908e44b3076d4693315d9cb5736
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Quit
-  - hash:
-      serializedVersion: 2
-      Hash: 1776661452c6b132e1e5322d865bd1c1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ColliderProperty
-  - hash:
-      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 60d021259591814b7ea7bcf4634360a5
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Lerp
   - hash:
       serializedVersion: 2
       Hash: 13debb64706705306df6fb0ac49b3b48
@@ -3851,64 +2152,10 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: e47424e6e25c4ce7519fa6de10cd0132
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: StopFlowchart
-  - hash:
-      serializedVersion: 2
-      Hash: c95a893b64a3e30081675a6bbbcd2d24
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: GameStarted
-  - hash:
-      serializedVersion: 2
-      Hash: 65c320fb2d453f06fcf3280398ac919c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MapSpot
-  - hash:
-      serializedVersion: 2
-      Hash: 4fb0d6ddbfa6d517c2e07c8f11827a52
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetInteractable
-  - hash:
-      serializedVersion: 2
-      Hash: cdef98e0388ace2593bcf015c02d916b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameButton
-  - hash:
-      serializedVersion: 2
-      Hash: 8de3821234a2407b6dd62d5360f96091
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collision2D
-  - hash:
-      serializedVersion: 2
-      Hash: 13450d385a76811f4ed81a398552f033
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: AddForce2D
-  - hash:
-      serializedVersion: 2
-      Hash: a75764e52fced7dba887a1374eea27d2
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Trig
-  - hash:
-      serializedVersion: 2
       Hash: eb89cc9c55c1361dc02d4fea220cc023
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
-  - hash:
-      serializedVersion: 2
-      Hash: 975f5b6714ca519a795080fca6062530
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Writer
   - hash:
       serializedVersion: 2
       Hash: e4c654f2c22e97586651b87d4668f2fe
@@ -3923,52 +2170,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerHBox
   - hash:
       serializedVersion: 2
-      Hash: c743f918fec96e5331a1a3634f5c492c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandElement
-  - hash:
-      serializedVersion: 2
-      Hash: f87ed503ebba9718971827c653be0f57
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SpriteProperty
-  - hash:
-      serializedVersion: 2
-      Hash: ce088ff41cfe7d7a120f1fb458c567c4
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: iTween
-  - hash:
-      serializedVersion: 2
-      Hash: 349d90e90030f302f5bf7dea45b199cc
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetToggleState
-  - hash:
-      serializedVersion: 2
-      Hash: 385b95c98a5f4ab5808ab399182b271d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DialogInput
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a922d4fd590fbefad1efdcacd3c2ec7b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Reset
-  - hash:
-      serializedVersion: 2
-      Hash: 01554f25c55dc0fb439d2230cb74505f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaEnvironment
   - hash:
       serializedVersion: 2
       Hash: 7a0dffef755dbed4f4799f891b173e23
@@ -3977,10 +2182,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectFloatField
   - hash:
       serializedVersion: 2
-      Hash: 8af9f89f9a192367e70f05f8fcd43952
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ShakeCamera
+      Hash: 751d867553f413cde86fe5db0b02780d
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -3993,24 +2198,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
     className: NavMeshModifier
-  - hash:
-      serializedVersion: 2
-      Hash: deccb0c1ff9d0a068feef215b36bd6fd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: UpdateTick
-  - hash:
-      serializedVersion: 2
-      Hash: 6be25e2b9b3bcabc6e43645d0b5106b9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Character
-  - hash:
-      serializedVersion: 2
-      Hash: 5d9a885c3c6637390cfc475918ffecd1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FlowchartEnabled
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -4031,40 +2218,16 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 3045800a9f926faa60e82e4e3eedb329
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaUtils
-  - hash:
-      serializedVersion: 2
-      Hash: 874f6f119252828c05001013c6373589
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSayDialog
-  - hash:
-      serializedVersion: 2
       Hash: bda375ec9364b61578e45bbeddaa26a0
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerColor
   - hash:
       serializedVersion: 2
-      Hash: 31e60b2deb4e75316190cfe69ba85f0f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: IntVarCollection
-  - hash:
-      serializedVersion: 2
       Hash: ad0eda518d43b4ecaa586237c08aa4b2
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: FilmGrain
-  - hash:
-      serializedVersion: 2
-      Hash: 3d8bcfedf8c8f8c061e055079e2c5de8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collision2DProperty
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -4079,46 +2242,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c5969909238448d8251ced01e8248aa6
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ElseIf
-  - hash:
-      serializedVersion: 2
       Hash: a8b7fd1da21541aeec7d0fde1c075720
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerObjectList
-  - hash:
-      serializedVersion: 2
-      Hash: a4a76a613e0c80f0e4905822845d1749
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlayAnimState
-  - hash:
-      serializedVersion: 2
-      Hash: 1d79e5887cfa4a165b9e503638e8e38f
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: ForceCursorVisible
-  - hash:
-      serializedVersion: 2
-      Hash: ebc58d6465eda603a9ce9747ba62c9ed
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Vector4Variable
-  - hash:
-      serializedVersion: 2
-      Hash: 4dc4ed5b81abee77f755c96fcf2095d0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TestJPEGDownload
-  - hash:
-      serializedVersion: 2
-      Hash: cbeae481a2d84852b10934497de78d29
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: SimpleMouseLook
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -4139,24 +2266,6 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: ecfb9a2e292ab216b3b782d7ac6a0374
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetClickable2D
-  - hash:
-      serializedVersion: 2
-      Hash: 33b1330eb1739453afd691d251224479
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Exp
-  - hash:
-      serializedVersion: 2
-      Hash: 5d9a885c3c6637390cfc475918ffecd1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: EventHandler
-  - hash:
-      serializedVersion: 2
       Hash: bbd18fc68ceeefb10270c51811911485
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -4169,28 +2278,10 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f3ba6ccbc824489d8194964e3bd1668d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MoveToView
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 78410201a3d3b115fa9726ff3536ef33
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PhysicsCast
-  - hash:
-      serializedVersion: 2
-      Hash: 84df86f692fb92a1cff045ac8d43a43b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RewardUIManager
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -4199,58 +2290,10 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 2f10db2578e288493934e62557b9b618
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlayMusic
-  - hash:
-      serializedVersion: 2
-      Hash: b91196684244e6821d889d9c2720fc7a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetMenuDialog
-  - hash:
-      serializedVersion: 2
-      Hash: 72739c11a2e12efeb4951425ea86a855
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PlayUsfxrSound
-  - hash:
-      serializedVersion: 2
-      Hash: f7bb39e7cb4f3e5b7fa5f9ab61e1f4a9
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Trigger2D
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SceneLoader
-  - hash:
-      serializedVersion: 2
-      Hash: c64e5653bb359ceacc060569a0f18f92
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: KeyPressed
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMoveMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PortraitController
-  - hash:
-      serializedVersion: 2
-      Hash: f9dd588f20f25e02cc4c0b12354708e8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandCount
   - hash:
       serializedVersion: 2
       Hash: 51c975dda8aaf99e5338553ec4931968
@@ -4259,64 +2302,10 @@ ScriptsOnlyBuild:
     className: PostProcessData
   - hash:
       serializedVersion: 2
-      Hash: 522faab158ae6f1e5e4b8cd148c8c373
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: DragCompleted
-  - hash:
-      serializedVersion: 2
-      Hash: 956c2a3108578620778d40040ce31425
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PauseMenu
-  - hash:
-      serializedVersion: 2
-      Hash: efaffb1bc3937c362a5e44757bfe100a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: RandomInteger
-  - hash:
-      serializedVersion: 2
       Hash: ba0656d47f0fcdf90e7f55af86e32052
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: 
     className: FullScreenPassRendererFeature
-  - hash:
-      serializedVersion: 2
-      Hash: 1098c252d593242b4bb2b5e5aef0957d
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetCollider
-  - hash:
-      serializedVersion: 2
-      Hash: 2ccaeb268b3b4bba324405a83912be3a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SetSortingLayer
-  - hash:
-      serializedVersion: 2
-      Hash: 4582e916ac2220642af3ab73cf66f930
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PunchPosition
-  - hash:
-      serializedVersion: 2
-      Hash: cf997dad3607ce45d71f910fdb7960e1
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: MoveTo
-  - hash:
-      serializedVersion: 2
-      Hash: d6cd8bf8673a142bff486a0dc8662f0a
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: Collision
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MapUIManager
   - hash:
       serializedVersion: 2
       Hash: df890c4d7f6baa24beba8f1eaa9b4ea9
@@ -4326,105 +2315,15 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LuaStore
-  - hash:
-      serializedVersion: 2
-      Hash: e516c1ebec25bacc50fbe093cbf3b4a8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandRemove
-  - hash:
-      serializedVersion: 2
-      Hash: 8c9ae46aa30e4e2822d1aed3fabb16c8
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandAdd
-  - hash:
-      serializedVersion: 2
-      Hash: e5b53e94f8832f77a1118cfaa522832c
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: LookFrom
-  - hash:
-      serializedVersion: 2
-      Hash: e47f11d026343d636c22ad6bbcd3de7e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AudioManager
-  - hash:
-      serializedVersion: 2
-      Hash: 22a78a3ced4ab89d7817f0e16a33752f
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: CollectionCommandReverse
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 36c7a7fe02e941ec6cf170df28029828
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: SendMessage
-  - hash:
-      serializedVersion: 2
-      Hash: 9cc6de49b41d99c47ecfc1484590ffca
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: FPDemoPriorityRouter
   - hash:
       serializedVersion: 2
       Hash: 116a5d45ac93b8a51d0a895f4b9c4df2
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerFoldout
-  - hash:
-      serializedVersion: 2
-      Hash: 578a261e5d248718dd2bf5775779a65b
-    assemblyName: Assembly-CSharp
-    namespaceName: Aris.Utils
-    className: DebugToUIManager
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: FungusManager
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Bunker
-  - hash:
-      serializedVersion: 2
-      Hash: deccb0c1ff9d0a068feef215b36bd6fd
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: ApplicationState
-  - hash:
-      serializedVersion: 2
-      Hash: b4b9ab5a2425d1926e4977e152fb4d22
-    assemblyName: Fungus
-    namespaceName: Fungus
-    className: PhysicsOverlap
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: FungusExamples
-    namespaceName: Fungus.Examples
-    className: TMProLinkStylingDemo
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -4439,19 +2338,2191 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 6e18b9908ea0cdf06446782f85b31d48
+      Hash: a922d4fd590fbefad1efdcacd3c2ec7b
     assemblyName: Fungus
     namespaceName: Fungus
-    className: ObjectClicked
+    className: Reset
+  - hash:
+      serializedVersion: 2
+      Hash: a1e274ab25ba09be107fcf71ea4c44d7
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LoadScene
+  - hash:
+      serializedVersion: 2
+      Hash: 0e24ce4668ab32a68d410a763250c162
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ColliderVariable
+  - hash:
+      serializedVersion: 2
+      Hash: c64e5653bb359ceacc060569a0f18f92
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: KeyPressed
+  - hash:
+      serializedVersion: 2
+      Hash: 22a78a3ced4ab89d7817f0e16a33752f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandSort
+  - hash:
+      serializedVersion: 2
+      Hash: 1bc3a186bbe0432fc54a58ca02988540
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: QuaternionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: d8f5e715de9753991f5ab7a829d33f27
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ButtonClicked
+  - hash:
+      serializedVersion: 2
+      Hash: 938e3c563a63d73daeaa84d1fa68c83e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ShowSprite
+  - hash:
+      serializedVersion: 2
+      Hash: d3eb140d98c538091fbc3e0e3684423d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InitWithDefault
+  - hash:
+      serializedVersion: 2
+      Hash: 7b8876e70e771319304681d5f2bfdc4d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FadeScreen
+  - hash:
+      serializedVersion: 2
+      Hash: c91402d24942dc1f4e1031b791621cd5
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ToInt
+  - hash:
+      serializedVersion: 2
+      Hash: 505cf29279b45826103115a850bc5b04
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpotManager
+  - hash:
+      serializedVersion: 2
+      Hash: 045d0392440154a8750f163deac8b189
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ScaleLean
+  - hash:
+      serializedVersion: 2
+      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collision2DVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 02bd20bd1498d6576086be666d66699c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SaveData
+  - hash:
+      serializedVersion: 2
+      Hash: c5969909238448d8251ced01e8248aa6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: If
+  - hash:
+      serializedVersion: 2
+      Hash: b3cfba51552e477b7005885a2736b11f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ControllerColliderHitProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 0064224d930617c33d540612e30b3c63
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FloatVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 01c68a12de563b350c2fe244bcb3e857
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TextInputHandler
+  - hash:
+      serializedVersion: 2
+      Hash: b49a4b2c6c586fc86572c432aff3fb00
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: InvLerp
+  - hash:
+      serializedVersion: 2
+      Hash: b91196684244e6821d889d9c2720fc7a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetMenuDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 3eab3f89889ebfb978059fcef8a5dea5
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LoopRange
+  - hash:
+      serializedVersion: 2
+      Hash: db5c85bda08caa7ac027d0da993f0c74
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: QuaternionVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 7d469a402f68cf81562696ff410dea69
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Curve
+  - hash:
+      serializedVersion: 2
+      Hash: f6ab2d91c0159948751e8c4efb0b43e6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneSwitcher
+  - hash:
+      serializedVersion: 2
+      Hash: 5287dbe3ebd729b3144e2a792a7fcc1d
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: TravelEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: SpriteColorChangeFromFungusMouseEvent
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaStore
+  - hash:
+      serializedVersion: 2
+      Hash: 174c24d137764cfdcf1b15d9e4b8f768
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector4Property
+  - hash:
+      serializedVersion: 2
+      Hash: c8d9d1f76cb90d21bbfbb68adeccb87c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TextureProperty
+  - hash:
+      serializedVersion: 2
+      Hash: f9dd588f20f25e02cc4c0b12354708e8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandCount
+  - hash:
+      serializedVersion: 2
+      Hash: 349d90e90030f302f5bf7dea45b199cc
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetToggleState
+  - hash:
+      serializedVersion: 2
+      Hash: 5350477ed16c183fd6018b2f4f80fc34
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FromString
+  - hash:
+      serializedVersion: 2
+      Hash: 269aa4b0a8f696b4d88c38d057cd0e3b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MinMax
+  - hash:
+      serializedVersion: 2
+      Hash: ebc58d6465eda603a9ce9747ba62c9ed
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector4Variable
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SaveSerial
+  - hash:
+      serializedVersion: 2
+      Hash: 9cc6de49b41d99c47ecfc1484590ffca
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: FPDemoPriorityRouter
+  - hash:
+      serializedVersion: 2
+      Hash: 8af9f89f9a192367e70f05f8fcd43952
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ShakeCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 1925359e9aac84db55ffbf0a09d4d4f7
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusState
+  - hash:
+      serializedVersion: 2
+      Hash: 2c612e2d6257829abd4ecfd60b42e5af
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ExecuteLua
+  - hash:
+      serializedVersion: 2
+      Hash: 351a9580f4b6621a5cf048df8b225938
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DebugBreak
+  - hash:
+      serializedVersion: 2
+      Hash: 22a78a3ced4ab89d7817f0e16a33752f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandShuffle
+  - hash:
+      serializedVersion: 2
+      Hash: b992837496124888fd9ba6cf6ad9b57b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GameObjectVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 3045800a9f926faa60e82e4e3eedb329
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaUtils
+  - hash:
+      serializedVersion: 2
+      Hash: 2fdd684fdd8357a064506422fc7ef096
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DeleteSaveKey
+  - hash:
+      serializedVersion: 2
+      Hash: e47f11d026343d636c22ad6bbcd3de7e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: c303f7939620dd533fdb7df036ffb992
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ControlStage
+  - hash:
+      serializedVersion: 2
+      Hash: fe788e69f2056709aed76f1275082af1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TestJPEGDownload
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TaskManager
+  - hash:
+      serializedVersion: 2
+      Hash: 48e88acbf8bdbac8fa7602ce973ddc89
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GameObjectProperty
+  - hash:
+      serializedVersion: 2
+      Hash: f94d52f4006ff920b6db6331033d30f9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AudioSourceProperty
+  - hash:
+      serializedVersion: 2
+      Hash: b2bd43aac0a3abb8d26878ffb5689712
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RigidbodyVariable
+  - hash:
+      serializedVersion: 2
+      Hash: b78e150c854bc6795b33ea34564b6078
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: IntCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 5f941b1ef90b66fbb2097cbd3b257892
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AddTorque2D
+  - hash:
+      serializedVersion: 2
+      Hash: 4582e916ac2220642af3ab73cf66f930
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PunchPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 3821e36b0542f3115ce31c982a6cd29d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandCopy
+  - hash:
+      serializedVersion: 2
+      Hash: dbfa9fae30ce8a30efa35628817bb1c4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetUIImage
+  - hash:
+      serializedVersion: 2
+      Hash: 4582e916ac2220642af3ab73cf66f930
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ShakeRotation
+  - hash:
+      serializedVersion: 2
+      Hash: 688508066fd127de845115f1829495a2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: NarrativeLogEntryDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 3821e36b0542f3115ce31c982a6cd29d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandExclusive
+  - hash:
+      serializedVersion: 2
+      Hash: 98ae20327fd756be6fb97f40b41ce971
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Matrix4x4Variable
+  - hash:
+      serializedVersion: 2
+      Hash: 16b0565b8b46a0f3822038bb76824c81
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Physics2DOverlap
+  - hash:
+      serializedVersion: 2
+      Hash: 8de3821234a2407b6dd62d5360f96091
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collision2D
+  - hash:
+      serializedVersion: 2
+      Hash: c95a893b64a3e30081675a6bbbcd2d24
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GameStarted
+  - hash:
+      serializedVersion: 2
+      Hash: deccb0c1ff9d0a068feef215b36bd6fd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: UpdateTick
+  - hash:
+      serializedVersion: 2
+      Hash: c15eb06c58127711d1ee9b84a7f14b38
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RotateTo
+  - hash:
+      serializedVersion: 2
+      Hash: 731b332c7c0148f2224f3683ec18ca2e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerStatus
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Exp
+  - hash:
+      serializedVersion: 2
+      Hash: 52006e4d61c07c7b3af90bff49053772
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Pow
+  - hash:
+      serializedVersion: 2
+      Hash: 865353386fa411cc79be78ee1cf1c691
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LoadVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PublicMethods
+  - hash:
+      serializedVersion: 2
+      Hash: 67a2e7ea535b6d9152ac5fad9190b824
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Wait
+  - hash:
+      serializedVersion: 2
+      Hash: 5d9a885c3c6637390cfc475918ffecd1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: EventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: f17a1315158969b351096e5b67441ccf
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CustomTag
+  - hash:
+      serializedVersion: 2
+      Hash: e5b53e94f8832f77a1118cfaa522832c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LookFrom
+  - hash:
+      serializedVersion: 2
+      Hash: 385b95c98a5f4ab5808ab399182b271d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DialogInput
+  - hash:
+      serializedVersion: 2
+      Hash: b91196684244e6821d889d9c2720fc7a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ClearMenu
+  - hash:
+      serializedVersion: 2
+      Hash: f6c9afae2b50ca47f2f2b964d6ac328e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FadeToView
+  - hash:
+      serializedVersion: 2
+      Hash: a4a76a613e0c80f0e4905822845d1749
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlayAnimState
+  - hash:
+      serializedVersion: 2
+      Hash: 7239d029c1eb5cc40b180c3ba3798146
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DragStarted
+  - hash:
+      serializedVersion: 2
+      Hash: 4330c25ff7329e531d6382b7d84b53fb
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TransformVariable
+  - hash:
+      serializedVersion: 2
+      Hash: f20a52a730da0490e0652a20aab0cab3
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collider2DCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 97831c3baf0860a69186680c25b42878
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: InvaderGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 44e58892fb59646d9ee04071b131d802
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlayAmbianceSound
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: End
+  - hash:
+      serializedVersion: 2
+      Hash: 9d94c08e0b1a2f5973027d8e035bf71d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collider2DVariable
+  - hash:
+      serializedVersion: 2
+      Hash: d3eb140d98c538091fbc3e0e3684423d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TestCloudSave
+  - hash:
+      serializedVersion: 2
+      Hash: 8c9ae46aa30e4e2822d1aed3fabb16c8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandAdd
+  - hash:
+      serializedVersion: 2
+      Hash: 22cd40885da80d2bd972248dd2bebbb1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusPriorityCount
+  - hash:
+      serializedVersion: 2
+      Hash: 72739c11a2e12efeb4951425ea86a855
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlayUsfxrSound
+  - hash:
+      serializedVersion: 2
+      Hash: 1d79e5887cfa4a165b9e503638e8e38f
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: ForceCursorVisible
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopMusic
+  - hash:
+      serializedVersion: 2
+      Hash: 7239d029c1eb5cc40b180c3ba3798146
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DragCancelled
+  - hash:
+      serializedVersion: 2
+      Hash: 64b849c4019a9ef4603c29112fc9dc48
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3ToVector2
+  - hash:
+      serializedVersion: 2
+      Hash: d6cd8bf8673a142bff486a0dc8662f0a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collision
+  - hash:
+      serializedVersion: 2
+      Hash: 51aab758b1d6d271a727a6a0161a6795
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Particle
+  - hash:
+      serializedVersion: 2
+      Hash: deccb0c1ff9d0a068feef215b36bd6fd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Render
+  - hash:
+      serializedVersion: 2
+      Hash: 749ea89914f42bef0fe85e4d43d66eed
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlayRandomSound
+  - hash:
+      serializedVersion: 2
+      Hash: 4976d55f32dc679b8a244760fc4bd9f0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: OpenURL
+  - hash:
+      serializedVersion: 2
+      Hash: 78410201a3d3b115fa9726ff3536ef33
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PhysicsCast
+  - hash:
+      serializedVersion: 2
+      Hash: cf997dad3607ce45d71f910fdb7960e1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MoveTo
+  - hash:
+      serializedVersion: 2
+      Hash: ad9a934d2bf946b628d14a1633c111fa
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaScript
+  - hash:
+      serializedVersion: 2
+      Hash: 48c392635ca2da088fcb69c02da2d054
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpotInfo
+  - hash:
+      serializedVersion: 2
+      Hash: ea67486d6bbe14628117b11f96e15f89
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: 6e18b9908ea0cdf06446782f85b31d48
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ObjectClicked
+  - hash:
+      serializedVersion: 2
+      Hash: d87f3439e2fbb83b9d5e7c33a90e8383
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAudioVolume
+  - hash:
+      serializedVersion: 2
+      Hash: deccb0c1ff9d0a068feef215b36bd6fd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ApplicationState
+  - hash:
+      serializedVersion: 2
+      Hash: 60d021259591814b7ea7bcf4634360a5
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Lerp
+  - hash:
+      serializedVersion: 2
+      Hash: 51c47f8e2b8dde66ea9178e8c6984e3e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandContainsAny
+  - hash:
+      serializedVersion: 2
+      Hash: 36c7a7fe02e941ec6cf170df28029828
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SendMessage
+  - hash:
+      serializedVersion: 2
+      Hash: 90fc3c03454f08dba0333eed4cc07527
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: WriterAudio
+  - hash:
+      serializedVersion: 2
+      Hash: 1530d89b510b3fa2b366d97344330947
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ScaleAdd
+  - hash:
+      serializedVersion: 2
+      Hash: 754c7990e342fd9b8ca33e0271f80db7
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AssertCommand
+  - hash:
+      serializedVersion: 2
+      Hash: 3ad92dc5a7cfb07835215d5555ee4ef0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AnimatorProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ChallengerContoller
+  - hash:
+      serializedVersion: 2
+      Hash: 1d01c2bb5b84c7e64b943eb09c559c62
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: SimpleForceMovement
+  - hash:
+      serializedVersion: 2
+      Hash: a8b4d69d872a41ca63f66f2908bc60bc
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FloatCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 8463ae9673e2333139513dbae454471c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Call
+  - hash:
+      serializedVersion: 2
+      Hash: 4ec50022a3e2e07e13b8a2bb519e3c8e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GameObjectCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 6be25e2b9b3bcabc6e43645d0b5106b9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Character
+  - hash:
+      serializedVersion: 2
+      Hash: 9882f8bd342b03ddd81e3e35e82addae
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ShakePosition
+  - hash:
+      serializedVersion: 2
+      Hash: 40d244afe660099fb91eb803ac22bffb
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StringVariable
+  - hash:
+      serializedVersion: 2
+      Hash: c60833fb1afee9b284236beedaeb68ea
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionVariable
+  - hash:
+      serializedVersion: 2
+      Hash: f3ba6ccbc824489d8194964e3bd1668d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MoveToView
+  - hash:
+      serializedVersion: 2
+      Hash: 736cf84997cb7672fd5e2dd101b1ccda
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Rigidbody2DVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 70d8901b43f9937f506c4e0e7f35eb24
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TransformCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 8e0de6a8a38dd9f857f5734e04cbf0af
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MapSoundLibrary
+  - hash:
+      serializedVersion: 2
+      Hash: 5e83e3bf637575510844e6040f0a21ff
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandOccurrences
+  - hash:
+      serializedVersion: 2
+      Hash: efeee56f53dbeded579e697251285f5e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaCondition
+  - hash:
+      serializedVersion: 2
+      Hash: 3d8bcfedf8c8f8c061e055079e2c5de8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collision2DProperty
+  - hash:
+      serializedVersion: 2
+      Hash: ecf03afff9a2345b99cd04ac6679671d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GameObjectFind
+  - hash:
+      serializedVersion: 2
+      Hash: 76c4324df41b1631107ee5e544881b79
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: View
+  - hash:
+      serializedVersion: 2
+      Hash: eaf1a5c9f33bb5d3a6b13c003da459e6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: InvokeEvent
+  - hash:
+      serializedVersion: 2
+      Hash: ecfb9a2e292ab216b3b782d7ac6a0374
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetClickable2D
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MusicManager
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusPriorityReset
+  - hash:
+      serializedVersion: 2
+      Hash: 706eb1baa2f82569719a489cee261db6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Collider2DProperty
+  - hash:
+      serializedVersion: 2
+      Hash: df7f02ea7845a5ffc257e67d2b089631
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TravelSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: NarrativeLog
+  - hash:
+      serializedVersion: 2
+      Hash: 6642d1948da1ae380dd6aa1f013c860e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MoveFrom
+  - hash:
+      serializedVersion: 2
+      Hash: 41adde8c35a50f7eda14a54fbe4007a8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionRandom
+  - hash:
+      serializedVersion: 2
+      Hash: e20d6e3aae991273f3bb3924c3856782
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Localization
+  - hash:
+      serializedVersion: 2
+      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ControllerColliderHitVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Inv
+  - hash:
+      serializedVersion: 2
+      Hash: 11df2d7f124b38ea562bcca489da4847
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpaceInvaderManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5bf36b0b7e2b0da851ef753bdefec9cf
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MaterialProperty
+  - hash:
+      serializedVersion: 2
+      Hash: f9dd588f20f25e02cc4c0b12354708e8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandReserve
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopTweens
+  - hash:
+      serializedVersion: 2
+      Hash: 8665cfa0d52b1b868670ef796dd7c664
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionRandomBag
+  - hash:
+      serializedVersion: 2
+      Hash: 986915cc1b65342846d69cc31d43e5ab
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandAddAll
+  - hash:
+      serializedVersion: 2
+      Hash: 14a6cffbcc69b434bb19e104d5321dad
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PathManager
+  - hash:
+      serializedVersion: 2
+      Hash: c5969909238448d8251ced01e8248aa6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: While
+  - hash:
+      serializedVersion: 2
+      Hash: 33a9f6c1a2fa9b54debda6465a601f90
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ScaleTo
+  - hash:
+      serializedVersion: 2
+      Hash: 4c599aa057c5893d4d71ad2953a14891
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAnimInteger
+  - hash:
+      serializedVersion: 2
+      Hash: ed89d2cd5bfb1eef696cc59324825430
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MaterialVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GlobalVariables
+  - hash:
+      serializedVersion: 2
+      Hash: 48ba8e0a64bc1a5bcd175b258d95b6cd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: NarrativeLogMenu
+  - hash:
+      serializedVersion: 2
+      Hash: b61ac8c07efaa480f83781e219acdae6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3Fields
+  - hash:
+      serializedVersion: 2
+      Hash: 975f5b6714ca519a795080fca6062530
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Writer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Bunker
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: EventDispatcher
+  - hash:
+      serializedVersion: 2
+      Hash: 874f6f119252828c05001013c6373589
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSayDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 45315727f240caf2ad1df4c58d29bbae
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ShakeScale
+  - hash:
+      serializedVersion: 2
+      Hash: 36ec9098f57fb287c1d679fcaa53e508
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Conversation
+  - hash:
+      serializedVersion: 2
+      Hash: 78c0f8f73909080beb527e9cebf50ec3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OpeningManager
+  - hash:
+      serializedVersion: 2
+      Hash: 461606aa877794d72684da23acdefc16
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAnimTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: a7cb5a00fbd5ac80334dcf5c757abd78
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CallMethod
+  - hash:
+      serializedVersion: 2
+      Hash: b622e57b839318db932682c4e2b22f33
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Matrix4x4Property
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: 
+    className: SfxrAudioPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 6f14dd5429262e06a515c68d45726498
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Log
+  - hash:
+      serializedVersion: 2
+      Hash: 2ccaeb268b3b4bba324405a83912be3a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSortingLayer
+  - hash:
+      serializedVersion: 2
+      Hash: 68483541028dff991dd71e1fa4430fdf
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DestroyOnLoad
+  - hash:
+      serializedVersion: 2
+      Hash: f5e234dfb298e951dd0d5462453021b4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Node
+  - hash:
+      serializedVersion: 2
+      Hash: e1f4dfba767a0d52926a9b5de9762525
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GetToggleState
+  - hash:
+      serializedVersion: 2
+      Hash: efeee56f53dbeded579e697251285f5e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaElseIf
+  - hash:
+      serializedVersion: 2
+      Hash: 254fd1448779929c21b7d1af0052fac8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector2Property
+  - hash:
+      serializedVersion: 2
+      Hash: d3eb140d98c538091fbc3e0e3684423d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UGS_Analytics
+  - hash:
+      serializedVersion: 2
+      Hash: 90f0d37aff367ac2c6d81663d6393cbb
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CharacterControllerCollide
+  - hash:
+      serializedVersion: 2
+      Hash: 22a78a3ced4ab89d7817f0e16a33752f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandReverse
+  - hash:
+      serializedVersion: 2
+      Hash: 1b224f64e40508db2f14629887eae3f4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopTween
+  - hash:
+      serializedVersion: 2
+      Hash: 9a38e08151f74e848060a0011cf928ca
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PickUp
+  - hash:
+      serializedVersion: 2
+      Hash: 890bd4de0600c9a4c457d05a58599bed
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ToString
+  - hash:
+      serializedVersion: 2
+      Hash: d7d56bed6ae9543ef6fa96bf1ec6c615
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Fullscreen
+  - hash:
+      serializedVersion: 2
+      Hash: 6eb8384e22507bc2c8eadb21f0a940dd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MapSpot
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: 
+    className: SfxrCacheSurrogate
+  - hash:
+      serializedVersion: 2
+      Hash: 5c1248faa98b1112dc40656650648e3d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Draggable2D
+  - hash:
+      serializedVersion: 2
+      Hash: c5969909238448d8251ced01e8248aa6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ElseIf
+  - hash:
+      serializedVersion: 2
+      Hash: 6a2ef3bb201fae7339b53c7b4e773ffa
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: InvaderPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 0f00644f615021a2508672d4c7976eb4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CommandCopyBuffer
+  - hash:
+      serializedVersion: 2
+      Hash: cbeae481a2d84852b10934497de78d29
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: SimpleMouseLook
+  - hash:
+      serializedVersion: 2
+      Hash: e1d69a7a7c3c2225a04eb3be840c7a1e
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: Manifest
+  - hash:
+      serializedVersion: 2
+      Hash: 3821e36b0542f3115ce31c982a6cd29d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandIntersection
+  - hash:
+      serializedVersion: 2
+      Hash: 3ef3b54e027cfe7d206b0dbacdbec7da
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: InvokeMethod
+  - hash:
+      serializedVersion: 2
+      Hash: 17c275d149e5cdd89f2260a75014a17d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetText
+  - hash:
+      serializedVersion: 2
+      Hash: f7bb39e7cb4f3e5b7fa5f9ab61e1f4a9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Trigger2D
+  - hash:
+      serializedVersion: 2
+      Hash: 956c2a3108578620778d40040ce31425
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: fcc46e1e313b2560b6e2e4291b0a7155
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Map
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MapUIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1098c252d593242b4bb2b5e5aef0957d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetCollider
+  - hash:
+      serializedVersion: 2
+      Hash: 31e60b2deb4e75316190cfe69ba85f0f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: IntVarCollection
+  - hash:
+      serializedVersion: 2
+      Hash: efeee56f53dbeded579e697251285f5e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaIf
+  - hash:
+      serializedVersion: 2
+      Hash: fec6970961b0e01b0b8862f7d01760c2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TravelEventUI
+  - hash:
+      serializedVersion: 2
+      Hash: 6e73d7f6d6fce7d0f7827f71101406cf
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ToggleChanged
+  - hash:
+      serializedVersion: 2
+      Hash: b6bd61f199ee715857d24d0dcf425680
+    assemblyName: FungusExamples
+    namespaceName: 
+    className: CustomScript
+  - hash:
+      serializedVersion: 2
+      Hash: 108fa64da7375a1bc03101f37de0bc27
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RotateLean
+  - hash:
+      serializedVersion: 2
+      Hash: f9dd588f20f25e02cc4c0b12354708e8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandRemoveAt
+  - hash:
+      serializedVersion: 2
+      Hash: 0162bd92fab2ca585adf01ab56a42311
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Destroy
+  - hash:
+      serializedVersion: 2
+      Hash: 0fdf7cc27fc08e38252f6e5baff1e9a5
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GetText
+  - hash:
+      serializedVersion: 2
+      Hash: 2f10db2578e288493934e62557b9b618
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlayMusic
+  - hash:
+      serializedVersion: 2
+      Hash: 6a334945c0ec6008b28b7fb9646b033b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ColliderCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 7afa9dafca3c2cb9ea013940bb48b518
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Clamp
+  - hash:
+      serializedVersion: 2
+      Hash: 25fd2d9aca124ea002fc20d60246a983
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: EndEdit
+  - hash:
+      serializedVersion: 2
+      Hash: 13450d385a76811f4ed81a398552f033
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AddForce2D
+  - hash:
+      serializedVersion: 2
+      Hash: b4b9ab5a2425d1926e4977e152fb4d22
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PhysicsOverlap
+  - hash:
+      serializedVersion: 2
+      Hash: 22a78a3ced4ab89d7817f0e16a33752f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandUnique
+  - hash:
+      serializedVersion: 2
+      Hash: 23a008e0aa79b806928d62aad697a0d0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MoveAdd
+  - hash:
+      serializedVersion: 2
+      Hash: 1b7a9d9fba18129b7f2d5a5379111519
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandFind
+  - hash:
+      serializedVersion: 2
+      Hash: f271cbffa359e52408219ab8e10463ff
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: App
+  - hash:
+      serializedVersion: 2
+      Hash: d3027e69b55cbdac65cd2280b847bc70
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StartSwipe
+  - hash:
+      serializedVersion: 2
+      Hash: d5063b0b43d23006b364ab741708f53e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Trigger
+  - hash:
+      serializedVersion: 2
+      Hash: a75764e52fced7dba887a1374eea27d2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Round
+  - hash:
+      serializedVersion: 2
+      Hash: 49e9c43b80f335fdd451df2f5585e439
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3Normalise
+  - hash:
+      serializedVersion: 2
+      Hash: f87ed503ebba9718971827c653be0f57
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SpriteProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 0f77f86c0b8e7dd48013f2106ea4e173
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3Property
+  - hash:
+      serializedVersion: 2
+      Hash: e0b61aabeb1ed357df954c2c35aef7e2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetDraggable2D
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Break
+  - hash:
+      serializedVersion: 2
+      Hash: 8d257aeb18c3af059b906e8bcdcdcef8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopTweensLean
+  - hash:
+      serializedVersion: 2
+      Hash: 578a261e5d248718dd2bf5775779a65b
+    assemblyName: Assembly-CSharp
+    namespaceName: Aris.Utils
+    className: DebugToUIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 48331e87c1bc96318c3140de632c8b2e
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: Projectile
+  - hash:
+      serializedVersion: 2
+      Hash: 23a008e0aa79b806928d62aad697a0d0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RotateAdd
+  - hash:
+      serializedVersion: 2
+      Hash: 07bb628684e4586149feec8bc51638fe
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Portrait
+  - hash:
+      serializedVersion: 2
+      Hash: fa6026ae08be63c5ba0dc49e0b6a9bc0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Parallax
+  - hash:
+      serializedVersion: 2
+      Hash: adbbe15d56b15bf02e821e5acd4fff96
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SayDialog
+  - hash:
+      serializedVersion: 2
+      Hash: d27e263a800ac2f6b7c375cda5e97fe9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StringCollection
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Sign
+  - hash:
+      serializedVersion: 2
+      Hash: efaffb1bc3937c362a5e44757bfe100a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RandomInteger
+  - hash:
+      serializedVersion: 2
+      Hash: d57d2f055714b5cc09eed68cc0f74b48
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Flowchart
+  - hash:
+      serializedVersion: 2
+      Hash: 9903f933b7444dd5785c0cf928572473
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSaveProfile
+  - hash:
+      serializedVersion: 2
+      Hash: 84df86f692fb92a1cff045ac8d43a43b
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: RewardUIManager
+  - hash:
+      serializedVersion: 2
+      Hash: 01554f25c55dc0fb439d2230cb74505f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaEnvironment
+  - hash:
+      serializedVersion: 2
+      Hash: 522faab158ae6f1e5e4b8cd148c8c373
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DragExited
+  - hash:
+      serializedVersion: 2
+      Hash: 1776661452c6b132e1e5322d865bd1c1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ColliderProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 4785452e765809b56913e274f39ba3b6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FormData
+  - hash:
+      serializedVersion: 2
+      Hash: 46ceb594b32743eca825f013ccdd252d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Physics2DCast
+  - hash:
+      serializedVersion: 2
+      Hash: 45315727f240caf2ad1df4c58d29bbae
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PunchScale
+  - hash:
+      serializedVersion: 2
+      Hash: 4582e916ac2220642af3ab73cf66f930
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PunchRotation
+  - hash:
+      serializedVersion: 2
+      Hash: f0837ca6ec5c991bc87323f81e205ea9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ColorVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 2fdd684fdd8357a064506422fc7ef096
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Label
+  - hash:
+      serializedVersion: 2
+      Hash: f717f52a4cd3ee382f2bde8660a6bcf4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Comment
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8f96f5f933f7ec97d4e3fed9d9f6d31b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SavePoint
+  - hash:
+      serializedVersion: 2
+      Hash: 865353386fa411cc79be78ee1cf1c691
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SaveVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 3821e36b0542f3115ce31c982a6cd29d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandRemoveAllOf
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopAmbiance
+  - hash:
+      serializedVersion: 2
+      Hash: b67638688214d061f085bf0d9c54461f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandContains
+  - hash:
+      serializedVersion: 2
+      Hash: 22a78a3ced4ab89d7817f0e16a33752f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandClear
+  - hash:
+      serializedVersion: 2
+      Hash: a4c976a0d6f65a32d8f7d9c5d2d20fdd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSprite
+  - hash:
+      serializedVersion: 2
+      Hash: cdef98e0388ace2593bcf015c02d916b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameButton
+  - hash:
+      serializedVersion: 2
+      Hash: ab956aaefcf1a1533cc2439c89b5e0d0
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollisionVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 5a0ed2c3cb0b539230f8ed41fd556e37
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SaveMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 492022688e7dd43d24241712362a1845
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MenuTimer
+  - hash:
+      serializedVersion: 2
+      Hash: 9edaf197924ad3977c4351f588788333
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GetKey
+  - hash:
+      serializedVersion: 2
+      Hash: 4fb0d6ddbfa6d517c2e07c8f11827a52
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetInteractable
+  - hash:
+      serializedVersion: 2
+      Hash: 5bfe1f8c69869d563a0ed183baaef6b7
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GetAxis
+  - hash:
+      serializedVersion: 2
+      Hash: 59a4dddf3a572eb2865b2131a8b92531
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SpawnObject
+  - hash:
+      serializedVersion: 2
+      Hash: 36827fd0c678d3a91c58acee37945e5a
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: LookingAtDoor
+  - hash:
+      serializedVersion: 2
+      Hash: c2eea67388893571474f3986b7ce7b95
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetActive
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusPriorityDecrease
+  - hash:
+      serializedVersion: 2
+      Hash: 8189de9e79861e301bace5ace20b1dbe
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector2Variable
+  - hash:
+      serializedVersion: 2
+      Hash: 12382781415e1dadf2c6f4683fc03b49
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: GetMousePosition
+  - hash:
+      serializedVersion: 2
+      Hash: 80aefa56c28ea1c18563b64b207bffbe
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetVariable
+  - hash:
+      serializedVersion: 2
+      Hash: e5779494252329a739f70ac21afde037
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAnimFloat
+  - hash:
+      serializedVersion: 2
+      Hash: 3fded660c078304e64401d55208d6a02
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetMouseCursor
+  - hash:
+      serializedVersion: 2
+      Hash: ff4c52ae1166e2179d632ceb976aed69
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RandomFloat
+  - hash:
+      serializedVersion: 2
+      Hash: d110645821ab9091974192c3e9f071e2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ForEach
+  - hash:
+      serializedVersion: 2
+      Hash: 67fd9fe14e2f82b80bb110bf2aedc83d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ReadTextFile
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SelectOnEnable
+  - hash:
+      serializedVersion: 2
+      Hash: f9dd588f20f25e02cc4c0b12354708e8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandResize
+  - hash:
+      serializedVersion: 2
+      Hash: 5af4097b76dbe417f4c8bdc526183e76
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MoveLean
+  - hash:
+      serializedVersion: 2
+      Hash: cdfc771d87ea006f2731ad7a28229b3e
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LuaBindings
+  - hash:
+      serializedVersion: 2
+      Hash: b4674bca8592968b6655cb427b7cdb52
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FadeUI
+  - hash:
+      serializedVersion: 2
+      Hash: 223b9efe917aae2dade1497917cc393a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RotateFrom
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SaveManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8650cf07670106d5a5cab7ffb6317708
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: InfoText
+  - hash:
+      serializedVersion: 2
+      Hash: 187d6872003374c1d04c97e8d807366c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ColorProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 748372bfa31fe169d57c3013ca9ef491
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AnimatorVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 438c491bd61a85390fb4cb64221dc6b6
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SavePointLoaded
+  - hash:
+      serializedVersion: 2
+      Hash: 35b3006b38794a7cdeafdfd7eba4d604
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: StampbookPage
+  - hash:
+      serializedVersion: 2
+      Hash: d09ea471e3bf619653935c8cf75ced5c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ReloadScene
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: 
+    className: LeanTween
+  - hash:
+      serializedVersion: 2
+      Hash: 461606aa877794d72684da23acdefc16
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ResetAnimTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 12be2c07fcbdac7e8b79f19b43d9ef37
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FadeSprite
+  - hash:
+      serializedVersion: 2
+      Hash: 253c42b70be1f896300a59a26ac95506
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ControlAudio
+  - hash:
+      serializedVersion: 2
+      Hash: 68e5487d432729f61b4619b287bc5c38
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Clickable2D
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SpriteFader
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PortraitController
+  - hash:
+      serializedVersion: 2
+      Hash: 8597ea0ab0df2193ff027181ce7a472a
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Say
+  - hash:
+      serializedVersion: 2
+      Hash: 192bb9fe33e33bb990d7bdbaec614bea
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ObjectVariable
+  - hash:
+      serializedVersion: 2
+      Hash: ad5b0416a79bade09fc80710330fe371
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopBlock
+  - hash:
+      serializedVersion: 2
+      Hash: c1cacc95e49bedf0181513f17e28a2ec
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ScaleFrom
+  - hash:
+      serializedVersion: 2
+      Hash: dfd22cd75a592fa4f16105630127704f
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandContainsAll
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: FungusExamples
+    namespaceName: Fungus.Examples
+    className: TMProLinkStylingDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 44ee1af54cf1659c52f7b65b43e9eedd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSliderValue
+  - hash:
+      serializedVersion: 2
+      Hash: 36631b45cbfe895e64c4619ed0361662
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAudioPitch
+  - hash:
+      serializedVersion: 2
+      Hash: d4bca9d096ea7b9defeb84455d3e4f70
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MessageReceived
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FungusPriorityIncrease
+  - hash:
+      serializedVersion: 2
+      Hash: 0f00644f615021a2508672d4c7976eb4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Block
+  - hash:
+      serializedVersion: 2
+      Hash: 35aed6d637f5d1950802c8a36b136c20
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3Variable
+  - hash:
+      serializedVersion: 2
+      Hash: ded3f40d4aa9928a0dec2f3401ee9109
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MenuShuffle
+  - hash:
+      serializedVersion: 2
+      Hash: 14784d0b8350fcafe9cc1ba37da5c167
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: BooleanVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 9c495beddcd141960a155bf0a3456d04
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetSpriteOrder
+  - hash:
+      serializedVersion: 2
+      Hash: 91d77d8fb507377c32e153ca03f195be
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollisionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Abs
+  - hash:
+      serializedVersion: 2
+      Hash: 2747144b1a00196b3c069b25d81965d3
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ThrowException
+  - hash:
+      serializedVersion: 2
+      Hash: 522faab158ae6f1e5e4b8cd148c8c373
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DragCompleted
+  - hash:
+      serializedVersion: 2
+      Hash: 3b0ae7621c9753bf43f30788d16b177b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Write
+  - hash:
+      serializedVersion: 2
+      Hash: e70163b591feb453ad3fd3d2579dc344
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopMotionRigidBody2D
+  - hash:
+      serializedVersion: 2
+      Hash: f84010480c92ce89a914cbdfc19577e9
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: PlaySound
+  - hash:
+      serializedVersion: 2
+      Hash: 171c4e806e1588f5d38979305e12ab36
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: RigidbodyProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 5e83e3bf637575510844e6040f0a21ff
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandInsert
+  - hash:
+      serializedVersion: 2
+      Hash: 27261ef4f790b1d75e8d329838666be2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AnimatorState
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InteractableItem
+  - hash:
+      serializedVersion: 2
+      Hash: 7c51530a500b8521ee4dba2fda1529eb
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: NarrativeLogEntryUI
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Quit
+  - hash:
+      serializedVersion: 2
+      Hash: f209229857776d5a8718a9253be6880b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Rigidbody2DProperty
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopSwipe
+  - hash:
+      serializedVersion: 2
+      Hash: 2d4f6d58e93797a1f4d42674a5ff9c61
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: LookTo
+  - hash:
+      serializedVersion: 2
+      Hash: deccb0c1ff9d0a068feef215b36bd6fd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TransformChanged
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Sqrt
+  - hash:
+      serializedVersion: 2
+      Hash: e516c1ebec25bacc50fbe093cbf3b4a8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandRemove
+  - hash:
+      serializedVersion: 2
+      Hash: c00e0b907619eab3a07e6f37f0d89fe8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: ExecuteHandler
+  - hash:
+      serializedVersion: 2
+      Hash: f059913217272ea4d409152693512332
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SaveInfoNewer
+  - hash:
+      serializedVersion: 2
+      Hash: 7ec205919440d1b97fec889754bbd034
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
+      Hash: bb16290da4e07e1e2917830b47f8c9eb
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TextureVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SceneLoader
+  - hash:
+      serializedVersion: 2
+      Hash: e47424e6e25c4ce7519fa6de10cd0132
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: StopFlowchart
+  - hash:
+      serializedVersion: 2
+      Hash: 5d6aa21ad4fd56a5cd1799f87ab7ebb7
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Jump
+  - hash:
+      serializedVersion: 2
+      Hash: f3fbd536ecf56843f4203573cd2645ef
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: Invader
+  - hash:
+      serializedVersion: 2
+      Hash: 097b87143af344832ddfa1263b90844c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TMProLinkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: ff9106daaaf5950c8835a2b68cd62a3c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: WaitFrames
+  - hash:
+      serializedVersion: 2
+      Hash: 522faab158ae6f1e5e4b8cd148c8c373
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DragEntered
+  - hash:
+      serializedVersion: 2
+      Hash: ce37db59aedfe979039bd7785a62e423
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetAnimBool
+  - hash:
+      serializedVersion: 2
+      Hash: da08eeab278cec8d774d3d31933ac9c1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: MenuDialog
+  - hash:
+      serializedVersion: 2
+      Hash: a75764e52fced7dba887a1374eea27d2
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Trig
+  - hash:
+      serializedVersion: 2
+      Hash: 6f4f92b9d175d2ca54f63f344ae77ae8
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: AudioSourceVariable
+  - hash:
+      serializedVersion: 2
+      Hash: c5e31811ef047c0bc353c96d20833c76
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StampBook
+  - hash:
+      serializedVersion: 2
+      Hash: 2722ae184ee083c816d7a70b8fa77935
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: TransformProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 5642b965a0a3aaeb1faa5e8e53500d0c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: DebugLog
+  - hash:
+      serializedVersion: 2
+      Hash: f727d19e0610b2cb74ebdfc033298457
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SetLanguage
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Else
+  - hash:
+      serializedVersion: 2
+      Hash: ce088ff41cfe7d7a120f1fb458c567c4
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: iTween
+  - hash:
+      serializedVersion: 2
+      Hash: b0fb8908e44b3076d4693315d9cb5736
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Stop
+  - hash:
+      serializedVersion: 2
+      Hash: d055dcdf1bc15b201b27dc8324db7bf1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 62919b403f39f08656201a341dab525d
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Stage
+  - hash:
+      serializedVersion: 2
+      Hash: 5d9a885c3c6637390cfc475918ffecd1
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: FlowchartEnabled
+  - hash:
+      serializedVersion: 2
+      Hash: 62011cc4f25553431d48421435334320
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: IntegerVariable
+  - hash:
+      serializedVersion: 2
+      Hash: c743f918fec96e5331a1a3634f5c492c
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CollectionCommandElement
+  - hash:
+      serializedVersion: 2
+      Hash: 4b29ee70770bd9342e76a0da20f268df
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: SpriteVariable
+  - hash:
+      serializedVersion: 2
+      Hash: 1782dc0153b74eaa7fd80e4b587e2a78
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Vector3Arithmetic
+  - hash:
+      serializedVersion: 2
+      Hash: deccb0c1ff9d0a068feef215b36bd6fd
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Mouse
+  - hash:
+      serializedVersion: 2
+      Hash: fb3f71dba93440a620bd1b5b786f9c9e
+    assemblyName: Assembly-CSharp
+    namespaceName: SAS
+    className: GameDataManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8bf441a2d1c178876a6779747f126156
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: CameraManager
+  - hash:
+      serializedVersion: 2
+      Hash: 33b1330eb1739453afd691d251224479
+    assemblyName: Fungus
+    namespaceName: Fungus
+    className: Neg
+  - hash:
+      serializedVersion: 2
+      Hash: d4f3b86ccb013b08d373d5065ce3a443
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NPCController
   platform: 20
   scenePathNames:
   - Assets/Scenes/Opening.unity
   - Assets/Scenes/Map_Prototype.unity
   - Assets/Scenes/Level_SpaceInvader.unity
-  playerPath: I:/Unity Workspace/2023/SAS Build/6.23
+  playerPath: /Users/yalinzhang/Documents/GitHub/sas_travel.github.io/History/27/v27
