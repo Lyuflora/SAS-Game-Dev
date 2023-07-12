@@ -175,7 +175,8 @@ public class InvaderPlayer : MonoBehaviour
         {
             Projectile projectile = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laserActive = true;
-            Debug.Log("Shoot");
+            Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("Shoot"));
+
             projectile.destroyed += LayserDestroyed;
             //sfx
             SpaceInvaderManager.m_Instance.PlayShootSFX();
