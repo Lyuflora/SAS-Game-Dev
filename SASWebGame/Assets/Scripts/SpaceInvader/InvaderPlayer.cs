@@ -52,7 +52,6 @@ public class InvaderPlayer : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            Debug.Log("any key");
             ToggleGameStart();
         }
         

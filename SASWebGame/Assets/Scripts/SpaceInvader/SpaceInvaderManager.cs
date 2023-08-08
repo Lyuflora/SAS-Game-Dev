@@ -55,10 +55,6 @@ public class SpaceInvaderManager : MonoBehaviour
     {
         m_LosePanel.SetActive(true);
         
-        if (PlayerStatus.m_Instance.CheckReceivedSPReward() == false)
-        {
-            PlayerPrefs.SetInt("spStatus",0);
-        }
         SoundManager.Instance.Play(loseSFX);
         m_Analytics.SPLoseCustomEvent(m_player.playerScore);
     }
@@ -77,10 +73,14 @@ public class SpaceInvaderManager : MonoBehaviour
 
     public void SaveSPWin()
     {
-        GameDataManager.Instance.LoadGame();
-        GameDataManager.Instance.isWinSP = true;
+        if (GameDataManager.Instance)
+        {
+            GameDataManager.Instance.LoadGame();
+            GameDataManager.Instance.isWinSP = true;
 
-        GameDataManager.Instance.SaveGame();
+            GameDataManager.Instance.SaveGame();
+        }
+        
     }
     
 

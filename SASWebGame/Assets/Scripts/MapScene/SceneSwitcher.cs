@@ -21,10 +21,19 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadSpaceInvaderScene()
     {
         sceneName = "Level_SpaceInvader";
+        Debug.Log("Go SpaceInvader");
+        SceneManager.LoadScene(sceneName);
+        // debug -- no anim
+        //StartCoroutine(nameof(LoadSceneByName));
+
+    }
+    public void LoadMapScene()
+    {
+        sceneName = "Map_Prototype";
+        Debug.Log("Go Map");
         StartCoroutine(nameof(LoadSceneByName));
 
     }
-
     public void LoadScene(string r_SceneNname)
     {
         sceneName = r_SceneNname;
@@ -35,6 +44,6 @@ public class SceneSwitcher : MonoBehaviour
     {
         transtionAnim.SetTrigger("end");
         yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene(sceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }
