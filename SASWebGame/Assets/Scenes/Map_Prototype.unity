@@ -2409,7 +2409,7 @@ PrefabInstance:
     - target: {fileID: 5593649527468650257, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
         type: 3}
       propertyPath: pageSpeed
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5593649527468650257, guid: 9aa5c8afeffaa9d46b247b027f1f0e8d,
         type: 3}
@@ -7711,7 +7711,7 @@ MonoBehaviour:
   stampImage: {fileID: 823311883}
   bgImage: {fileID: 1916837045}
   stamps:
-  - {fileID: 2010004436, guid: 4724cad4006a00a41bfe4bb6dc261d9b, type: 3}
+  - {fileID: 1848526414, guid: 4724cad4006a00a41bfe4bb6dc261d9b, type: 3}
   - {fileID: 1797665028, guid: 4724cad4006a00a41bfe4bb6dc261d9b, type: 3}
   backgrounds:
   - {fileID: 542330403, guid: 4724cad4006a00a41bfe4bb6dc261d9b, type: 3}

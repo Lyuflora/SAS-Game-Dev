@@ -131,11 +131,15 @@ public class StampBook : MonoBehaviour
         pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
         pages[index].GetComponent<SAS.StampbookPage>().ControlPage();
         pages[index].GetComponent<StampbookPage>().stampImage.enabled = (record[index*2+1] != 0);
+        Debug.Log("page No."+ index + "facingup is "+ pages[index].GetComponent<SAS.StampbookPage>().isFacingUp);
+
         if (index+1 < pages.Count)
         {
             pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
             pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
             pages[index + 1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index + 1)*2] != 0);
+            Debug.Log("page No."+ index+1 + "facingup is "+ pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp);
+
         }
 
         UpdateCoverPage();
@@ -165,19 +169,22 @@ public class StampBook : MonoBehaviour
         
         record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
 
-        if (index + 1 < pages.Count)
+        if (index +1>=0)
         {
-            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = true;
+
+            pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = false;
             pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
             pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
+
+            Debug.Log("page No."+ index+1 + "facingup is "+ pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp);
         }
         
-        if (index > 0)
+        if (index+2 < pages.Count)
         {
-            pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = false;
+            pages[index].GetComponent<SAS.StampbookPage>().isFacingUp = true;
             pages[index].GetComponent<SAS.StampbookPage>().ControlPage();
             pages[index].GetComponent<StampbookPage>().stampImage.enabled = (record[index*2+1] != 0);
-
+            Debug.Log("page No."+ index + "facingup is "+ pages[index].GetComponent<SAS.StampbookPage>().isFacingUp);
         }
 
         UpdateCoverPage();

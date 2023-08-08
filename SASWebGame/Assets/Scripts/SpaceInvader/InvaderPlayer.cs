@@ -34,7 +34,7 @@ public class InvaderPlayer : MonoBehaviour
 
     private void Start()
     {
-        EnableOrDisableButtonsBasedOnPlatform();
+        //EnableOrDisableButtonsBasedOnPlatform();
         
         // Screen Bounds
         screenBounds =
@@ -116,39 +116,32 @@ public class InvaderPlayer : MonoBehaviour
 
     private void EnableOrDisableButtonsBasedOnPlatform()
     {
-        if(isMobile() == true)    return;
+         if(isMobile() == true)    return;
         
         moveButtons.SetActive(false);
     }
 
     private void PlayerMovement()
     {
-        if (isMobile() == false)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                this.transform.position += Vector3.left * speed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                this.transform.position += Vector3.right * speed * Time.deltaTime;
-            }
+            this.transform.position += Vector3.left * speed * Time.deltaTime;
         }
-        else
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            // use buttons
-            return;
+            this.transform.position += Vector3.right * speed * Time.deltaTime;
         }
     }
 
     private void PlayerAttack()
     {
+        if (Input.GetKey(KeyCode.Space) || autoShoot)
+        {
+            Shoot();
+        }
         if (isMobile() == false)
         {
-            if (Input.GetKey(KeyCode.Space) || autoShoot)
-            {
-                Shoot();
-            }
+
 
         }
         else

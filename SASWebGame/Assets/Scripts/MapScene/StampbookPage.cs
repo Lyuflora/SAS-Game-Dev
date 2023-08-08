@@ -24,11 +24,15 @@ public class StampbookPage : MonoBehaviour
         {
             stampImage.sprite = stamps[0];
             bgImage.sprite = backgrounds[0];
+            stampImage.rectTransform.localScale = new Vector3(1, 1, 1);
+            bgImage.rectTransform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
             stampImage.sprite = stamps[1];
             bgImage.sprite = backgrounds[1];
+            stampImage.rectTransform.localScale = new Vector3(-1, 1, 1);
+            bgImage.rectTransform.localScale = new Vector3(-1, 1, 1);
         }
     }
 
