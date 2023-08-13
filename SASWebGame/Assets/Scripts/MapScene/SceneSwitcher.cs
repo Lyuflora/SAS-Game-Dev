@@ -22,9 +22,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         sceneName = "Level_SpaceInvader";
         Debug.Log("Go SpaceInvader");
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
         // debug -- no anim
-        //StartCoroutine(nameof(LoadSceneByName));
+        StartCoroutine(nameof(LoadSceneByName));
 
     }
     public void LoadMapScene()

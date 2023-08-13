@@ -41,7 +41,7 @@ public class SpaceInvaderManager : MonoBehaviour
     public void WinSpaceInvader()
     {
         m_WinPanel.SetActive(true);
-        pauseMenu.Pause();
+        
         
         PlayerPrefs.SetInt("spStatus",1);   // 1 for winning, 0 for losing, -1 for not initialized
         // to do: save
