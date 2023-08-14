@@ -837,7 +837,7 @@ PrefabInstance:
     - target: {fileID: 8622002054245491441, guid: 6f727da1bc88d87469ed79d0ed2f1102,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1720,6 +1720,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1895778770}
+  - {fileID: 1609907171}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2344,6 +2345,79 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &1191489003
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 863428490}
+    m_Modifications:
+    - target: {fileID: 1995714369268380109, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_Name
+      value: SaveInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.474656
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8765703
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03608622
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00582bec12115fe46927b720421ba93d, type: 3}
 --- !u!1 &1279011270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2751,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4179239571091281862, guid: 22c41886ac63ced4c8aabff7ffb49130,
     type: 3}
   m_PrefabInstance: {fileID: 147244275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1609907171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4288720028995202856, guid: 00582bec12115fe46927b720421ba93d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191489003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1663488640
 GameObject:
@@ -4048,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 8622002054245491441, guid: 6f727da1bc88d87469ed79d0ed2f1102,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

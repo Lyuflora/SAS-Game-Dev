@@ -19,7 +19,7 @@ namespace SAS
 
         private void Start()
         {
-            // Application.targetFrameRate = 20;
+            Application.targetFrameRate = 20;
         }
 
         public Manifest GetLevel1Preset()

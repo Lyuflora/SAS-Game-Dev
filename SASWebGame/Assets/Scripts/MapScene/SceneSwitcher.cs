@@ -17,7 +17,12 @@ public class SceneSwitcher : MonoBehaviour
     }
 
 
-
+    public void LoadOpeningScene()
+    {
+        sceneName = "Opening";
+        Debug.Log("Go Opening");
+        StartCoroutine(nameof(LoadSceneByName));
+    }
     public void LoadSpaceInvaderScene()
     {
         sceneName = "Level_SpaceInvader";

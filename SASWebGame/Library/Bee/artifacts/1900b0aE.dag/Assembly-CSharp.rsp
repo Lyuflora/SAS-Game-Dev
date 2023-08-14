@@ -427,6 +427,7 @@
 "Assets/Scripts/SavePlayerData/GameDataManager.cs"
 "Assets/Scripts/SavePlayerData/SaveInfoNewer.cs"
 "Assets/Scripts/SavePlayerData/SaveSerial.cs"
+"Assets/Scripts/SavePlayerData/TestDataObj.cs"
 "Assets/Scripts/SheetData/FormData.cs"
 "Assets/Scripts/SheetData/TextInputHandler.cs"
 "Assets/Scripts/SpaceInvader/Bunker.cs"

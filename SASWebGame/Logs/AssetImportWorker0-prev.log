@@ -15,7 +15,7 @@ E:/Github/Work/SAS-Game-Dev/SASWebGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-1491
+3715
 Successfully changed project path to: E:/Github/Work/SAS-Game-Dev/SASWebGame
 E:/Github/Work/SAS-Game-Dev/SASWebGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ E:/Github/Work/SAS-Game-Dev/SASWebGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [15120] Host "[IP] 192.168.1.158 [Port] 0 [Flags] 2 [Guid] 2139791251 [EditorId] 2139791251 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14276] Host "[IP] 192.168.1.158 [Port] 0 [Flags] 2 [Guid] 2796499376 [EditorId] 2796499376 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [15120] Host "[IP] 192.168.1.158 [Port] 0 [Flags] 2 [Guid] 2139791251 [EditorId] 2139791251 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14276] Host "[IP] 192.168.1.158 [Port] 0 [Flags] 2 [Guid] 2796499376 [EditorId] 2796499376 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7L7L3KD1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 8.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 10.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.15f1 (30d813e1a2a9)
 [Subsystems] Discovering subsystems at path F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/Resources/UnitySubsystems
@@ -67,43 +67,43 @@ Initialize mono
 Mono path[0] = 'F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56116
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/Programs/UnityEditor/Unity 2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003146 seconds.
-- Loaded All Assemblies, in  0.329 seconds
+Registered in 0.003282 seconds.
+- Loaded All Assemblies, in  0.264 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.215 seconds
+- Finished resetting the current domain, in  0.184 seconds
 Domain Reload Profiling:
-	ReloadAssembly (211ms)
-		BeginReloadAssembly (130ms)
+	ReloadAssembly (158ms)
+		BeginReloadAssembly (85ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (130ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (115ms)
-				TypeCache.Initialize (115ms)
-					TypeCache.ScanAssembly (113ms)
+			SetupTypeCache (103ms)
+				TypeCache.Initialize (103ms)
+					TypeCache.ScanAssembly (101ms)
 				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (170ms)
+			SetupLoadedEditorAssemblies (144ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (3ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (113ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				ProcessInitializeOnLoadAttributes (97ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -113,49 +113,49 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.860 seconds
-Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.642 seconds
+Refreshing native plugins compatible for Editor in 4.34 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.543 seconds
+- Finished resetting the current domain, in  0.523 seconds
 Domain Reload Profiling:
-	ReloadAssembly (248ms)
-		BeginReloadAssembly (171ms)
+	ReloadAssembly (171ms)
+		BeginReloadAssembly (109ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		LoadAllAssembliesAndSetupDomain (611ms)
-			LoadAssemblies (362ms)
+			CreateAndSetChildDomain (17ms)
+		LoadAllAssembliesAndSetupDomain (471ms)
+			LoadAssemblies (255ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (367ms)
-				TypeCache.Initialize (326ms)
-					TypeCache.ScanAssembly (320ms)
-				ResolveRequiredComponents (12ms)
+			SetupTypeCache (280ms)
+				TypeCache.Initialize (244ms)
+					TypeCache.ScanAssembly (240ms)
+				ResolveRequiredComponents (13ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (394ms)
+			SetupLoadedEditorAssemblies (379ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (3ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (256ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (247ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 5.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6359 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 83 unused Assets / (364.4 KB). Loaded Objects now: 6815.
 Memory consumption went from 224.4 MB to 224.0 MB.
-Total: 3.744400 ms (FindLiveObjects: 0.514100 ms CreateObjectMapping: 0.269100 ms MarkObjects: 2.735600 ms  DeleteObjects: 0.224800 ms)
+Total: 3.822600 ms (FindLiveObjects: 0.506000 ms CreateObjectMapping: 0.257600 ms MarkObjects: 2.775700 ms  DeleteObjects: 0.282400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -171,305 +171,94 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 508.466458 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/angry.png
-  artifactKey: Guid(061fcd6caac25954287291fffde7cd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/angry.png using Guid(061fcd6caac25954287291fffde7cd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d963e912a8e7a67ec1a81d83520001') in 0.103726 seconds
+  Time since last request: 1551.961539 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(6fadd22bf232ed04492465ddde11447c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(6fadd22bf232ed04492465ddde11447c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd018c648688fea7dcbaee558c99ae0') in 0.001937 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Fungus/Resources/Sprites/Background.png
-  artifactKey: Guid(78bc8db714c3749cc8bd8c0b7e525b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fungus/Resources/Sprites/Background.png using Guid(78bc8db714c3749cc8bd8c0b7e525b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '523cc41eb6076144252263b74e1ab35a') in 0.031802 seconds
+  Time since last request: 1.681723 seconds.
+  path: Assets/Prefabs/Map/SaveInfo.prefab
+  artifactKey: Guid(00582bec12115fe46927b720421ba93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/SaveInfo.prefab using Guid(00582bec12115fe46927b720421ba93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d76a5eef26699133d282be9abe75bb4') in 0.023262 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 5
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FungusExamples/TheHunter/Sprites/Bear.png
-  artifactKey: Guid(1844620fa148d4dc89443ca7b33205e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/TheHunter/Sprites/Bear.png using Guid(1844620fa148d4dc89443ca7b33205e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7e85ec4ba4080fa8395060df7bf5a1') in 0.012893 seconds
+  Time since last request: 10.772856 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(9c53962885c2c4f449125a979d6ad240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(9c53962885c2c4f449125a979d6ad240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2837f784b82376b13ac855d130f3e12') in 0.000551 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/_ArtAssets/StampBook/button.png
-  artifactKey: Guid(04d8aba18cee90a4aa96b07a68efdad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/StampBook/button.png using Guid(04d8aba18cee90a4aa96b07a68efdad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c262ce8a83ace8a03fd2389288edf094') in 0.008065 seconds
+  Time since last request: 1.990923 seconds.
+  path: Assets/Scenes/Opening.unity
+  artifactKey: Guid(1c7b0e8c49e43b64683af40d58f87c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Opening.unity using Guid(1c7b0e8c49e43b64683af40d58f87c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cf2efe174996cd6b535d2e57a7f601b') in 0.000559 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 0
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/FungusExamples/TheHunter/Sprites/BearHead.png
-  artifactKey: Guid(62955e2782fd34c5ca3e78712625ae50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/TheHunter/Sprites/BearHead.png using Guid(62955e2782fd34c5ca3e78712625ae50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96050222eaa1be3501376b9f42857f1b') in 0.010950 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/_ArtAssets/StampBook/cardJune.png
-  artifactKey: Guid(f6cd0e526987d6e4895536cfbafcb8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/StampBook/cardJune.png using Guid(f6cd0e526987d6e4895536cfbafcb8ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d04a49c6fcd17985723f7a83570223') in 0.009112 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/_ArtAssets/StampBook/cardNovember.png
-  artifactKey: Guid(fc5f58ee932daff4db07e878d09581d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/StampBook/cardNovember.png using Guid(fc5f58ee932daff4db07e878d09581d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6756509b3ea3c66c76db2ce3532fd71e') in 0.009246 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/FungusExamples/Sherlock/Images/background.jpg
-  artifactKey: Guid(0e9767bc88b404362852d1a4d5c0d103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Images/background.jpg using Guid(0e9767bc88b404362852d1a4d5c0d103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb662cf38e5fb5926400093b0de90b91') in 0.010009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 3.710095 seconds.
-  path: Assets/_ArtAssets/PlayerArt/character.png
-  artifactKey: Guid(3de2303fcb59a8442a458a51c1af3869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/PlayerArt/character.png using Guid(3de2303fcb59a8442a458a51c1af3869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41b4a70058c44aeec67cbbc5910e719') in 0.096661 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 79
-========================================================================
-Received Import Request.
-  Time since last request: 0.561145 seconds.
-  path: Assets/FungusExamples/TheHunter/Sprites/CiaraHead.psd
-  artifactKey: Guid(05ccd53483a554ca9b31f685fa76154a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/TheHunter/Sprites/CiaraHead.psd using Guid(05ccd53483a554ca9b31f685fa76154a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6f0877951b42c7339d81710959ed08b') in 0.011332 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 26.818618 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/concentrating.png
-  artifactKey: Guid(d8b4be5652abe8a438eb34290ae8c163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/concentrating.png using Guid(d8b4be5652abe8a438eb34290ae8c163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '330e33f90450a550670dd2f63d9ff9af') in 0.036079 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Fungus/Textures/CreatedWith.psd
-  artifactKey: Guid(7adcbbe62d6554d81affcab2c56ad5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fungus/Textures/CreatedWith.psd using Guid(7adcbbe62d6554d81affcab2c56ad5ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c83a48cdba8d23698073861cd09068') in 0.024709 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/_ArtAssets/GUI/dialogue_bg_0.png
-  artifactKey: Guid(c281b98c20c3b774f8f3f6f652fd7163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/GUI/dialogue_bg_0.png using Guid(c281b98c20c3b774f8f3f6f652fd7163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb2c4a934ad47a82bd5fd7a4d3858301') in 0.030995 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/frustrated.png
-  artifactKey: Guid(b14a874c86c5f6345ae0f84ec697575f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/frustrated.png using Guid(b14a874c86c5f6345ae0f84ec697575f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6238f048e0bc2d4139e499127dbd46c9') in 0.015436 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/eyeroll.png
-  artifactKey: Guid(a6b4fd71ceffb6e4b9f3272ef8a5c2c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/eyeroll.png using Guid(a6b4fd71ceffb6e4b9f3272ef8a5c2c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8fc7c635ac04b7bdb5c745df6e7b7f0') in 0.011290 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Fungus/Textures/DialogBoxSliced.png
-  artifactKey: Guid(e8ab00ef0d9684dcb9deb52811d91218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fungus/Textures/DialogBoxSliced.png using Guid(e8ab00ef0d9684dcb9deb52811d91218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431d82ed3c997993da60e4afd06d9b97') in 0.009970 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Fungus/Textures/GreyButton.png
-  artifactKey: Guid(9bdedfa4650174106a3115624f193b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fungus/Textures/GreyButton.png using Guid(9bdedfa4650174106a3115624f193b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36fc04f18b51394d02e1df7a6eac1a7d') in 0.011812 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/Sherlock/eyeroll.png
-  artifactKey: Guid(b9482ea03e69b5a4aa5e7827da354549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/Sherlock/eyeroll.png using Guid(b9482ea03e69b5a4aa5e7827da354549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a99c32c9756694356921018fd6ac764') in 0.011474 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/FungusExamples/FungusTown/Sprites/FungusLogo.png
-  artifactKey: Guid(63bf7975446de4f0887eff3390fbb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/FungusTown/Sprites/FungusLogo.png using Guid(63bf7975446de4f0887eff3390fbb4ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c33bc535227a6c4fef81574c9da0ef4') in 0.007444 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 3.311665 seconds.
-  path: Assets/FungusExamples/Playground/Sprites/Hexagon.png
-  artifactKey: Guid(d77e6458673a5ff4080857204d985f54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Playground/Sprites/Hexagon.png using Guid(d77e6458673a5ff4080857204d985f54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca267cdc6da964744e317de19fb0d5b4') in 0.008337 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FungusExamples/Sherlock/Images/ImprobableStudios.png
-  artifactKey: Guid(eea3b26b25ca249f58d5659aabf1114c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Images/ImprobableStudios.png using Guid(eea3b26b25ca249f58d5659aabf1114c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46acdfffe30a428b2a727e3d62be046b') in 0.016096 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.014491 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/laughing.png
-  artifactKey: Guid(d7af8fdea3ead3c4b8a4e54d014b255d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/laughing.png using Guid(d7af8fdea3ead3c4b8a4e54d014b255d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe7c13a0e1d6c17ee6b1fc0d2fa275d') in 0.013336 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.003272 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/neutral2.png
-  artifactKey: Guid(7c9434f7e81b4264f9c56afc7180b8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/neutral2.png using Guid(7c9434f7e81b4264f9c56afc7180b8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7f1ab9753b6068a468746b45d71384') in 0.012732 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/_ArtAssets/Images/Opening/Opening_Title.PNG
-  artifactKey: Guid(e766f18795d6ea747b5da92ebe5a8a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/Images/Opening/Opening_Title.PNG using Guid(e766f18795d6ea747b5da92ebe5a8a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8142b8667878404659a9223ae6c7703') in 0.009410 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/Sherlock/pleased.png
-  artifactKey: Guid(a3710c5af5b436a46b8d0ff4235d1dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/Sherlock/pleased.png using Guid(a3710c5af5b436a46b8d0ff4235d1dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe747a89af937107b3ee0ed4e06ffd37') in 0.011753 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/serious.png
-  artifactKey: Guid(09b05a675bbbc4e4b8f3b031a1fb63f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/serious.png using Guid(09b05a675bbbc4e4b8f3b031a1fb63f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6c04c2d79c03cece8b8f05bfb5c58b') in 0.010945 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Fungus/Textures/rewind.png
-  artifactKey: Guid(62573ea76cbf34643bf28a259a6c901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fungus/Textures/rewind.png using Guid(62573ea76cbf34643bf28a259a6c901c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7b72bca8d6f48b50b0118cfa721ea3') in 0.010356 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/sorry.png
-  artifactKey: Guid(bb66ae101c944a34e870fde3693b756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/sorry.png using Guid(bb66ae101c944a34e870fde3693b756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b262b0d6f535e2c20c5face91494413') in 0.012626 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/Sherlock/regretful.png
-  artifactKey: Guid(36652428f3b9f6d41840d56c65aa0d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/Sherlock/regretful.png using Guid(36652428f3b9f6d41840d56c65aa0d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4918602130d00ae67cf3ea331f7ba92b') in 0.012308 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/FungusExamples/TheHunter/Sprites/ShayHead.psd
-  artifactKey: Guid(f7484a661774243b193bebc6e3ae5120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/TheHunter/Sprites/ShayHead.psd using Guid(f7484a661774243b193bebc6e3ae5120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca008be3d59c04e3bfc53f2b2e4a173c') in 0.010062 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/Sherlock/sorry.png
-  artifactKey: Guid(97171eca7b577c5438e9516b956c042a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/Sherlock/sorry.png using Guid(97171eca7b577c5438e9516b956c042a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8784f422cd6e945711dd39937b075ef8') in 0.011782 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/_ArtAssets/Images/Opening/Opening_Lady.PNG
-  artifactKey: Guid(330efc7532e918d42b678532a0dc1f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/Images/Opening/Opening_Lady.PNG using Guid(330efc7532e918d42b678532a0dc1f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0650d66bcd24cd1cae51c98eed999595') in 0.012896 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/Sherlock/scared.png
-  artifactKey: Guid(448053637e8df7a42824234afeafa291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/Sherlock/scared.png using Guid(448053637e8df7a42824234afeafa291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c73b5b63f77ac097705416639fa90930') in 0.011194 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.251713 seconds.
-  path: Assets/FungusExamples/Sherlock/Portraits/John/sulking.png
-  artifactKey: Guid(d38d394fe4d92ae4da3d41e6ff3b0385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/Sherlock/Portraits/John/sulking.png using Guid(d38d394fe4d92ae4da3d41e6ff3b0385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f40935e4bd104d3cb3067ec298cb2f4') in 0.012869 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.091146 seconds.
-  path: Assets/FungusExamples/JumpingPrax/Sprites/Switzerland.jpg
-  artifactKey: Guid(4cba48f17d83f44828e13c3de6dc3aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FungusExamples/JumpingPrax/Sprites/Switzerland.jpg using Guid(4cba48f17d83f44828e13c3de6dc3aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfd08cc3fd03e169150dc2b55fa70aa') in 0.018876 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.067876 seconds.
-  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_02.png
-  artifactKey: Guid(2b32e765563ec404ca200ad92fbbc42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_02.png using Guid(2b32e765563ec404ca200ad92fbbc42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a16d7d9e85667e9843c352550374a64') in 0.032006 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_Env01.PNG
-  artifactKey: Guid(d5f3358afc8dab248b2eacc826bf9def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_Env01.PNG using Guid(d5f3358afc8dab248b2eacc826bf9def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ecc543c32826d0aabef457721a3b39c') in 0.008344 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.691554 seconds.
-  path: Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_Sample02.PNG
-  artifactKey: Guid(06874a66b6fa55045b4bf4af8db55c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_ArtAssets/Tilemap/Yalin/Tilemap_SAS_Sample02.PNG using Guid(06874a66b6fa55045b4bf4af8db55c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef90038e5b6943359a70e27782fc9a9') in 0.009418 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Github\Work\SAS-Game-Dev\SASWebGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.572 seconds
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.203 seconds
+Domain Reload Profiling:
+	ReloadAssembly (200ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		LoadAllAssembliesAndSetupDomain (372ms)
+			LoadAssemblies (218ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (221ms)
+				TypeCache.Initialize (209ms)
+					TypeCache.ScanAssembly (204ms)
+				ResolveRequiredComponents (11ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (372ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (225ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 3.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6196 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 50 unused Assets / (322.2 KB). Loaded Objects now: 6820.
+Memory consumption went from 196.2 MB to 195.9 MB.
+Total: 3.418600 ms (FindLiveObjects: 0.419300 ms CreateObjectMapping: 0.215400 ms MarkObjects: 2.686000 ms  DeleteObjects: 0.096900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
