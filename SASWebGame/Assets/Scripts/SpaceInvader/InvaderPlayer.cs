@@ -85,6 +85,7 @@ public class InvaderPlayer : MonoBehaviour
         #endregion
     }
 
+
     private void LateUpdate()
     {
         // Screen Bounds
@@ -134,6 +135,7 @@ public class InvaderPlayer : MonoBehaviour
 
     private void PlayerAttack()
     {
+        if(isGameStarted==false)    return;
         if (Input.GetKey(KeyCode.Space) || autoShoot)
         {
             Shoot();

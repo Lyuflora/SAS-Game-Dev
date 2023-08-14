@@ -169,9 +169,8 @@ public class StampBook : MonoBehaviour
         
         record=stampRecord.ToBinaryBits(8); // [0,0,0,0,1,1,0,0]
 
-        if (index +1>=0)
+        if (index +1>=0 && index +1 < pages.Count)
         {
-
             pages[index+1].GetComponent<SAS.StampbookPage>().isFacingUp = false;
             pages[index+1].GetComponent<SAS.StampbookPage>().ControlPage();
             pages[index+1].GetComponent<StampbookPage>().stampImage.enabled = (record[(index+1)*2] != 0);
