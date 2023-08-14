@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_LosePanel: {fileID: 1125957495}
   m_Analytics: {fileID: 297437922}
   bgm: {fileID: 8300000, guid: 65c9165f38359b64081fc52b3214ae45, type: 3}
-  shootSFX: {fileID: 8300000, guid: dca1a568030eaba4bae17ab972ae1b23, type: 3}
+  shootSFX: {fileID: 8300000, guid: b683f6e4b0a9428438b00d67758e3214, type: 3}
   winSFX: {fileID: 8300000, guid: e5f483415a0df4c48a38cd34fb48a27f, type: 3}
   loseSFX: {fileID: 8300000, guid: f4eab4c6080c1f044ba4e875db2137c0, type: 3}
   hitSFX: {fileID: 8300000, guid: 82262e962f0022c46b99197838fa435f, type: 3}
