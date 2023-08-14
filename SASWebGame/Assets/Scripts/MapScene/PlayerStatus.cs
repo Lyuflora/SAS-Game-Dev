@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SAS;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -44,11 +45,17 @@ public class PlayerStatus : MonoBehaviour
     public void DisableInteraction()
     {
         m_IntStatus = IntStatus.disabled;
+        
+        // to do: disable opening stampbook
+        MapUIManager.Instance.SwitchStampBookBtn(false);
+        
     }
 
     public void EnableInteraction()
     {
         m_IntStatus = IntStatus.canInteract;
+        MapUIManager.Instance.SwitchStampBookBtn(true);
+
     }
 
     #endregion
