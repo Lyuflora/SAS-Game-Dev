@@ -842,7 +842,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8622002054245491441, guid: 6f727da1bc88d87469ed79d0ed2f1102,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514047407}
   m_SourcePrefab: {fileID: 100100000, guid: 6f727da1bc88d87469ed79d0ed2f1102, type: 3}
 --- !u!114 &297437922 stripped
 MonoBehaviour:
@@ -1004,6 +1008,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 296462157}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &514047407
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514047405}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a5b8f637e48b3db4d8014a1010b8ca61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &572527296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2079,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8774533553361495968}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1125957497
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125957495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb2fd83ab0ed793479c777e66f1e428e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1141075521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4133,5 +4179,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8622002054245491441, guid: 6f727da1bc88d87469ed79d0ed2f1102,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1125957497}
   m_SourcePrefab: {fileID: 100100000, guid: 6f727da1bc88d87469ed79d0ed2f1102, type: 3}

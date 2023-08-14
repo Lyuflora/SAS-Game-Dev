@@ -41,6 +41,8 @@ public class SpaceInvaderManager : MonoBehaviour
     public void WinSpaceInvader()
     {
         m_WinPanel.SetActive(true);
+        m_WinPanel.GetComponent<Animator>().SetTrigger("show");
+
         m_player.isGameStarted = false;
         Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("isGameStarted: {0}", m_player.isGameStarted));
 
@@ -55,6 +57,7 @@ public class SpaceInvaderManager : MonoBehaviour
     public void LoseSpaceInvader()
     {
         m_LosePanel.SetActive(true);
+        m_LosePanel.GetComponent<Animator>().SetTrigger("show");
         
         SoundManager.Instance.Play(loseSFX);
         m_Analytics.SPLoseCustomEvent(m_player.playerScore);
