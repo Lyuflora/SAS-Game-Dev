@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -120,8 +121,16 @@ namespace SAS
 
             if (amountKillled >= totalInvaders)
             {
-                SpaceInvaderManager.m_Instance.WinSpaceInvader();
+                // SpaceInvaderManager.m_Instance.WinSpaceInvader();
+                // Wait for 0.5s
+                StartCoroutine(PlayerWin());
             }
+        }
+        
+        private IEnumerator PlayerWin()
+        {
+            yield return new WaitForSeconds(1f);
+            SpaceInvaderManager.m_Instance.WinSpaceInvader();
         }
 
         public void MissileAttack()
