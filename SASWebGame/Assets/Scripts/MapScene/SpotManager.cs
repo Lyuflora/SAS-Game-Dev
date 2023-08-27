@@ -153,6 +153,7 @@ public class SpotManager : MonoBehaviour
     {
         if (CurrentSpot.GetTravelEvent().Enabled)
         {
+            Debug.Log("Trigger travel event");
             ShowPopupEvent(CurrentSpot.GetTravelEvent().Value);
         }
     }
@@ -160,10 +161,18 @@ public class SpotManager : MonoBehaviour
     private void ShowPopupEvent(TravelEvent targetEvent)
     {
         Debug.Log(targetEvent.eventTitle);
-        
+        if (travelEventUI == null)
+        {
+            travelEventUI = GameObject.FindWithTag("TravelEventUI").GetComponent<TravelEventUI>();
+        }
         travelEventUI.Popup();
     }
-    
+
+   public void HidePopupEventUI()
+    {
+        travelEventUI.Close();
+    }
+
     public void EnterSpaceInvader()
     {
         SceneSwitcher.m_Instance.LoadSpaceInvaderScene();

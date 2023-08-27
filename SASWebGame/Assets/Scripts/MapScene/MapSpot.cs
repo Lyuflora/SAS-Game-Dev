@@ -133,6 +133,23 @@ public class MapSpot : MonoBehaviour, IClickable
         PlayerStatus.m_Instance.DisableInteraction();
         MapSoundLibrary.m_Instance.PlaySpotSFX();
 
+
+
+        this.SetSpotLook();
+
+        if (this.m_Status == SpotStatus.Unvisited)
+        {
+            // spot dialogue
+            StartCoroutine(nameof(ExecuteSpotBlock)); 
+        }
+        else
+        {
+            
+            StartCoroutine(nameof(ExecuteVisitedBlock)); 
+            PlayerStatus.m_Instance.EnableInteraction();
+        
+        }
+
         // SpotManager.m_Instance.TryEnterSpot(this);
         SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
         SpotManager.m_Instance.CurrentSpot.SetSpotLook();
@@ -140,12 +157,6 @@ public class MapSpot : MonoBehaviour, IClickable
         SpotManager.m_Instance.SetCurSpot(this);
         // SpotManager.m_Instance.CurrentSpot = this;
         this.m_Status = SpotStatus.Active;
-        this.SetSpotLook();
- 
-
-        // spot dialogue
-        StartCoroutine(nameof(ExecuteSpotBlock));
-
     }
 
     public Optional<TravelEvent> GetTravelEvent()
@@ -163,6 +174,13 @@ public class MapSpot : MonoBehaviour, IClickable
         yield return new WaitForSeconds(.5f);
         m_SpriteRenderer.color = m_Normal;
         SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
+    }
+
+    IEnumerator ExecuteVisitedBlock()
+    {
+        yield return new WaitForSeconds(.5f);
+        m_SpriteRenderer.color = m_Normal;
+        SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock("VisitedWarning");
     }
 
     public SpotInfo GetSpotInfo()

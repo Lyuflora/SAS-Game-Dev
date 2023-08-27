@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Preset:
   - spotInfo: {fileID: 11400000, guid: f40a127c7dc1a9d4eb2badb363121e52, type: 2}
-    statusPreset: 2
+    statusPreset: 0
   - spotInfo: {fileID: 11400000, guid: ee3b2bd9b9738a145af6db66329d6b1b, type: 2}
     statusPreset: 0
   - spotInfo: {fileID: 11400000, guid: 40de10daba7a5a54d8b1966e9fd6cb4b, type: 2}

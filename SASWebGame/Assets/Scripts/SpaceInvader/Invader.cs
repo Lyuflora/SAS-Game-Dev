@@ -48,7 +48,6 @@ public class Invader : MonoBehaviour
     {
         if(other.gameObject.tag == "Projectile")
         {
-
             this.GetComponent<Collider2D>().enabled = false;
             this.animator.SetTrigger("Killed");
             Aris.Utils.DebugToUIManager.m_Instance.DebugToUI("Killed");
