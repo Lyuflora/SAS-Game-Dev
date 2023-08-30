@@ -134,26 +134,30 @@ public class MapSpot : MonoBehaviour, IClickable
         MapSoundLibrary.m_Instance.PlaySpotSFX();
 
 
-
-        this.SetSpotLook();
-
         if (this.m_Status == SpotStatus.Unvisited)
         {
+            SpotManager.m_Instance.CurrentSpot.SetSpotLook();
+            SpotManager.m_Instance.SetCurSpot(this);
+            SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
+            this.SetSpotLook();
+            
+            // sfx and execute
+            StartCoroutine(SpotManager.m_Instance.EnterNewSpot());
+            
             // spot dialogue
-            StartCoroutine(nameof(ExecuteSpotBlock)); 
+            StartCoroutine(nameof(ExecuteSpotBlock));
+
         }
         else
         {
-            
             StartCoroutine(nameof(ExecuteVisitedBlock)); 
             PlayerStatus.m_Instance.EnableInteraction();
-        
         }
-
+        
+        this.SetSpotLook();
         // SpotManager.m_Instance.TryEnterSpot(this);
-        SpotManager.m_Instance.CurrentSpot.m_Status = SpotStatus.Visited;
-        SpotManager.m_Instance.CurrentSpot.SetSpotLook();
 
+        SpotManager.m_Instance.CurrentSpot.SetSpotLook();
         SpotManager.m_Instance.SetCurSpot(this);
         // SpotManager.m_Instance.CurrentSpot = this;
         this.m_Status = SpotStatus.Active;
@@ -171,7 +175,7 @@ public class MapSpot : MonoBehaviour, IClickable
 
     IEnumerator ExecuteSpotBlock()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.5f);
         m_SpriteRenderer.color = m_Normal;
         SpotManager.m_Instance.spotFlowchart.ExecuteIfHasBlock(blockName);
     }

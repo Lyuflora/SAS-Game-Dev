@@ -28,7 +28,7 @@ namespace SAS
             }
 
             //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
 
         public void SwitchStampBookBtn(bool status)

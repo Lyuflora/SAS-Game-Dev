@@ -39,20 +39,32 @@ public class Invader : MonoBehaviour
         spriteRenderer.sprite = animatedSprites[animationFrame];
     }
 
+    public void DestroyInvader()
+    {
+        // sfx
+        SpaceInvaderManager.m_Instance.PlayKillSFX();
+    }
+    
     public void HideInvader()
     {
+
         this.gameObject.SetActive(false);
+
     }
     
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Projectile")
         {
+            // sfx
+            SpaceInvaderManager.m_Instance.PlayKillSFX();
             this.GetComponent<Collider2D>().enabled = false;
             this.animator.SetTrigger("Killed");
             Aris.Utils.DebugToUIManager.m_Instance.DebugToUI("Killed");
             Debug.Log("Killed");
+
             this.killed.Invoke();
+
         }
 
         if (other.gameObject.tag == "Player")

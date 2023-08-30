@@ -16,7 +16,8 @@ MonoBehaviour:
   spotPictVisited: {fileID: 1923773787, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
   spotPictLocked: {fileID: -1471147497, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
   spotStamp: {fileID: -402723098, guid: 2b32e765563ec404ca200ad92fbbc42c, type: 3}
-  status: 0
+  status: 3
   comments: 
   adjacentSpots:
   - {fileID: 11400000, guid: ee3b2bd9b9738a145af6db66329d6b1b, type: 2}
+  - {fileID: 11400000, guid: 40de10daba7a5a54d8b1966e9fd6cb4b, type: 2}

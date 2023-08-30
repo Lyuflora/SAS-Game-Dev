@@ -11,6 +11,7 @@ public class MapSoundLibrary : MonoBehaviour
     public AudioClip spotSFX;
     public AudioClip popupSFX;
     public AudioClip openSFX;
+    public AudioClip enterNewSpotSFX;
     public static MapSoundLibrary m_Instance;
 
     private void Awake()
@@ -46,4 +47,9 @@ public class MapSoundLibrary : MonoBehaviour
         SoundManager.Instance.Play(popupSFX);
     }
 
+    public void PlayEnterNewSpotSFX()
+    {
+        
+        SoundManager.Instance.Play(enterNewSpotSFX);
+    }
 }

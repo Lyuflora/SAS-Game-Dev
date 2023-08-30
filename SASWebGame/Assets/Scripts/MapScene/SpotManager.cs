@@ -136,6 +136,12 @@ public class SpotManager : MonoBehaviour
         SetPlayerPos(spot.m_PlayerTrans.position);
     }
 
+    public IEnumerator EnterNewSpot()
+    {
+        MapSoundLibrary.m_Instance.PlayEnterNewSpotSFX();
+        yield return new WaitForSeconds(0f);
+    }
+    
     // Here is the start, called by fungus
     public void TryEnterSpot()
     {

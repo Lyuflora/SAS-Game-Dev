@@ -332,11 +332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c7f309234982d4fb25c76b5f89c992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapBGM: {fileID: 8300000, guid: 5ec227ecd1f549c41a8d8c42a13c1695, type: 3}
+  mapBGM: {fileID: 8300000, guid: faaa2ede52ebcf246bd9f80eb58645d1, type: 3}
   btnSFX: {fileID: 8300000, guid: 82262e962f0022c46b99197838fa435f, type: 3}
   spotSFX: {fileID: 8300000, guid: 82262e962f0022c46b99197838fa435f, type: 3}
   popupSFX: {fileID: 8300000, guid: 8905852270e92514089b16b0579ce42f, type: 3}
   openSFX: {fileID: 8300000, guid: 0cef0d1d933509e4ba21523a5d698cf9, type: 3}
+  enterNewSpotSFX: {fileID: 8300000, guid: ad407de7a81c7c44cb701d8e5a11f916, type: 3}
 --- !u!1 &210911121
 GameObject:
   m_ObjectHideFlags: 0

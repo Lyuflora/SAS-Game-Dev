@@ -42,6 +42,7 @@ public class SpaceInvaderManager : MonoBehaviour
     {
         m_WinPanel.SetActive(true);
         m_WinPanel.GetComponent<Animator>().SetTrigger("show");
+        SoundManager.Instance.Play(winSFX);
 
         m_player.isGameStarted = false;
         Aris.Utils.DebugToUIManager.m_Instance.DebugToUI(String.Format("isGameStarted: {0}", m_player.isGameStarted));
@@ -50,7 +51,7 @@ public class SpaceInvaderManager : MonoBehaviour
         // to do: save
         SaveSPWin();
         
-        SoundManager.Instance.Play(winSFX);
+
         m_Analytics.SPWinCustomEvent(m_player.playerScore + 100-(int)Time.realtimeSinceStartup);
     }
     
